@@ -1,0 +1,1251 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--String resources for Human Playback-->
+<dictionaries default-language="en" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="..\..\DOC\string-dictionaries.xsd">
+	<dictionary name="messages">
+		<entry key="playback-settings">
+			<string content="Playback Settings"/>
+		</entry>
+		<entry key="clean-midi">
+			<string content="Cleaning current MIDI data..."/>
+		</entry>
+		<entry key="get-notes">
+			<string content="Retrieving notes..."/>
+		</entry>
+		<entry key="get-expressions">
+			<string content="Retrieving expressions..."/>
+		</entry>
+		<entry key="get-shapes">
+			<string content="Retrieving Smart Shapes..."/>
+		</entry>
+		<entry key="get-items">
+			<string content="Retrieving score items..."/>
+		</entry>
+		<entry key="process-interpret">
+			<string content="Interpreting score..."/>
+		</entry>
+		<entry key="process-ornaments">
+			<string content="Processing ornaments..."/>
+		</entry>
+		<entry key="process-techniques">
+			<string content="Processing Techniques..."/>
+		</entry>
+		<entry key="process-hairpins">
+			<string content="Processing hairpins..."/>
+		</entry>
+		<entry key="process-gliss">
+			<string content="Processing glissandi and bends..."/>
+		</entry>
+		<entry key="save-note_data">
+			<string content="Saving note performance data..."/>
+		</entry>
+		<entry key="save-continuous-data">
+			<string content="Saving continuous data..."/>
+		</entry>
+		<entry key="midi-conflict">
+			<string content="Some instruments are sharing the same MIDI channel which may cause playback problems. This is resolved by changing MIDI channels within the Instrument List. Do you wish to continue playback with HP?"/>
+		</entry>
+		<entry key="none">
+			<string content="(None)"/>
+		</entry>
+		<entry key="untitled-prefs">
+			<string content="Untitled Prefs Set"/>
+		</entry>
+		<entry key="new-parenthesis">
+			<string content=" (new)"/>
+		</entry>
+		<entry key="duplicate">
+			<string content="Duplicate"/>
+		</entry>
+		<entry key="prefs-title">
+			<string content="Human Playback® Preferences"/>
+		</entry>
+		<entry key="attached">
+			<string content=" (attached)"/>
+		</entry>
+		<entry key="untitled-technique">
+			<string content="Untitled technique"/>
+		</entry>
+		<entry key="copy">
+			<string content="-copy"/>
+		</entry>
+		<entry key="detach-prefs">
+			<string content="You are about to detach this preferences set from your file. Would you like to create a copy of the current set? (Otherwise it will be lost)."/>
+		</entry>
+		<entry key="create-prefs-copy">
+			<string content="The current HP Pref set is attached to your file. You are about to switch to another preferences set. Would you like to create a copy of the current set? (Otherwise it will be lost)"/>
+		</entry>
+		<entry key="not">
+			<string content="Not: "/>
+		</entry>
+		<entry key="softsynth">
+			<string content="SoftSynth"/>
+		</entry>
+		<entry key="external">
+			<string content="External"/>
+		</entry>
+		<entry key="softsynth-external">
+			<string content="SoftSynth, External"/>
+		</entry>
+		<entry key="default-prefs">
+			<string content="Default Prefs"/>
+		</entry>
+		<entry key="off">
+			<string content="off"/>
+		</entry>
+		<entry key="internal-speaker">
+			<string content="internal speaker playback"/>
+		</entry>
+		<entry key="new">
+			<string content="New"/>
+		</entry>
+		<entry key="new-features">
+			<string content="Some new features are available in HP. Would you like to create a new default preference set and make it current? (Your previous sets will be kept safe in Prefs Set List)."/>
+		</entry>
+		<entry key="checkmark">
+			<string content="√"/>
+		</entry>
+		<entry key="dot">
+			<string content=" · "/>
+		</entry>
+		<entry key="dashes">
+			<string content="- - -"/>
+		</entry>
+		<entry key="chose-hpdat">
+			<string content="Choose a HP.dat file or a Finale file to import the prefs from:"/>
+		</entry>
+		<entry key="import">
+			<string content="Import"/>
+		</entry>
+		<entry key="bad-format">
+			<string content="File is corrupt or bad format!"/>
+		</entry>
+		<entry key="nothing-imported">
+			<string content="This file has no HP prefs attached. Nothing was imported."/>
+		</entry>
+		<entry key="imported">
+			<string content=" (imported)"/>
+		</entry>
+		<entry key="default">
+			<string content="Default"/>
+		</entry>
+		<entry key="show-details">
+			<string content="Show details"/>
+		</entry>
+		<entry key="hide-details">
+			<string content="Hide details"/>
+		</entry>
+		<entry key="untitled-folder">
+			<string content="Untitled folder"/>
+		</entry>
+	</dictionary>
+	<dictionary name="expressions" translatable="false">
+		<entry key="acc">
+			<string content="acc:accel:accelerando:accelerato:affretando:incalzando:ristringendo:stringendo:string:stretto:enpressant:pressez:enaccelerant:faster:beschleunigend:eilend:drangend:belebend:steigernd"/>
+		</entry>
+		<entry key="rall">
+			<string content="rall:rallentando:calando:rit:ri:ritar:ritenuto:ritenente:riten:ritardando:ritardo:allargando:allarg:slargando:retenu:rallentir:enretenant:encedant:cedez:zuruckhaltend:breiterwerdend:breiter:zeitlassen:langsamer:zuruckkehrend:ritornando:zogernd"/>
+		</entry>
+		<entry key="cresc">
+			<string content="cresc:crescendo:enaugmentant:augmentez:erhebend:aufschlagend:louden"/>
+		</entry>
+		<entry key="dim">
+			<string content="dim:dimin:diminuendo:decrescendo:decresc:decr:perdendosi:smorzando:smorz:morendo:endiminuant:enseloignant:enattenuant:abnehmend:nachlassend:nachgebend"/>
+		</entry>
+		<entry key="gp">
+			<string content="grandpause:gp:pausalunga"/>
+		</entry>
+		<entry key="sfz">
+			<string content="Z:S:&#167;:&#141;:sf:sfz:&#142;f:&#142;fz"/>
+		</entry>
+		<entry key="fp">
+			<string content="&#234;:fp:&#130;:&#196;p:sfp:ffp:s&#234;:Fp:Sp:&#167;p:&#141;p:sfp:sfzp"/>
+		</entry>
+		<entry key="fpp">
+			<string content="fpp:f&#185;:ffpp:&#196;pp:&#196;&#185;:sf&#185;:sfpp:S&#185;:Spp:&#182;:&#234;p:Fpp:F&#185;:Spp:S&#185;:&#167;pp:&#167;&#185;:&#141;pp:&#141;&#185;:sfpp: sf&#185;:sfzpp:sfz&#185;"/>
+		</entry>
+		<entry key="ferm">
+			<string content="u:U"/>
+		</entry>
+		<entry key="ped">
+			<string content="ped:conpedale:pedale:&#161;:&#222;"/>
+		</entry>
+		<entry key="ped-end">
+			<string content="*"/>
+		</entry>
+		<entry key="damped-notes">
+			<string content="etouffe:etouffes:sonsetouffes:etouffez:damped:damp:dampen:dampfen:velare:coprire:sec:secco:stopped:P:&#185;"/>
+		</entry>
+		<entry key="tr">
+			<string content="&#217;:tr"/>
+		</entry>
+		<entry key="tr-nat">
+			<string content="&#233;&#217;:&#46;"/>
+		</entry>
+		<entry key="tr#">
+			<string content="I&#217;:&#217;I:#&#217;:&#217;#:[I]&#217;:&#217;[I]:[#]&#217;:&#217;[#]:a&#217;:&#217;a:[&#217;:&#217;[:,"/>
+		</entry>
+		<entry key="trb">
+			<string content="i&#217;:&#60;"/>
+		</entry>
+		<entry key="trbb">
+			<string content="&#186;&#217;:&#217;&#186;:&#140;&#217;:&#217;&#140;:&#211;&#217;:&#217;&#211;:[&#186;]&#217;:&#217;[&#186;]"/>
+		</entry>
+		<entry key="trx">
+			<string content="&#220;&#217;:&#217;&#220;:&#129;&#217;:&#217;&#129;:]&#217;:&#217;]:[&#220;]&#217;:&#217;[&#220;]"/>
+		</entry>
+		<entry key="solo">
+			<string content="solo:soli:concertino:concertant:concertante"/>
+		</entry>
+		<entry key="tutti">
+			<string content="tutti:section:group:grup:desk:pupitr"/>
+		</entry>
+		<entry key="nonarp">
+			<string content="nonarp:nonarpeggio:nonarpeggiato:nichtgebrochen:nichtgebr"/>
+		</entry>
+		<entry key="hpoff">
+			<string content="hpoff:humanplaybackoff"/>
+		</entry>
+		<entry key="hpon">
+			<string content="hpon:humanplaybackon"/>
+		</entry>
+		<entry key="tempo">
+			<string content="atempo:tempo:ontime:aumouvement:zeitmass"/>
+		</entry>
+		<entry key="upbow">
+			<string content="&#178;"/>
+		</entry>
+		<entry key="downbow">
+			<string content="&#179;"/>
+		</entry>
+		<entry key="ignored">
+			<string content="pocoapoco:peuapeu:nachundnach:littlebylittle:sempre:toujours:always:immer:wieder:dinuovo:stetig:allmahlich:zum"/>
+		</entry>
+		<entry key="molto">
+			<string content="molto:moltissimo:moltiss:tres:beaucoup:much:piu:alot:lots"/>
+		</entry>
+		<entry key="poco">
+			<string content="unpoco:poco:pochissimo:poch:unpeu:legerement:etwas:alittle:einwenig:wenig"/>
+		</entry>
+		<entry key="grupetto">
+			<string content="T:d:g"/>
+		</entry>
+		<entry key="nat">
+			<string content="n:N:&#233;:&#210;"/>
+		</entry>
+		<entry key="#">
+			<string content="#:a:I:["/>
+		</entry>
+		<entry key="b">
+			<string content="b:A:i:{"/>
+		</entry>
+		<entry key="open">
+			<string content="senzasordino:senzasordini:senzasord:ohnedampfer:odpf:offen:otezlessourdines:otezlasourdine:open:muteoff:muteout:nomute:alzato:aperto:openhorn:ouvert:viasord:viasordino:viasordini"/>
+		</entry>
+		<entry key="snap">
+			<string content="bartok:snap"/>
+		</entry>
+		<entry key="pizz">
+			<string content="pizz:pizzicato:pizzicati"/>
+		</entry>
+		<entry key="pont">
+			<string content="ponticello:sulpont:sulponticello:pont:amsteg:auchevalet:sulponty:ponty"/>
+		</entry>
+		<entry key="tasto">
+			<string content="sultasto:tasto:sullatastiera:tastiera:surlatouche:amgriffbrett:griffbrett:griffbr"/>
+		</entry>
+		<entry key="flaut">
+			<string content="flautando:flautendo:flaut"/>
+		</entry>
+		<entry key="legno">
+			<string content="collegno:conlegno:colllegno:collegn:mitholz"/>
+		</entry>
+		<entry key="mute">
+			<string content="mute:muteon:mutes:straightmute:stmute:standardmute:strmute:straight:consord:cs:consordino:sordino:sordini:sourd:sourdine:sourdines:mitdampfer:sord:mdpf:mitdpf"/>
+		</entry>
+		<entry key="cup">
+			<string content="cupmute:cup:solotone:solotonemute:incup:withcup"/>
+		</entry>
+		<entry key="harmon">
+			<string content="harmonmute:harmon:wahwah:buzzwow:inharmon:withharmon"/>
+		</entry>
+		<entry key="bucket">
+			<string content="bucketmute:bucket:hat:inhat:instand:withbucket:inbucket"/>
+		</entry>
+		<entry key="bouche">
+			<string content="stopped:gestopft:chiuso:bouche"/>
+		</entry>
+		<entry key="ord">
+			<string content="ord:ordin:ordinario:natural:nat:normal:normale:standard"/>
+		</entry>
+		<entry key="arco">
+			<string content="arco:collarco:conlarco:colarco:bog:bogen:bowed"/>
+		</entry>
+	</dictionary>
+	<dictionary name="undo-strings">
+		<entry key="settings">
+			<string content="Human Playback Settings" language="en"/>
+		</entry>
+		<entry key="attach-prefs">
+			<string content="HP: Attaching Pref Set" language="en"/>
+		</entry>
+		<entry key="detach-prefs">
+			<string content="HP: Detaching Pref Set" language="en"/>
+		</entry>
+	</dictionary>
+	<dictionary name="user-interface">
+		<entry key="style-list">
+			<string language="en">
+				<enumeration content="Standard" key="standard"/>
+				<enumeration content="Baroque"/>
+				<enumeration content="Classical"/>
+				<enumeration content="Romantic"/>
+				<enumeration content="21st Century"/>
+				<enumeration content="Marching Band"/>
+				<enumeration content="Viennese Waltz"/>
+				<enumeration content="Light Waltz"/>
+				<enumeration content="Funk"/>
+				<enumeration content="Jazz"/>
+				<enumeration content="Latin"/>
+				<enumeration content="Pop"/>
+				<enumeration content="Reggae"/>
+				<enumeration content="Rock"/>
+				<enumeration content="Samba"/>
+				<enumeration content="   "/>
+			</string>
+		</entry>
+		<entry key="swing">
+			<string language="en">
+				<enumeration content="None"/>
+				<enumeration content="Current"/>
+				<enumeration content="Light"/>
+				<enumeration content="Standard" key="standard"/>
+				<enumeration content="Heavy"/>
+				<enumeration content="Dotted 8th,16th"/>
+			</string>
+		</entry>
+		<entry key="volume-type">
+			<string language="en">
+				<enumeration content="HP (Ignore Data)" key="ignore"/>
+				<enumeration content="HP (Incorporate Data)" key="incorporate"/>
+				<enumeration content="No HP Effect" key="no-effect"/>
+			</string>
+		</entry>
+		<entry key="velocity-type">
+			<string language="en">
+				<enumeration content="HP (Ignore Data)" key="ignore"/>
+				<enumeration content="HP (Incorporate Data)" key="incorporate"/>
+				<enumeration content="No HP Effect" key="no-effect"/>
+			</string>
+		</entry>
+		<entry key="tempo-type">
+			<string language="en">
+				<enumeration content="HP (Ignore Data)" key="ignore"/>
+				<enumeration content="HP (Incorporate Data)" key="incorporate"/>
+				<enumeration content="No HP Effect" key="no-effect"/>
+			</string>
+		</entry>
+		<entry key="start-stop-time-type">
+			<string language="en">
+				<enumeration content="HP (Ignore Data)" key="ignore"/>
+				<enumeration content="HP (Incorporate Data)" key="incorporate"/>
+				<enumeration content="No HP Effect" key="no-effect"/>
+			</string>
+		</entry>
+		<entry key="hairpin-type">
+			<string language="en">
+				<enumeration content="Automatic" key="automatic"/>
+				<enumeration content="Key Velocity Only" key="key-velocity"/>
+				<enumeration content="Continuous Contr. Only" key="continuous"/>
+			</string>
+		</entry>
+		<entry key="dynamic-curve-type">
+			<string language="en">
+				<enumeration content="Automatic" key="automatic"/>
+				<enumeration content="Cubic" key="cubic"/>
+				<enumeration content="Quadratic" key="quadratic"/>
+				<enumeration content="Linear" key="linear"/>
+			</string>
+		</entry>
+		<entry key="glissando-curve-type">
+			<string language="en">
+				<enumeration content="Automatic" key="automatic"/>
+				<enumeration content="Cubic" key="cubic"/>
+				<enumeration content="Quadratic" key="quadratic"/>
+				<enumeration content="Linear" key="linear"/>
+			</string>
+		</entry>
+		<entry key="glissando-type">
+			<string language="en">
+				<enumeration content="Automatic" key="automatic"/>
+				<enumeration content="Pitchbend" key="pitchbend"/>
+				<enumeration content="Chromatic" key="chromatic"/>
+				<enumeration content="Diatonic" key="diatonic"/>
+			</string>
+		</entry>
+		<entry key="pitch-bend-range">
+			<string language="en">
+				<enumeration content="None"/>
+				<enumeration content="1"/>
+				<enumeration content="2"/>
+				<enumeration content="3"/>
+				<enumeration content="4"/>
+				<enumeration content="5"/>
+				<enumeration content="6"/>
+				<enumeration content="7"/>
+				<enumeration content="8"/>
+				<enumeration content="9"/>
+				<enumeration content="10"/>
+				<enumeration content="11"/>
+				<enumeration content="12"/>
+				<enumeration content="13"/>
+				<enumeration content="14"/>
+				<enumeration content="15"/>
+				<enumeration content="16"/>
+				<enumeration content="17"/>
+				<enumeration content="18"/>
+				<enumeration content="19"/>
+				<enumeration content="20"/>
+				<enumeration content="21"/>
+				<enumeration content="22"/>
+				<enumeration content="23"/>
+				<enumeration content="24"/>
+			</string>
+		</entry>
+		<entry key="dynamic-approach">
+			<string language="en">
+				<enumeration content="Automatic" key="automatic"/>
+				<enumeration content="Volume (CC#7) + Velocity" key="cc7+velocity"/>
+				<enumeration content="Modulation (CC#1) + Velocity for Attack" key="cc11+velocity-for-attack"/>
+				<enumeration content="Expression (CC#11) + Velocity" key="cc11+velocity"/>
+			</string>
+		</entry>
+		<entry key="legato-mode">
+			<string language="en">
+				<enumeration content="64" key="cc-64"/>
+				<enumeration content="68" key="cc-68"/>
+			</string>
+		</entry>
+		<entry key="technique-list-columns">
+			<string language="en">
+				<enumeration content="Name"/>
+				<enumeration content="Actions"/>
+				<enumeration content="Filter"/>
+			</string>
+		</entry>
+		<entry key="controller-list">
+			<string language="en">
+				<enumeration content="CC#0: Bank 0"/>
+				<enumeration content="CC#1: Modulation"/>
+				<enumeration content="CC#2: Breath"/>
+				<enumeration content="CC#3: "/>
+				<enumeration content="CC#4: "/>
+				<enumeration content="CC#5: "/>
+				<enumeration content="CC#6: "/>
+				<enumeration content="CC#7: Volume"/>
+				<enumeration content="CC#8: "/>
+				<enumeration content="CC#9: "/>
+				<enumeration content="CC#10: Pan"/>
+				<enumeration content="CC#11: Expression"/>
+				<enumeration content="CC#12: "/>
+				<enumeration content="CC#13: "/>
+				<enumeration content="CC#14: "/>
+				<enumeration content="CC#15: "/>
+				<enumeration content="CC#16: "/>
+				<enumeration content="CC#17: "/>
+				<enumeration content="CC#18: "/>
+				<enumeration content="CC#19: "/>
+				<enumeration content="CC#20: "/>
+				<enumeration content="CC#21: "/>
+				<enumeration content="CC#22: "/>
+				<enumeration content="CC#23: "/>
+				<enumeration content="CC#24: "/>
+				<enumeration content="CC#25: "/>
+				<enumeration content="CC#26: "/>
+				<enumeration content="CC#27: "/>
+				<enumeration content="CC#28: "/>
+				<enumeration content="CC#29: "/>
+				<enumeration content="CC#30: "/>
+				<enumeration content="CC#31: "/>
+				<enumeration content="CC#32: Bank 32"/>
+				<enumeration content="CC#33: "/>
+				<enumeration content="CC#34: "/>
+				<enumeration content="CC#35: "/>
+				<enumeration content="CC#36: "/>
+				<enumeration content="CC#37: "/>
+				<enumeration content="CC#38: "/>
+				<enumeration content="CC#39: "/>
+				<enumeration content="CC#40: "/>
+				<enumeration content="CC#41: "/>
+				<enumeration content="CC#42: "/>
+				<enumeration content="CC#43: "/>
+				<enumeration content="CC#44: "/>
+				<enumeration content="CC#45: "/>
+				<enumeration content="CC#46: "/>
+				<enumeration content="CC#47: "/>
+				<enumeration content="CC#48: "/>
+				<enumeration content="CC#49: "/>
+				<enumeration content="CC#50: "/>
+				<enumeration content="CC#51: "/>
+				<enumeration content="CC#52: "/>
+				<enumeration content="CC#53: "/>
+				<enumeration content="CC#54: "/>
+				<enumeration content="CC#55: "/>
+				<enumeration content="CC#56: "/>
+				<enumeration content="CC#57: "/>
+				<enumeration content="CC#58: "/>
+				<enumeration content="CC#59: "/>
+				<enumeration content="CC#60: "/>
+				<enumeration content="CC#61: "/>
+				<enumeration content="CC#62: "/>
+				<enumeration content="CC#63: "/>
+				<enumeration content="CC#64: Sustain Pedal"/>
+				<enumeration content="CC#65: "/>
+				<enumeration content="CC#66: "/>
+				<enumeration content="CC#67: "/>
+				<enumeration content="CC#68: Legato"/>
+				<enumeration content="CC#69: "/>
+				<enumeration content="CC#70: "/>
+				<enumeration content="CC#71: "/>
+				<enumeration content="CC#72: "/>
+				<enumeration content="CC#73: "/>
+				<enumeration content="CC#74: "/>
+				<enumeration content="CC#75: "/>
+				<enumeration content="CC#76: "/>
+				<enumeration content="CC#77: "/>
+				<enumeration content="CC#78: "/>
+				<enumeration content="CC#79: "/>
+				<enumeration content="CC#80: "/>
+				<enumeration content="CC#81: "/>
+				<enumeration content="CC#82: "/>
+				<enumeration content="CC#83: "/>
+				<enumeration content="CC#84: "/>
+				<enumeration content="CC#85: "/>
+				<enumeration content="CC#86: "/>
+				<enumeration content="CC#87: "/>
+				<enumeration content="CC#88: "/>
+				<enumeration content="CC#89: "/>
+				<enumeration content="CC#90: "/>
+				<enumeration content="CC#91: "/>
+				<enumeration content="CC#92: "/>
+				<enumeration content="CC#93: "/>
+				<enumeration content="CC#94: "/>
+				<enumeration content="CC#95: "/>
+				<enumeration content="CC#96: "/>
+				<enumeration content="CC#97: "/>
+				<enumeration content="CC#98: "/>
+				<enumeration content="CC#99: "/>
+				<enumeration content="CC#100: "/>
+				<enumeration content="CC#101: "/>
+			</string>
+		</entry>
+		<entry key="0-127-values">
+			<string language="en">
+				<enumeration content="0"/>
+				<enumeration content="1"/>
+				<enumeration content="2"/>
+				<enumeration content="3"/>
+				<enumeration content="4"/>
+				<enumeration content="5"/>
+				<enumeration content="6"/>
+				<enumeration content="7"/>
+				<enumeration content="8"/>
+				<enumeration content="9"/>
+				<enumeration content="10"/>
+				<enumeration content="11"/>
+				<enumeration content="12"/>
+				<enumeration content="13"/>
+				<enumeration content="14"/>
+				<enumeration content="15"/>
+				<enumeration content="16"/>
+				<enumeration content="17"/>
+				<enumeration content="18"/>
+				<enumeration content="19"/>
+				<enumeration content="20"/>
+				<enumeration content="21"/>
+				<enumeration content="22"/>
+				<enumeration content="23"/>
+				<enumeration content="24"/>
+				<enumeration content="25"/>
+				<enumeration content="26"/>
+				<enumeration content="27"/>
+				<enumeration content="28"/>
+				<enumeration content="29"/>
+				<enumeration content="30"/>
+				<enumeration content="31"/>
+				<enumeration content="32"/>
+				<enumeration content="33"/>
+				<enumeration content="34"/>
+				<enumeration content="35"/>
+				<enumeration content="36"/>
+				<enumeration content="37"/>
+				<enumeration content="38"/>
+				<enumeration content="39"/>
+				<enumeration content="40"/>
+				<enumeration content="41"/>
+				<enumeration content="42"/>
+				<enumeration content="43"/>
+				<enumeration content="44"/>
+				<enumeration content="45"/>
+				<enumeration content="46"/>
+				<enumeration content="47"/>
+				<enumeration content="48"/>
+				<enumeration content="49"/>
+				<enumeration content="50"/>
+				<enumeration content="51"/>
+				<enumeration content="52"/>
+				<enumeration content="53"/>
+				<enumeration content="54"/>
+				<enumeration content="55"/>
+				<enumeration content="56"/>
+				<enumeration content="57"/>
+				<enumeration content="58"/>
+				<enumeration content="59"/>
+				<enumeration content="60"/>
+				<enumeration content="61"/>
+				<enumeration content="62"/>
+				<enumeration content="63"/>
+				<enumeration content="64"/>
+				<enumeration content="65"/>
+				<enumeration content="66"/>
+				<enumeration content="67"/>
+				<enumeration content="68"/>
+				<enumeration content="69"/>
+				<enumeration content="70"/>
+				<enumeration content="71"/>
+				<enumeration content="72"/>
+				<enumeration content="73"/>
+				<enumeration content="74"/>
+				<enumeration content="75"/>
+				<enumeration content="76"/>
+				<enumeration content="77"/>
+				<enumeration content="78"/>
+				<enumeration content="79"/>
+				<enumeration content="80"/>
+				<enumeration content="81"/>
+				<enumeration content="82"/>
+				<enumeration content="83"/>
+				<enumeration content="84"/>
+				<enumeration content="85"/>
+				<enumeration content="86"/>
+				<enumeration content="87"/>
+				<enumeration content="88"/>
+				<enumeration content="89"/>
+				<enumeration content="90"/>
+				<enumeration content="91"/>
+				<enumeration content="92"/>
+				<enumeration content="93"/>
+				<enumeration content="94"/>
+				<enumeration content="95"/>
+				<enumeration content="96"/>
+				<enumeration content="97"/>
+				<enumeration content="98"/>
+				<enumeration content="99"/>
+				<enumeration content="100"/>
+				<enumeration content="101"/>
+				<enumeration content="102"/>
+				<enumeration content="103"/>
+				<enumeration content="104"/>
+				<enumeration content="105"/>
+				<enumeration content="106"/>
+				<enumeration content="107"/>
+				<enumeration content="108"/>
+				<enumeration content="109"/>
+				<enumeration content="110"/>
+				<enumeration content="111"/>
+				<enumeration content="112"/>
+				<enumeration content="113"/>
+				<enumeration content="114"/>
+				<enumeration content="115"/>
+				<enumeration content="116"/>
+				<enumeration content="117"/>
+				<enumeration content="118"/>
+				<enumeration content="119"/>
+				<enumeration content="120"/>
+				<enumeration content="121"/>
+				<enumeration content="122"/>
+				<enumeration content="123"/>
+				<enumeration content="124"/>
+				<enumeration content="125"/>
+				<enumeration content="126"/>
+				<enumeration content="127"/>
+			</string>
+		</entry>
+		<entry key="1-128-values">
+			<string language="en">
+				<enumeration content="1"/>
+				<enumeration content="2"/>
+				<enumeration content="3"/>
+				<enumeration content="4"/>
+				<enumeration content="5"/>
+				<enumeration content="6"/>
+				<enumeration content="7"/>
+				<enumeration content="8"/>
+				<enumeration content="9"/>
+				<enumeration content="10"/>
+				<enumeration content="11"/>
+				<enumeration content="12"/>
+				<enumeration content="13"/>
+				<enumeration content="14"/>
+				<enumeration content="15"/>
+				<enumeration content="16"/>
+				<enumeration content="17"/>
+				<enumeration content="18"/>
+				<enumeration content="19"/>
+				<enumeration content="20"/>
+				<enumeration content="21"/>
+				<enumeration content="22"/>
+				<enumeration content="23"/>
+				<enumeration content="24"/>
+				<enumeration content="25"/>
+				<enumeration content="26"/>
+				<enumeration content="27"/>
+				<enumeration content="28"/>
+				<enumeration content="29"/>
+				<enumeration content="30"/>
+				<enumeration content="31"/>
+				<enumeration content="32"/>
+				<enumeration content="33"/>
+				<enumeration content="34"/>
+				<enumeration content="35"/>
+				<enumeration content="36"/>
+				<enumeration content="37"/>
+				<enumeration content="38"/>
+				<enumeration content="39"/>
+				<enumeration content="40"/>
+				<enumeration content="41"/>
+				<enumeration content="42"/>
+				<enumeration content="43"/>
+				<enumeration content="44"/>
+				<enumeration content="45"/>
+				<enumeration content="46"/>
+				<enumeration content="47"/>
+				<enumeration content="48"/>
+				<enumeration content="49"/>
+				<enumeration content="50"/>
+				<enumeration content="51"/>
+				<enumeration content="52"/>
+				<enumeration content="53"/>
+				<enumeration content="54"/>
+				<enumeration content="55"/>
+				<enumeration content="56"/>
+				<enumeration content="57"/>
+				<enumeration content="58"/>
+				<enumeration content="59"/>
+				<enumeration content="60"/>
+				<enumeration content="61"/>
+				<enumeration content="62"/>
+				<enumeration content="63"/>
+				<enumeration content="64"/>
+				<enumeration content="65"/>
+				<enumeration content="66"/>
+				<enumeration content="67"/>
+				<enumeration content="68"/>
+				<enumeration content="69"/>
+				<enumeration content="70"/>
+				<enumeration content="71"/>
+				<enumeration content="72"/>
+				<enumeration content="73"/>
+				<enumeration content="74"/>
+				<enumeration content="75"/>
+				<enumeration content="76"/>
+				<enumeration content="77"/>
+				<enumeration content="78"/>
+				<enumeration content="79"/>
+				<enumeration content="80"/>
+				<enumeration content="81"/>
+				<enumeration content="82"/>
+				<enumeration content="83"/>
+				<enumeration content="84"/>
+				<enumeration content="85"/>
+				<enumeration content="86"/>
+				<enumeration content="87"/>
+				<enumeration content="88"/>
+				<enumeration content="89"/>
+				<enumeration content="90"/>
+				<enumeration content="91"/>
+				<enumeration content="92"/>
+				<enumeration content="93"/>
+				<enumeration content="94"/>
+				<enumeration content="95"/>
+				<enumeration content="96"/>
+				<enumeration content="97"/>
+				<enumeration content="98"/>
+				<enumeration content="99"/>
+				<enumeration content="100"/>
+				<enumeration content="101"/>
+				<enumeration content="102"/>
+				<enumeration content="103"/>
+				<enumeration content="104"/>
+				<enumeration content="105"/>
+				<enumeration content="106"/>
+				<enumeration content="107"/>
+				<enumeration content="108"/>
+				<enumeration content="109"/>
+				<enumeration content="110"/>
+				<enumeration content="111"/>
+				<enumeration content="112"/>
+				<enumeration content="113"/>
+				<enumeration content="114"/>
+				<enumeration content="115"/>
+				<enumeration content="116"/>
+				<enumeration content="117"/>
+				<enumeration content="118"/>
+				<enumeration content="119"/>
+				<enumeration content="120"/>
+				<enumeration content="121"/>
+				<enumeration content="122"/>
+				<enumeration content="123"/>
+				<enumeration content="124"/>
+				<enumeration content="125"/>
+				<enumeration content="126"/>
+				<enumeration content="127"/>
+				<enumeration content="128"/>
+			</string>
+		</entry>
+		<entry key="midi-note-list">
+			<string language="en">
+				<enumeration content="C-2 (0)"/>
+				<enumeration content="C#-2 (1)"/>
+				<enumeration content="D-2 (2)"/>
+				<enumeration content="D#-2 (3)"/>
+				<enumeration content="E-2 (4)"/>
+				<enumeration content="F-2 (5)"/>
+				<enumeration content="F#-2 (6)"/>
+				<enumeration content="G-2 (7)"/>
+				<enumeration content="G#-2 (8)"/>
+				<enumeration content="A-2 (9)"/>
+				<enumeration content="A#-2 (10)"/>
+				<enumeration content="B-2 (11)"/>
+				<enumeration content="C-1 (12)"/>
+				<enumeration content="C#-1 (13)"/>
+				<enumeration content="D-1 (14)"/>
+				<enumeration content="D#-1 (15)"/>
+				<enumeration content="E-1 (16)"/>
+				<enumeration content="F-1 (17)"/>
+				<enumeration content="F#-1 (18)"/>
+				<enumeration content="G-1 (19)"/>
+				<enumeration content="G#-1 (20)"/>
+				<enumeration content="A-1 (21)"/>
+				<enumeration content="A#-1 (22)"/>
+				<enumeration content="B-1 (23)"/>
+				<enumeration content="C0 (24)"/>
+				<enumeration content="C#0 (25)"/>
+				<enumeration content="D0 (26)"/>
+				<enumeration content="D#0 (27)"/>
+				<enumeration content="E0 (28)"/>
+				<enumeration content="F0 (29)"/>
+				<enumeration content="F#0 (30)"/>
+				<enumeration content="G0 (31)"/>
+				<enumeration content="G#0 (32)"/>
+				<enumeration content="A0 (33)"/>
+				<enumeration content="A#0 (34)"/>
+				<enumeration content="B0 (35)"/>
+				<enumeration content="C1 (36)"/>
+				<enumeration content="C#1 (37)"/>
+				<enumeration content="D1 (38)"/>
+				<enumeration content="D#1 (39)"/>
+				<enumeration content="E1 (40)"/>
+				<enumeration content="F1 (41)"/>
+				<enumeration content="F#1 (42)"/>
+				<enumeration content="G1 (43)"/>
+				<enumeration content="G#1 (44)"/>
+				<enumeration content="A1 (45)"/>
+				<enumeration content="A#1 (46)"/>
+				<enumeration content="B1 (47)"/>
+				<enumeration content="C2 (48)"/>
+				<enumeration content="C#2 (49)"/>
+				<enumeration content="D2 (50)"/>
+				<enumeration content="D#2 (51)"/>
+				<enumeration content="E2 (52)"/>
+				<enumeration content="F2 (53)"/>
+				<enumeration content="F#2 (54)"/>
+				<enumeration content="G2 (55)"/>
+				<enumeration content="G#2 (56)"/>
+				<enumeration content="A2 (57)"/>
+				<enumeration content="A#2 (58)"/>
+				<enumeration content="B2 (59)"/>
+				<enumeration content="C3 (60)"/>
+				<enumeration content="C#3 (61)"/>
+				<enumeration content="D3 (62)"/>
+				<enumeration content="D#3 (63)"/>
+				<enumeration content="E3 (64)"/>
+				<enumeration content="F3 (65)"/>
+				<enumeration content="F#3 (66)"/>
+				<enumeration content="G3 (67)"/>
+				<enumeration content="G#3 (68)"/>
+				<enumeration content="A3 (69)"/>
+				<enumeration content="A#3 (70)"/>
+				<enumeration content="B3 (71)"/>
+				<enumeration content="C4 (72)"/>
+				<enumeration content="C#4 (73)"/>
+				<enumeration content="D4 (74)"/>
+				<enumeration content="D#4 (75)"/>
+				<enumeration content="E4 (76)"/>
+				<enumeration content="F4 (77)"/>
+				<enumeration content="F#4 (78)"/>
+				<enumeration content="G4 (79)"/>
+				<enumeration content="G#4 (80)"/>
+				<enumeration content="A4 (81)"/>
+				<enumeration content="A#4 (82)"/>
+				<enumeration content="B4 (83)"/>
+				<enumeration content="C5 (84)"/>
+				<enumeration content="C#5 (85)"/>
+				<enumeration content="D5 (86)"/>
+				<enumeration content="D#5 (87)"/>
+				<enumeration content="E5 (88)"/>
+				<enumeration content="F5 (89)"/>
+				<enumeration content="F#5 (90)"/>
+				<enumeration content="G5 (91)"/>
+				<enumeration content="G#5 (92)"/>
+				<enumeration content="A5 (93)"/>
+				<enumeration content="A#5 (94)"/>
+				<enumeration content="B5 (95)"/>
+				<enumeration content="C6 (96)"/>
+				<enumeration content="C#6 (97)"/>
+				<enumeration content="D6 (98)"/>
+				<enumeration content="D#6 (99)"/>
+				<enumeration content="E6 (100)"/>
+				<enumeration content="F6 (101)"/>
+				<enumeration content="F#6 (102)"/>
+				<enumeration content="G6 (103)"/>
+				<enumeration content="G#6 (104)"/>
+				<enumeration content="A6 (105)"/>
+				<enumeration content="A#6 (106)"/>
+				<enumeration content="B6 (107)"/>
+				<enumeration content="C7 (108)"/>
+				<enumeration content="C#7 (109)"/>
+				<enumeration content="D7 (110)"/>
+				<enumeration content="D#7 (111)"/>
+				<enumeration content="E7 (112)"/>
+				<enumeration content="F7 (113)"/>
+				<enumeration content="F#7 (114)"/>
+				<enumeration content="G7 (115)"/>
+				<enumeration content="G#7 (116)"/>
+				<enumeration content="A7 (117)"/>
+				<enumeration content="A#7 (118)"/>
+				<enumeration content="B7 (119)"/>
+				<enumeration content="C8 (120)"/>
+				<enumeration content="C#8 (121)"/>
+				<enumeration content="D8 (122)"/>
+				<enumeration content="D#8 (123)"/>
+				<enumeration content="E8 (124)"/>
+				<enumeration content="F8 (125)"/>
+				<enumeration content="F#8 (126)"/>
+				<enumeration content="G8 (127)"/>
+			</string>
+		</entry>
+		<entry key="-12+12-relative-change">
+			<string language="en">
+				<enumeration content="–12"/>
+				<enumeration content="–11"/>
+				<enumeration content="–10"/>
+				<enumeration content="–9"/>
+				<enumeration content="–8"/>
+				<enumeration content="–7"/>
+				<enumeration content="–6"/>
+				<enumeration content="–5"/>
+				<enumeration content="–4"/>
+				<enumeration content="–3"/>
+				<enumeration content="–2"/>
+				<enumeration content="–1"/>
+				<enumeration content="0"/>
+				<enumeration content="+1"/>
+				<enumeration content="+2"/>
+				<enumeration content="+3"/>
+				<enumeration content="+4"/>
+				<enumeration content="+5"/>
+				<enumeration content="+6"/>
+				<enumeration content="+7"/>
+				<enumeration content="+8"/>
+				<enumeration content="+9"/>
+				<enumeration content="+10"/>
+				<enumeration content="+11"/>
+				<enumeration content="+12"/>
+			</string>
+		</entry>
+		<entry key="-16+16-relative-change">
+			<string language="en">
+				<enumeration content="–16"/>
+				<enumeration content="–15"/>
+				<enumeration content="–14"/>
+				<enumeration content="–13"/>
+				<enumeration content="–12"/>
+				<enumeration content="–11"/>
+				<enumeration content="–10"/>
+				<enumeration content="–9"/>
+				<enumeration content="–8"/>
+				<enumeration content="–7"/>
+				<enumeration content="–6"/>
+				<enumeration content="–5"/>
+				<enumeration content="–4"/>
+				<enumeration content="–3"/>
+				<enumeration content="–2"/>
+				<enumeration content="–1"/>
+				<enumeration content="0"/>
+				<enumeration content="+1"/>
+				<enumeration content="+2"/>
+				<enumeration content="+3"/>
+				<enumeration content="+4"/>
+				<enumeration content="+5"/>
+				<enumeration content="+6"/>
+				<enumeration content="+7"/>
+				<enumeration content="+8"/>
+				<enumeration content="+9"/>
+				<enumeration content="+10"/>
+				<enumeration content="+11"/>
+				<enumeration content="+12"/>
+				<enumeration content="+13"/>
+				<enumeration content="+14"/>
+				<enumeration content="+15"/>
+				<enumeration content="+16"/>
+			</string>
+		</entry>
+		<entry key="-20+20-relative-change">
+			<string language="en">
+				<enumeration content="–20"/>
+				<enumeration content="–19"/>
+				<enumeration content="–18"/>
+				<enumeration content="–17"/>
+				<enumeration content="–16"/>
+				<enumeration content="–15"/>
+				<enumeration content="–14"/>
+				<enumeration content="–13"/>
+				<enumeration content="–12"/>
+				<enumeration content="–11"/>
+				<enumeration content="–10"/>
+				<enumeration content="–9"/>
+				<enumeration content="–8"/>
+				<enumeration content="–7"/>
+				<enumeration content="–6"/>
+				<enumeration content="–5"/>
+				<enumeration content="–4"/>
+				<enumeration content="–3"/>
+				<enumeration content="–2"/>
+				<enumeration content="–1"/>
+				<enumeration content="Default"/>
+				<enumeration content="+1"/>
+				<enumeration content="+2"/>
+				<enumeration content="+3"/>
+				<enumeration content="+4"/>
+				<enumeration content="+5"/>
+				<enumeration content="+6"/>
+				<enumeration content="+7"/>
+				<enumeration content="+8"/>
+				<enumeration content="+9"/>
+				<enumeration content="+10"/>
+				<enumeration content="+11"/>
+				<enumeration content="+12"/>
+				<enumeration content="+13"/>
+				<enumeration content="+14"/>
+				<enumeration content="+15"/>
+				<enumeration content="+16"/>
+				<enumeration content="+17"/>
+				<enumeration content="+18"/>
+				<enumeration content="+19"/>
+				<enumeration content="+20"/>
+			</string>
+		</entry>
+		<entry key="0-30-pp-values">
+			<string language="en">
+				<enumeration content="Default"/>
+				<enumeration content="0"/>
+				<enumeration content="1"/>
+				<enumeration content="2"/>
+				<enumeration content="3"/>
+				<enumeration content="4"/>
+				<enumeration content="5"/>
+				<enumeration content="6"/>
+				<enumeration content="7"/>
+				<enumeration content="8"/>
+				<enumeration content="9"/>
+				<enumeration content="10"/>
+				<enumeration content="11"/>
+				<enumeration content="12"/>
+				<enumeration content="13"/>
+				<enumeration content="14"/>
+				<enumeration content="15"/>
+				<enumeration content="16"/>
+				<enumeration content="17"/>
+				<enumeration content="18"/>
+				<enumeration content="19"/>
+				<enumeration content="20"/>
+				<enumeration content="21"/>
+				<enumeration content="22"/>
+				<enumeration content="23"/>
+				<enumeration content="24"/>
+				<enumeration content="25"/>
+				<enumeration content="26"/>
+				<enumeration content="27"/>
+				<enumeration content="28"/>
+				<enumeration content="29"/>
+				<enumeration content="30"/>
+			</string>
+		</entry>
+		<entry key="prefs-group-list">
+			<string language="en">
+				<enumeration content="Instrument Techniques"/>
+				<enumeration content="Dynamics &amp; Volume"/>
+				<enumeration content="MIDI Data"/>
+				<enumeration content="Glissandi &amp; Bends"/>
+				<enumeration content="Ornaments &amp; Tremolos"/>
+				<enumeration content="Tempo Variations"/>
+				<enumeration content="Garritan Specials"/>
+			</string>
+		</entry>
+		<!-- unified (or universal) instrument types -->
+		<entry key="instrument-type">
+			<string language="en">
+				<enumeration content="Separator" key="separator" id="1"/>
+				<enumeration content="Any" key="any" id="2"/>
+				<enumeration content="Any sustaining" key="any-sustaining" id="3"/>
+				<enumeration content="Strings" key="strings" id="4"/>
+				<enumeration content="Violin" key="violin" id="5"/>
+				<enumeration content="Viola" key="viola" id="6"/>
+				<enumeration content="Cello" key="cello" id="7"/>
+				<enumeration content="Contrabass" key="contrabass" id="8"/>
+				<enumeration content="Winds" key="winds" id="19"/>
+				<enumeration content="Woodwinds" key="woodwinds" id="9"/>
+				<enumeration content="Piccolo" key="piccolo" id="26"/>
+				<enumeration content="Flute" key="flute" id="10"/>
+				<enumeration content="Oboe" key="oboe" id="23"/>
+				<enumeration content="English horn" key="english-horn" id="28"/>
+				<enumeration content="Clarinet" key="clarinet" id="11"/>
+				<enumeration content="Bass clarinet" key="bass-clarinet" id="27"/>
+				<enumeration content="Bassoon" key="bassoon" id="20"/>
+				<enumeration content="Contrabassoon" key="contrabassoon" id="24"/>
+				<enumeration content="Saxophone" key="sax" id="12"/>
+				<enumeration content="Brass" key="brass" id="13"/>
+				<enumeration content="Horn" key="horn" id="15"/>
+				<enumeration content="Trumpet" key="trumpet" id="14"/>
+				<enumeration content="Trombone" key="trombone" id="16"/>
+				<enumeration content="Tuba" key="tuba" id="21"/>
+				<enumeration content="Harp" key="harp" id="17"/>
+				<enumeration content="Timpani" key="timpani" id="18"/>
+				<enumeration content="Unpitched percussion" key="unpitched-percussion" id="22"/>
+				<enumeration content="Mallet instruments" key="mallet" id="25"/>
+				<enumeration content="Organ" key="organ" id="29"/>
+				<enumeration content="Harpsichord" key="harpsichord" id="30"/>
+				<enumeration content="Accordion" key="accordion" id="31"/>
+			</string>
+		</entry>
+		<entry key="unified-action">
+			<string language="en">
+				<enumeration content="(Skip)" key="skip" id="1"/>
+				<enumeration content="Key Switch" key="keyswitch" id="2"/>
+				<enumeration content="Controller" key="controller" id="3"/>
+				<enumeration content="Channel change" key="channel-change" id="4"/>
+				<enumeration content="Staff&#8217;s channel" key="staff-channel" id="5"/>
+				<enumeration content="Chan. change (relative)" key="relative-channel-change" id="6"/>
+				<enumeration content="Staff&#8217;s patch" key="staff-patch" id="7"/>
+				<enumeration content="Program Change" key="program-change" id="8"/>
+				<enumeration content="Bank 0, Progr. Change" key="bank0+prog-change" id="9"/>
+				<enumeration content="Bank 32, Progr. Change" key="bank32+prog-change" id="10"/>
+				<enumeration content="Prgm Chge, Prgrm Chge" key="prog-change+prog-change" id="11"/>
+				<enumeration content="Add pitch (1/2 tones)" key="add-pitch" id="12"/>
+				<enumeration content="For these notes only" key="these-notes-only" id="13"/>
+				<enumeration content="Dynamic: CC#1" key="dynamic-cc1" id="14"/>
+				<enumeration content="Dyn.: CC#7+Vel." key="dynamic-cc7+velocity" id="15"/>
+				<enumeration content="Dyn.: CC#11 only" key="dynamic-cc11" id="16"/>
+				<enumeration content="Dyn.: CC#11+Vel." key="dynamic-cc11+velocity" id="17"/>
+				<enumeration content="Dyn.: Velocity only" key="dynamic-velocity" id="18"/>
+				<enumeration content="Set to pitch (absolute)" key="set-to-pitch" id="19"/>
+				<enumeration content="Base volume" key="base-volume" id="20"/>
+			</string>
+		</entry>
+		<entry key="action-short">
+			<string language="en">
+				<enumeration content="---"/>
+				<enumeration content="KS="/>
+				<enumeration content="CC#"/>
+				<enumeration content="Chan."/>
+				<enumeration content="Staff ch."/>
+				<enumeration content="Staff rel. ch. "/>
+				<enumeration content="Staff patch"/>
+				<enumeration content="Prg.Chg."/>
+				<enumeration content="Bk.0 Prg.Chg."/>
+				<enumeration content="Bk.32 Prg.Chg."/>
+				<enumeration content="Prg.Chg.x2"/>
+				<enumeration content="Pitch "/>
+				<enumeration content="Notes "/>
+				<enumeration content="Mod"/>
+				<enumeration content="Vol+velocity"/>
+				<enumeration content="Expr+velocity"/>
+				<enumeration content="Expr"/>
+				<enumeration content="Vel"/>
+				<enumeration content="Pitch "/>
+				<enumeration content="Base Vol "/>
+			</string>
+		</entry>
+		<entry key="filter-custom">
+			<string language="en">
+				<enumeration content="For text expressions containing:" key="text-expression"/>
+			</string>
+		</entry>
+		<!-- unified (or universal) action filter types -->
+		<entry key="filter-type">
+			<string language="en">
+				<enumeration content="(No filter)" key="no-filter" id="1"/>
+				<enumeration content="If device name contains:" key="device-name" id="2"/>
+				<enumeration content="If library name (Aria or Kontakt 2/3) contains:" key="library-name" id="10"/>
+				<enumeration content="If device/library name contains:" key="device-or-library-name" id="9"/>
+				<enumeration content="If device name doesn’t contain:" key="exclude-device-name" id="3"/>
+				<enumeration content="If patch name (Aria or Kontakt 2/3) contains:" key="patch-name" id="11"/>
+				<enumeration content="If staff name contains:" key="staff-name" id="4"/>
+				<enumeration content="If MIDI channel # is:" key="midi-channel" id="5"/>
+				<enumeration content="On SoftSynth" key="softsynth" id="6"/>
+				<enumeration content="On default external playback (MIDI Setup)" key="external-midi" id="12"/>
+				<enumeration content="On SoftSynth/default Ext. Playback" key="softsynth-or-external-midi" id="7"/>
+				<enumeration content="Multiple filter :" key="multiple-filter" id="13"/>
+				<enumeration content="For text expressions containing:" key="text-expression" id="8"/>
+			</string>
+		</entry>
+		<!-- unified (or universal) technique types -->
+		<entry key="technique-type">
+			<string language="en">
+				<enumeration content="Undefined" key="undefined" id="0"/>
+				<enumeration content="Solo" key="solo" id="50"/>
+				<enumeration content="Tutti" key="tutti" id="51"/>
+				<enumeration content="Standard" key="standard" id="101"/>
+				<enumeration content="Mute" key="mute" id="102"/>
+				<enumeration content="Cup mute" key="mute-cup" id="103"/>
+				<enumeration content="Harmon mute" key="mute-harmon" id="104"/>
+				<enumeration content="Bucket mute" key="mute-bucket" id="105"/>
+				<enumeration content="Pizzicato" key="pizzicato" id="106"/>
+				<enumeration content="Col legno battuto" key="col-legno-battuto" id="107"/>
+				<enumeration content="Legato" key="legato" id="108"/>
+				<enumeration content="Staccato" key="staccato" id="109"/>
+				<enumeration content="Martelé" key="martellato" id="110"/>
+				<enumeration content="Marcato" key="marcato" id="111"/>
+				<enumeration content="Dynamic approach" key="dynamic-approach" id="112"/>
+				<enumeration content="Tremolo (sampled)" key="tremolo-sampled" id="113"/>
+				<enumeration content="Tremolo+mute (sampled)" key="tremolo-mute-sampled" id="114"/>
+				<enumeration content="Tremolo (triggered)" key="tremolo-triggered" id="115"/>
+				<enumeration content="Tremolo+mute (triggered)" key="tremolo-mute-triggered" id="116"/>
+				<enumeration content="Fluttertongue" key="fluttertongue" id="117"/>
+				<enumeration content="Bartok Pizz." key="bartok-pizz" id="118"/>
+				<enumeration content="Spiccato" key="spiccato" id="119"/>
+				<enumeration content="Up bow" key="up-bow" id="120"/>
+				<enumeration content="Down bow" key="down-bow" id="121"/>
+				<enumeration content="Détaché" key="detache" id="122"/>
+				<enumeration content="1/2 tone trill (sampled)" key="half-tone-trill" id="123"/>
+				<enumeration content="Whole tone trill (sampled)" key="whole-tone-trill" id="124"/>
+				<enumeration content="1/2 tone trill+mute (sampled)" key="half-tone-trill-mute" id="125"/>
+				<enumeration content="Whole tone trill+mute (sampled)" key="whole-tone-trill-mute" id="126"/>
+				<enumeration content="Harmonics" key="harmonics" id="127"/>
+				<enumeration content="Ponticello+tremolo" key="ponticello-tremolo" id="128"/>
+				<enumeration content="Sul ponticello" key="ponticello" id="300"/>
+				<enumeration content="Flautando" key="flautando" id="301"/>
+				<enumeration content="Sul tasto" key="tasto" id="302"/>
+				<enumeration content="Stopped" key="stopped" id="600"/>
+				<enumeration content="Falloffs" key="falloff" id="601"/>
+				<enumeration content="Doits" key="doit" id="602"/>
+				<enumeration content="Muted Staccato (Brass)" key="mute-staccato" id="603"/>
+				<enumeration content="Plucked string harmonics" key="plucked-string-harmonics" id="700"/>
+				<enumeration content="Damped notes" key="damped-notes" id="701"/>
+				<enumeration content="Damped harmonics" key="damped-harmonics" id="702"/>
+				<enumeration content="Rolls (sampled)" key="rolls-sampled" id="800"/>
+				<enumeration content="Custom" key="custom" id="1000"/>
+			</string>
+		</entry>
+	</dictionary>
+</dictionaries>

@@ -1,0 +1,17 @@
+[project]
+name = "doricokit"
+version = "0.1.0"
+description = "Shared Dorico engine (Rust) for the Python tools: codec, container, paths, ..."
+requires-python = ">=3.12"
+license = "MIT"
+
+[build-system]
+requires = ["maturin>=1.16,<2"]
+build-backend = "maturin"
+
+[tool.maturin]
+# The Rust extension becomes doricokit._native; the Python files sit next to it.
+manifest-path = "../crates/doricokit-py/Cargo.toml"
+module-name = "doricokit._native"
+python-source = "."
+python-packages = ["doricokit"]

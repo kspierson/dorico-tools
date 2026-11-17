@@ -1,0 +1,74 @@
+{
+ "plan": {
+  "start": 16.337759999999996,
+  "end": 19.402947445312492,
+  "pedals": "D\u266d C\u266e B\u266e | E\u266e F\u266f G\u266f A\u266e",
+  "low": 52,
+  "high": 84,
+  "range_jitter": 2,
+  "first": 84,
+  "last": 56,
+  "sweep": 0.6164270068359343,
+  "hang": 1.491,
+  "pattern": "DUDUD",
+  "velocity": 127,
+  "seed": 1
+ },
+ "spec": {
+  "pedals": "D\u266d C\u266e B\u266e | E\u266e F\u266f G\u266f A\u266e",
+  "release": 0.25,
+  "dynamics": [],
+  "sweeps": [
+   {
+    "start": 16.337759999999996,
+    "end": 17.001108951848398,
+    "from_string": 35,
+    "to_string": 16,
+    "velocity": 127,
+    "hang": 1.491,
+    "layer": 0,
+    "skip": []
+   },
+   {
+    "start": 17.03467062191428,
+    "end": 17.58813612297073,
+    "from_string": 17,
+    "to_string": 33,
+    "velocity": 127,
+    "hang": 1.491,
+    "layer": 0,
+    "skip": []
+   },
+   {
+    "start": 17.624466889707865,
+    "end": 18.223597563969925,
+    "from_string": 32,
+    "to_string": 16,
+    "velocity": 127,
+    "hang": 1.491,
+    "layer": 0,
+    "skip": []
+   },
+   {
+    "start": 18.261741813337775,
+    "end": 18.928922879030818,
+    "from_string": 17,
+    "to_string": 34,
+    "velocity": 127,
+    "hang": 1.491,
+    "layer": 0,
+    "skip": []
+   },
+   {
+    "start": 18.957667319409307,
+    "end": 19.402947445312492,
+    "from_string": 33,
+    "to_string": 18,
+    "velocity": 127,
+    "hang": 1.491,
+    "layer": 0,
+    "skip": []
+   }
+  ]
+ }
+}

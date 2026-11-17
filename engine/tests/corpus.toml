@@ -1,0 +1,29 @@
+# Test corpora and Dorico locations used by tests and tools (one place for every tool).
+#
+# Paths are as seen from WSL. Relative paths are relative to the repo root.
+# Any entry can be overridden with an environment variable DORICO_<NAME> in upper case,
+# e.g. DORICO_PROJECTS=/some/other/folder. The `paths` crate (engine/crates/paths) and
+# `doricokit.paths` read this file.
+#
+# These folders hold the user's own files: tools read them and never write to them.
+
+[corpus]
+# The user's Dorico projects (32 .dorico files on 2026-10-29). dorigit's real-file tests.
+projects = "/mnt/c/Users/kspie/Documents/Dorico Projects"
+# dorico-hp's capture area (Finale test pieces, MIDI captures, listening copies).
+hp_captures = "/mnt/c/Users/kspie/Documents/HPCaptures"
+# The user's Finale archive (71 .mus + 89 .musx). finale2dorico's real-score tests.
+finale_scores = "/mnt/g/Scores"
+# Shared Dorico test projects A-H (A-D made by dorigit/research/make_test_files.py) and
+# reference files (reference/).
+test_files = "engine/tests/dorico-files"
+
+[corpus.projects_used]
+# Individual projects that tests rely on (file names inside `projects`).
+hp_main = "Harry Potter Cues Plus 5 + LASS3.dorico"
+
+[dorico]
+# Windows locations of the Dorico install and user data (Dorico 5 for now).
+install = "/mnt/c/Program Files/Steinberg/Dorico5"
+appdata = "/mnt/c/Users/kspie/AppData/Roaming/Steinberg/Dorico 5"
+documents = "/mnt/c/Users/kspie/Documents"

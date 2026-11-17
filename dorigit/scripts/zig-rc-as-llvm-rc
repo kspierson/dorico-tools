@@ -1,0 +1,16 @@
+#!/bin/sh
+# Windows resource compiler for cross-builds from Linux/WSL: presents itself to
+# the `embed-resource` crate as llvm-rc, and runs `zig rc` (resinator) instead.
+# Used by scripts/build-windows.sh via RC_x86_64_pc_windows_gnu.
+case "$*" in
+  *"/?"*|*"-V"*) echo "OVERVIEW: LLVM Resource Converter (zig rc adapter)"; echo "  /no-preprocess"; exit 0 ;;
+esac
+for a in "$@"; do
+  shift
+  case "$a" in
+    /C|/c) set -- "$@" "/c" ;;
+    /no-preprocess) set -- "$@" "/:no-preprocess" ;;
+    *) set -- "$@" "$a" ;;
+  esac
+done
+exec zig rc "$@"

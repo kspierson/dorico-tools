@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<script name="HP capture 02 baroque">
+    <shortcut command="" enable="0" in-menu="0" />
+    <lines>
+        <line content="//Human Playback capture: baroque" />
+        <line content='batch process source folder &quot;C:\Users\kspie\Documents\HPCaptures\finale&quot;' />
+        <line content='batch process destination folder &quot;C:\Users\kspie\Documents\HPCaptures\midi\02-baroque&quot;' />
+        <line content="batch process folder" />
+        <line content="human playback baroque" />
+        <line content="save as midi" />
+        <line content="expect to press return" />
+        <line content="close" />
+    </lines>
+</script>

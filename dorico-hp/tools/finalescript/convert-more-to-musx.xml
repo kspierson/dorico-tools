@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<script name="Convert more .mus to .musx">
+    <shortcut command="" enable="0" in-menu="0" />
+    <lines>
+        <line content="//Open each old .mus file and save it as .musx (no other changes)" />
+        <line content='batch process source folder &quot;C:\Users\kspie\Documents\HPCaptures\finale\more-mus&quot;' />
+        <line content='batch process destination folder &quot;C:\Users\kspie\Documents\HPCaptures\finale\more&quot;' />
+        <line content="batch process folder" />
+        <line content="save" />
+        <line content="close" />
+    </lines>
+</script>

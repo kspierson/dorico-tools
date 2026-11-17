@@ -1,0 +1,55 @@
+version = 1
+revision = 5
+requires-python = ">=3.12"
+
+[manifest]
+members = [
+    "dorico-hp",
+    "dorico-test",
+    "doricokit",
+    "finale2dorico",
+]
+
+[[package]]
+name = "dorico-hp"
+version = "0.1.0"
+source = { editable = "dorico-hp" }
+dependencies = [
+    { name = "doricokit" },
+]
+
+[package.metadata]
+requires-dist = [{ name = "doricokit", editable = "engine/python" }]
+
+[[package]]
+name = "dorico-test"
+version = "0.0.0"
+source = { virtual = "." }
+dependencies = [
+    { name = "dorico-hp" },
+    { name = "doricokit" },
+    { name = "finale2dorico" },
+]
+
+[package.metadata]
+requires-dist = [
+    { name = "dorico-hp", editable = "dorico-hp" },
+    { name = "doricokit", editable = "engine/python" },
+    { name = "finale2dorico", editable = "finale2dorico" },
+]
+
+[[package]]
+name = "doricokit"
+version = "0.1.0"
+source = { editable = "engine/python" }
+
+[[package]]
+name = "finale2dorico"
+version = "0.1.0"
+source = { editable = "finale2dorico" }
+dependencies = [
+    { name = "doricokit" },
+]
+
+[package.metadata]
+requires-dist = [{ name = "doricokit", editable = "engine/python" }]

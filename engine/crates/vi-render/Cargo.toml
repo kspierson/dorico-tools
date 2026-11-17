@@ -1,0 +1,17 @@
+[package]
+name = "vi-render"
+description = "Headless VST2 host: render timed MIDI through a virtual instrument to WAV, list its parameters, get/set its state (Project C: VI profiles)"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[[bin]]
+name = "vi-render"
+path = "src/main.rs"
+
+[dependencies]
+anyhow.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+clap.workspace = true
+libloading = "0.8"

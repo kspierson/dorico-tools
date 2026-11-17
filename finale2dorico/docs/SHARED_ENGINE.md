@@ -1,0 +1,73 @@
+# Shared engine for the Dorico tools: inventory and proposal
+
+*2026-10-26. For review; nothing here has been changed yet in dorigit or dorico-hp.*
+
+> **Superseded (2026-10-29)** by [PLANNED_WORK.md §2](../../PLANNED_WORK.md#2-project-s-shared-modules-highest-priority)
+> at the repo root: full module map, migration phases S0-S12, decisions Q-S1..Q-S8. The user made
+> it the highest-priority project. Kept here for history.
+
+The user's direction: one powerful, actually shared engine (changes benefit every tool, no
+duplicated logic), written in the best language for sharing, respecting dorigit's choice of
+Rust.
+
+## 1. What is duplicated today
+
+| Capability | Where it lives now | Copies / overlaps |
+|---|---|---|
+| DTN codec (`score.dtn`/`scorelibrary.dtn` ⇄ tree) | **dorigit** `crates/dorico-format/src/dtn.rs` (reference, round-trip tested) | Python copies: `dorigit/prototype/dorigit/dtn.py`, `dorico-hp/doricohp/dtn.py`, `finale2dorico/f2d/dtn.py` (3 near-identical files) |
+| Dorico XML ⇄ tree | dorigit `xml.rs` | same 3 Python files |
+| `.dorico` container (OCF zip) read/write | dorigit `container.rs` | `dorico-hp/doricohp/project.py`, `finale2dorico/f2d/dorico/writer.py` (`write`), dorigit prototype |
+| Read-side musical model (flows, players, events at bar/beat) | dorigit `model.rs` (+ prototype `model.py`) | `dorico-hp/doricohp/notation.py`, **`finale2dorico/f2d/dorico/read.py`** (reviewer; dynamics groups/links, techniques, trills, ranges), finale2dorico research tools |
+| UI | dorigit app (Tauri 2 + Svelte 5) | the user wants one UI for all features (converter, reviewer, cleaner, editor) on this framework |
+| Writing projects from scratch (players, instruments, flows, events, layouts, dynamics groups/links, pick-ups, tuplets, forced durations) | **finale2dorico** `f2d/dorico/writer.py`, `tree.py` | none (dorigit and dorico-hp edit existing projects) |
+| Dorico install discovery; factory data (instruments, names, factory library, new-project library set) | finale2dorico `f2d/dorico/install.py`, `library.py`, `data/new_project_library.json` | dorico-hp `tools/dorico_maps.py` reads install data too |
+| Playback data (engine data, expression maps, plug-in slots) | dorigit `playback.rs`; dorico-hp `playback.py` | partly overlapping |
+| `.musx` unscramble (EnigmaXML) | dorico-hp `doricohp/musx.py` | `finale2dorico/f2d/finale/musx.py`; also musxdom/denigma (C++) |
+| Finale reading | finale2dorico (C++ `extract/` on musxdom + finale-mus-reader; Python bootstrap) | dorico-hp consumes finale2dorico's IR JSON (`doricohp/model.py`) |
+| Format knowledge (docs) | dorigit `docs/RESEARCH.md`, finale2dorico `docs/RESEARCH.md`, dorico-hp `research/NOTES.md` | overlapping notes on the same structures |
+
+Interface that already crosses projects: **finale2dorico's IR JSON** (`f2d ir`) is read by
+dorico-hp. Any change to `f2d/ir.py` must stay backward compatible or be coordinated.
+
+## 2. Proposal
+
+**One Rust engine, used natively by dorigit and through Python bindings by the Python tools.**
+
+```
+engine/ (Rust workspace, extracted from dorigit's crates; dorigit depends on it by path)
+  dorico-format   codec, XML, container, read model, diff, playback   (exists in dorigit today)
+  dorico-install  find Dorico; instruments/names; factory library; new-project library set
+  dorico-build    write projects: players/instruments/flows/events/layouts, dynamic groups &
+                  links, pick-ups, tuplets, forced durations          (port of f2d writer)
+  doricokit-py    PyO3 bindings (maturin wheel) exposing the three crates to Python
+```
+
+- **dorigit** keeps using `dorico-format` exactly as now (only the path changes).
+- **finale2dorico**: the IR stays the contract. Short term it calls `doricokit` for codec and
+  container; when `dorico-build` exists, `f2d convert` hands it the IR. The Finale side stays
+  C++ (musxdom/finale-mus-reader) behind `f2d-extract`, or later links into Rust via `cxx`.
+- **dorico-hp**: replaces its `dtn.py`/`project.py` with `doricokit`; keeps its playback rules.
+- Format docs: one `engine/docs/FORMAT.md` that each tool's notes link to.
+- One shared test corpus (the user's projects + Steinberg tutorial files, read from disk, never
+  committed) for round-trip and build tests across languages.
+
+Why Rust for the shared core: dorigit already has the tested codec/container/model in Rust; a
+compiled core serves both the Rust app and Python tools; Python bindings (PyO3) are mature;
+the WSL toolchain for Rust + zig is already set up by dorigit.
+
+## 3. Suggested order (each step usable on its own)
+
+1. Extract `dorico-format` into `engine/` (dorigit depends by path; no behaviour change).
+2. `doricokit-py` bindings for codec + container; switch the three Python `dtn.py` copies to it.
+3. Move install discovery + factory library into `dorico-install` (port of `install.py`/`library.py`).
+4. Port the writer to `dorico-build`, driven by finale2dorico's Round tests (every Round file
+   regenerated by both writers must be identical before switching).
+5. Merge format docs.
+
+## 4. Decisions for the user
+
+1. Location: a top-level `engine/` workspace, or keep the crates inside `dorigit/` and have the
+   others depend on them there?
+2. Timing: do step 1-2 now (small, touches dorigit and dorico-hp), or after finale2dorico's
+   writer has settled?
+3. Who owns the engine's docs/tests (likely the dorigit session, since it owns the reference codec)?

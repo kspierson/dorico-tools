@@ -1,0 +1,420 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stagecraft stage editor</title>
+<style>
+:root {
+  --bg: #f7f7f5; --panel: #ffffff; --ink: #1d1d1b; --muted: #6b6b66; --line: #d9d9d4;
+  --grid: #ececE8; --accent: #2f6fdf; --left: #2f6fdf; --right: #d2462f; --both: #8a4fd0;
+  --player: #1f8a5b; --sel: #f0a020; --room: #b8b2a0;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #18181a; --panel: #222225; --ink: #ececea; --muted: #9a9a95; --line: #3a3a3e;
+    --grid: #2a2a2e; --accent: #6d9cff; --left: #6d9cff; --right: #ff7a63; --both: #b58cff;
+    --player: #47c28a; --sel: #ffbe4d; --room: #6f6a5c;
+  }
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 13px/1.4 system-ui, sans-serif; }
+header { display: flex; gap: 12px; align-items: center; padding: 8px 14px; border-bottom: 1px solid var(--line); background: var(--panel); flex-wrap: wrap; }
+header h1 { font-size: 15px; margin: 0; font-weight: 600; }
+header .file { color: var(--muted); font-size: 12px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 40vw; }
+header .grow { flex: 1; }
+button { font: inherit; padding: 4px 10px; border: 1px solid var(--line); background: var(--bg); color: var(--ink); border-radius: 5px; cursor: pointer; }
+button:hover { border-color: var(--accent); }
+button.primary { background: var(--accent); color: #fff; border-color: var(--accent); }
+#status { color: var(--muted); font-size: 12px; min-width: 120px; }
+main { display: grid; grid-template-columns: 1fr 400px; height: calc(100vh - 46px); }
+@media (max-width: 900px) { main { grid-template-columns: 1fr; height: auto; } #view { height: 60vh; } }
+#view { width: 100%; height: 100%; display: block; touch-action: none; user-select: none; }
+aside { overflow-y: auto; overflow-x: hidden; min-width: 0; border-left: 1px solid var(--line); background: var(--panel); padding: 10px 14px 40px; }
+details { border-bottom: 1px solid var(--line); padding: 6px 0; }
+summary { font-weight: 600; cursor: pointer; padding: 4px 0; }
+.row { display: grid; grid-template-columns: 150px minmax(0, 1fr); gap: 8px; align-items: center; margin: 3px 0; }
+.row input[type=file] { max-width: 100%; }
+.row label { color: var(--muted); }
+.row input[type=number], .row input[type=text], .row select { width: 100%; font: inherit; padding: 2px 5px; background: var(--bg); color: var(--ink); border: 1px solid var(--line); border-radius: 4px; }
+.row .pair { display: flex; gap: 6px; align-items: center; }
+.row .pair input[type=range] { flex: 1; }
+.row .pair input[type=number] { width: 70px; }
+.hint { color: var(--muted); font-size: 12px; margin: 4px 0 8px; }
+table { border-collapse: collapse; width: 100%; font-size: 12px; margin-top: 6px; }
+th, td { text-align: right; padding: 2px 4px; border-bottom: 1px solid var(--line); }
+th:first-child, td:first-child, th:nth-child(2), td:nth-child(2) { text-align: left; }
+.btns { display: flex; gap: 6px; flex-wrap: wrap; margin: 6px 0; }
+.stem { display: grid; grid-template-columns: 1fr 150px; gap: 6px; align-items: center; margin: 3px 0; font-size: 12px; }
+.stem span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+svg text { fill: var(--ink); font-size: 11px; pointer-events: none; }
+svg .lbl-muted { fill: var(--muted); }
+</style>
+</head>
+<body>
+<header>
+  <h1 id="title">Stage</h1>
+  <span class="file" id="file"></span>
+  <span class="grow"></span>
+  <span id="status">loading…</span>
+  <button id="fit" title="Fit the view to the stage">Fit view</button>
+  <button id="save" class="primary">Save</button>
+</header>
+<main>
+  <svg id="view" aria-label="Stage seen from above: the microphones at the bottom, the stage going up"></svg>
+  <aside>
+    <details open id="sel-panel"><summary id="sel-title">Selection</summary><div id="sel"></div></details>
+    <details id="space-panel"><summary>Space</summary><div id="space"></div></details>
+    <details id="mics-panel"><summary>Microphones</summary><div id="mics"></div></details>
+    <details id="players-panel"><summary>Players</summary><div id="players"></div></details>
+    <details open id="audition-panel"><summary>Audition</summary><div id="audition"></div></details>
+  </aside>
+</main>
+<script>
+"use strict";
+let stage = null, placements = [], latency = 192, sel = null; // sel = {kind:'player'|'mic', i}
+let view = null; // {x0, y0, scale, w, h}
+const $ = (id) => document.getElementById(id);
+const svg = $("view");
+const NS = "http://www.w3.org/2000/svg";
+
+// ---------------------------------------------------------------- server
+async function api(path, body) {
+  const r = await fetch(path, body === undefined ? {} : { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(body) });
+  if (!r.ok) throw new Error(await r.text());
+  return path.startsWith("/api/ir/") ? r.arrayBuffer() : r.json();
+}
+function status(t) { $("status").textContent = t; }
+let pushTimer = null, pushing = false, pushAgain = false;
+function changed(soon) {
+  clearTimeout(pushTimer);
+  pushTimer = setTimeout(push, soon ? 30 : 150);
+  draw();
+}
+async function push() {
+  if (pushing) { pushAgain = true; return; }
+  pushing = true;
+  try {
+    const r = await api("/api/stage", stage);
+    placements = r.placements;
+    status("unsaved changes");
+    draw(); renderSelection(false);
+    audition.refresh();
+  } catch (e) { status("error: " + e.message); }
+  pushing = false;
+  if (pushAgain) { pushAgain = false; push(); }
+}
+
+// ---------------------------------------------------------------- geometry
+function bounds() {
+  const pts = [];
+  stage.space.mics.forEach(m => pts.push(m.position));
+  stage.players.forEach(p => pts.push(p.position));
+  const r = stage.space.room;
+  if (r) { pts.push([-r.width_m / 2, r.front_m]); pts.push([r.width_m / 2, r.front_m + r.length_m]); }
+  let [x0, x1, y0, y1] = [Infinity, -Infinity, Infinity, -Infinity];
+  pts.forEach(p => { x0 = Math.min(x0, p[0]); x1 = Math.max(x1, p[0]); y0 = Math.min(y0, p[1]); y1 = Math.max(y1, p[1]); });
+  return [x0 - 2, x1 + 2, y0 - 2, y1 + 2];
+}
+function fit() {
+  const [x0, x1, y0, y1] = bounds();
+  const w = svg.clientWidth || 800, h = svg.clientHeight || 600;
+  const scale = Math.min(w / (x1 - x0), h / (y1 - y0));
+  view = { scale, cx: (x0 + x1) / 2, cy: (y0 + y1) / 2, w, h };
+}
+const sx = (x) => view.w / 2 + (x - view.cx) * view.scale;
+const sy = (y) => view.h / 2 - (y - view.cy) * view.scale; // stage goes up the screen
+const wx = (px) => view.cx + (px - view.w / 2) / view.scale;
+const wy = (py) => view.cy - (py - view.h / 2) / view.scale;
+
+function el(tag, attrs, parent) {
+  const e = document.createElementNS(NS, tag);
+  for (const k in attrs) e.setAttribute(k, attrs[k]);
+  (parent || svg).appendChild(e);
+  return e;
+}
+function css(v) { return getComputedStyle(document.documentElement).getPropertyValue(v).trim(); }
+
+// ---------------------------------------------------------------- drawing
+function draw() {
+  if (!stage || !view) return;
+  svg.innerHTML = "";
+  const [x0, x1, y0, y1] = [wx(0), wx(view.w), wy(view.h), wy(0)];
+  for (let x = Math.ceil(x0); x <= x1; x++) el("line", { x1: sx(x), x2: sx(x), y1: 0, y2: view.h, stroke: css("--grid"), "stroke-width": x % 5 ? 0.5 : 1.2 });
+  for (let y = Math.ceil(y0); y <= y1; y++) el("line", { y1: sy(y), y2: sy(y), x1: 0, x2: view.w, stroke: css("--grid"), "stroke-width": y % 5 ? 0.5 : 1.2 });
+  el("line", { x1: 0, x2: view.w, y1: sy(0), y2: sy(0), stroke: css("--muted"), "stroke-dasharray": "4 4" });
+  el("text", { x: 6, y: sy(0) - 4, class: "lbl-muted" }).textContent = "stage edge (y = 0)";
+  const r = stage.space.room;
+  if (r) el("rect", { x: sx(-r.width_m / 2), y: sy(r.front_m + r.length_m), width: r.width_m * view.scale, height: r.length_m * view.scale, fill: "none", stroke: css("--room"), "stroke-width": 2 });
+  // the selected player's paths to each microphone (direct sound)
+  if (sel && sel.kind === "player" && placements[sel.i]) {
+    const p = stage.players[sel.i];
+    const best = {};
+    placements[sel.i].taps.filter(t => t.path === "direct").forEach(t => { if (!(t.mic in best) || t.gain_db > best[t.mic].gain_db) best[t.mic] = t; });
+    const loudest = Object.values(best).sort((a, b) => b.gain_db - a.gain_db).slice(0, 4).map(t => t.mic);
+    for (const name in best) {
+      const m = stage.space.mics.find(m => m.name === name); if (!m) continue;
+      const t = best[name];
+      const op = Math.max(0.12, Math.min(1, 1 + (t.gain_db) / 30));
+      const [ax, ay, bx, by] = [sx(p.position[0]), sy(p.position[1]), sx(m.position[0]), sy(m.position[1])];
+      el("line", { x1: ax, y1: ay, x2: bx, y2: by, stroke: css("--sel"), "stroke-opacity": op, "stroke-width": 1.5 });
+      if (loudest.includes(name)) el("text", { x: ax + 0.8 * (bx - ax) + 4, y: ay + 0.8 * (by - ay) - 3 }).textContent = `${t.delay_ms.toFixed(1)} ms ${t.gain_db.toFixed(1)} dB`;
+    }
+  }
+  stage.space.mics.forEach((m, i) => {
+    const col = m.left_db != null && m.right_db != null ? css("--both") : m.left_db != null ? css("--left") : m.right_db != null ? css("--right") : css("--muted");
+    const g = el("g", { cursor: "grab" });
+    const [x, y] = [sx(m.position[0]), sy(m.position[1])];
+    const d = m.direction, n = Math.hypot(d[0], d[1]) || 1;
+    el("line", { x1: x, y1: y, x2: x + 16 * d[0] / n, y2: y - 16 * d[1] / n, stroke: col, "stroke-width": 2 }, g);
+    el("rect", { x: x - 6, y: y - 6, width: 12, height: 12, fill: col, stroke: isSel("mic", i) ? css("--sel") : "none", "stroke-width": 3 }, g);
+    el("text", { x: x + 9, y: y + 14 }, g).textContent = `${m.name} (z ${m.position[2]})`;
+    drag(g, "mic", i);
+  });
+  stage.players.forEach((p, i) => {
+    const g = el("g", { cursor: "grab" });
+    const [x, y] = [sx(p.position[0]), sy(p.position[1])];
+    const a = p.facing_deg * Math.PI / 180;
+    if (p.width_m > 0) {
+      const hx = Math.cos(a) * p.width_m / 2 * view.scale, hy = Math.sin(a) * p.width_m / 2 * view.scale;
+      el("line", { x1: x - hx, y1: y + hy, x2: x + hx, y2: y - hy, stroke: css("--player"), "stroke-width": 6, "stroke-linecap": "round", "stroke-opacity": 0.5 }, g);
+    }
+    el("line", { x1: x, y1: y, x2: x + 14 * Math.sin(a), y2: y + 14 * Math.cos(a), stroke: css("--player"), "stroke-width": 2 }, g);
+    el("circle", { cx: x, cy: y, r: 7, fill: css("--player"), stroke: isSel("player", i) ? css("--sel") : "none", "stroke-width": 3 }, g);
+    el("text", { x: x + 10, y: y - 6 }, g).textContent = p.name;
+    drag(g, "player", i);
+  });
+}
+const isSel = (k, i) => sel && sel.kind === k && sel.i === i;
+
+function drag(g, kind, i) {
+  g.addEventListener("pointerdown", (e) => {
+    e.preventDefault();
+    select(kind, i);
+    g.setPointerCapture(e.pointerId);
+    const obj = kind === "player" ? stage.players[i] : stage.space.mics[i];
+    const move = (ev) => {
+      const r = svg.getBoundingClientRect();
+      obj.position[0] = Math.round(wx(ev.clientX - r.left) * 20) / 20;
+      obj.position[1] = Math.round(wy(ev.clientY - r.top) * 20) / 20;
+      changed(); renderSelection(true);
+    };
+    const up = () => { g.removeEventListener("pointermove", move); g.removeEventListener("pointerup", up); changed(true); };
+    g.addEventListener("pointermove", move);
+    g.addEventListener("pointerup", up);
+  });
+}
+
+// ---------------------------------------------------------------- forms
+function row(parent, label, input, hint) {
+  const d = document.createElement("div"); d.className = "row";
+  const l = document.createElement("label"); l.textContent = label; if (hint) l.title = hint;
+  d.append(l, input); parent.appendChild(d); return input;
+}
+function num(parent, label, get, set, opts = {}) {
+  const i = document.createElement("input"); i.type = "number"; i.step = opts.step || "any";
+  const v = get(); i.value = v == null ? "" : v;
+  if (opts.blank) i.placeholder = opts.blank;
+  i.onchange = () => { const t = i.value.trim(); set(t === "" ? (opts.blank ? null : 0) : parseFloat(t)); changed(true); };
+  return row(parent, label, i, opts.hint);
+}
+function slider(parent, label, get, set, min, max, step, hint) {
+  const wrap = document.createElement("div"); wrap.className = "pair";
+  const r = document.createElement("input"); r.type = "range"; r.min = min; r.max = max; r.step = step; r.value = get();
+  const n = document.createElement("input"); n.type = "number"; n.step = step; n.value = get();
+  r.oninput = () => { n.value = r.value; set(parseFloat(r.value)); changed(); };
+  n.onchange = () => { r.value = n.value; set(parseFloat(n.value)); changed(true); };
+  wrap.append(r, n); return row(parent, label, wrap, hint);
+}
+function text(parent, label, get, set) {
+  const i = document.createElement("input"); i.type = "text"; i.value = get() || "";
+  i.onchange = () => { set(i.value); changed(true); };
+  return row(parent, label, i);
+}
+function check(parent, label, get, set, hint) {
+  const i = document.createElement("input"); i.type = "checkbox"; i.checked = !!get();
+  i.onchange = () => { set(i.checked); changed(true); renderAll(); };
+  return row(parent, label, i, hint);
+}
+function vec(parent, label, arr, names) {
+  names.forEach((n, k) => num(parent, `${label} ${n}`, () => arr[k], (v) => arr[k] = v, { step: 0.05 }));
+}
+function hint(parent, t) { const p = document.createElement("div"); p.className = "hint"; p.textContent = t; parent.appendChild(p); }
+function buttons(parent, list) {
+  const d = document.createElement("div"); d.className = "btns";
+  list.forEach(([t, f]) => { const b = document.createElement("button"); b.textContent = t; b.onclick = f; d.appendChild(b); });
+  parent.appendChild(d);
+}
+
+function select(kind, i) { sel = { kind, i }; renderSelection(false); draw(); $("sel-panel").open = true; }
+
+function renderSelection(onlyTaps) {
+  const box = $("sel");
+  if (!sel) { box.innerHTML = ""; hint(box, "Click a player (circle) or a microphone (square) on the stage. Drag to move it."); $("sel-title").textContent = "Selection"; return; }
+  if (sel.kind === "player") {
+    const p = stage.players[sel.i]; if (!p) { sel = null; return renderSelection(); }
+    $("sel-title").textContent = `Player: ${p.name}`;
+    if (!onlyTaps) {
+      box.innerHTML = "";
+      text(box, "name", () => p.name, v => p.name = v);
+      vec(box, "position", p.position, ["x", "y", "z"]);
+      num(box, "gain dB", () => p.gain_db, v => p.gain_db = v, { step: 0.5 });
+      slider(box, "brightness dB @16k", () => p.brightness_db, v => p.brightness_db = v, -24, 24, 0.5, "Presence: lifts or lowers the top, independent of distance");
+      num(box, "VSS2 air", () => p.air, v => p.air = v, { blank: "none", hint: "VSS2's Air dial (−100 … 100); leave blank and use brightness + the space's air absorption instead" });
+      slider(box, "facing °", () => p.facing_deg, v => p.facing_deg = v, -180, 180, 1, "0 = toward the microphones");
+      slider(box, "width m", () => p.width_m, v => p.width_m = v, 0, 8, 0.1, "A section: left input at the left end, right input at the right end");
+      text(box, "note", () => p.note, v => p.note = v);
+      buttons(box, [["Duplicate", () => { const c = structuredClone(p); c.name += " copy"; c.position[0] += 1; stage.players.push(c); select("player", stage.players.length - 1); changed(true); renderAll(); }],
+                    ["Delete", () => { stage.players.splice(sel.i, 1); sel = null; changed(true); renderAll(); }]]);
+      const t = document.createElement("div"); t.id = "taps"; box.appendChild(t);
+    }
+    const pl = placements[sel.i], t = $("taps");
+    if (!pl || !t) return;
+    let h = `<div class="hint">Send to the reflection layer: ${pl.send_db == null ? "— (no layer in this space)" : pl.send_db.toFixed(1) + " dB"}</div>`;
+    h += "<table><tr><th>out</th><th>mic / path</th><th>input</th><th>delay ms</th><th>gain dB</th></tr>";
+    pl.taps.forEach(x => { h += `<tr><td>${x.output ? "R" : "L"}</td><td>${x.mic}${x.path === "direct" ? "" : " · " + x.path}</td><td>${["L", "R", "both"][x.input]}</td><td>${x.delay_ms.toFixed(2)}</td><td>${x.gain_db.toFixed(1)}</td></tr>`; });
+    t.innerHTML = h + "</table>";
+  } else {
+    const m = stage.space.mics[sel.i]; if (!m) { sel = null; return renderSelection(); }
+    $("sel-title").textContent = `Microphone: ${m.name}`;
+    if (onlyTaps) return;
+    box.innerHTML = "";
+    text(box, "name", () => m.name, v => m.name = v);
+    vec(box, "position", m.position, ["x", "y", "z"]);
+    vec(box, "direction", m.direction, ["x", "y", "z"]);
+    slider(box, "pattern", () => m.pattern, v => m.pattern = v, 0, 1, 0.05, "0 omni, 0.5 cardioid, 1 figure of eight");
+    num(box, "into left dB", () => m.left_db, v => m.left_db = v, { blank: "off" });
+    num(box, "into right dB", () => m.right_db, v => m.right_db = v, { blank: "off" });
+    num(box, "extra delay ms", () => m.delay_ms, v => m.delay_ms = v, { hint: "Time alignment of a spot mic" });
+    buttons(box, [["Duplicate", () => { const c = structuredClone(m); c.name += "'"; c.position[0] += 1; stage.space.mics.push(c); select("mic", stage.space.mics.length - 1); changed(true); renderAll(); }],
+                  ["Delete", () => { stage.space.mics.splice(sel.i, 1); sel = null; changed(true); renderAll(); }]]);
+  }
+}
+
+function renderSpace() {
+  const sp = stage.space, box = $("space"); box.innerHTML = "";
+  text(box, "name", () => sp.name, v => sp.name = v);
+  slider(box, "depth delay", () => sp.depth_delay, v => sp.depth_delay = v, 0, 1, 0.05, "0 = everyone's nearest mic at the same moment (VSS2); 1 = real arrival times");
+  num(box, "depth reference m", () => sp.depth_reference_m, v => sp.depth_reference_m = v, { step: 0.5, hint: "This distance arrives with no delay when depth delay > 0" });
+  check(box, "exact delays", () => sp.exact_delays, v => sp.exact_delays = v, "Off = whole samples, as VSS2");
+  slider(box, "distance exponent", () => sp.distance_exponent, v => sp.distance_exponent = v, 0.5, 1.5, 0.01, "Level ∝ 1/distance^exponent; 1 is physical");
+  num(box, "level dB", () => sp.level_db, v => sp.level_db = v, { step: 0.5 });
+  num(box, "speed of sound m/s", () => sp.speed_of_sound, v => sp.speed_of_sound = v, { step: 1 });
+  check(box, "air absorption", () => sp.air_absorption, v => sp.air_absorption = v, "Physical treble loss by path length (ISO 9613-1)");
+  if (sp.air_absorption) {
+    num(box, "temperature °C", () => sp.temperature_c, v => sp.temperature_c = v, { step: 1 });
+    num(box, "humidity %", () => sp.humidity_pct, v => sp.humidity_pct = v, { step: 5 });
+  }
+  check(box, "room (first reflections)", () => !!sp.room, v => sp.room = v ? { width_m: 30, length_m: 35, height_m: 12, front_m: -8, floor_db: -1, ceiling_db: -6, left_db: -3, right_db: -3, front_db: -3, back_db: -3 } : null);
+  if (sp.room) {
+    const r = sp.room;
+    ["width_m", "length_m", "height_m", "front_m"].forEach(k => num(box, "room " + k.replace("_m", " m"), () => r[k], v => r[k] = v, { step: 0.5 }));
+    ["floor_db", "ceiling_db", "left_db", "right_db", "front_db", "back_db"].forEach(k => num(box, k.replace("_db", "") + " reflection dB", () => r[k], v => r[k] = v, { blank: "none", step: 0.5 }));
+  }
+  check(box, "reflection layer sends", () => !!sp.reflections, v => sp.reflections = v ? { send_db: -15, per_m_db: 0.5, reference_m: 8 } : null);
+  if (sp.reflections) {
+    const s = sp.reflections;
+    num(box, "send dB", () => s.send_db, v => s.send_db = v, { step: 0.5, hint: "Send level at the reference distance" });
+    num(box, "per metre dB", () => s.per_m_db, v => s.per_m_db = v, { step: 0.1, hint: "Positive = the back wetter" });
+    num(box, "reference m", () => s.reference_m, v => s.reference_m = v, { step: 0.5 });
+    hint(box, "Send levels show per player; the shared layer itself is your reverb (e.g. the Fx Reverb Altiverb) — not auditioned here yet.");
+  }
+}
+
+function renderLists() {
+  const pb = $("players"); pb.innerHTML = "";
+  buttons(pb, [["Add player", () => { stage.players.push({ name: "New player", position: [0, 6, 1.5], gain_db: 0, air: null, brightness_db: 0, facing_deg: 0, width_m: 0, note: "" }); select("player", stage.players.length - 1); changed(true); renderAll(); }]]);
+  stage.players.forEach((p, i) => { const b = document.createElement("button"); b.textContent = p.name; b.style.margin = "2px"; b.onclick = () => select("player", i); pb.appendChild(b); });
+  const mb = $("mics"); mb.innerHTML = "";
+  buttons(mb, [["Add microphone", () => { stage.space.mics.push({ name: "Spot", position: [0, 3, 3.5], direction: [0, 0, -1], pattern: 0.5, left_db: -12, right_db: -12, delay_ms: 0 }); select("mic", stage.space.mics.length - 1); changed(true); renderAll(); }]]);
+  stage.space.mics.forEach((m, i) => { const b = document.createElement("button"); b.textContent = m.name; b.style.margin = "2px"; b.onclick = () => select("mic", i); mb.appendChild(b); });
+  hint(mb, "Any microphone plan: tree, outriggers, section spots, ambients. Each player reaches every mic (bleed), delayed and scaled by distance.");
+}
+
+function renderAll() { $("title").textContent = stage.space.name || "Stage"; renderSelection(false); renderSpace(); renderLists(); audition.render(); draw(); }
+
+// ---------------------------------------------------------------- audition (WebAudio)
+const audition = {
+  ctx: null, stems: [], nodes: [], playing: false, start: 0, gain: -6, timer: null,
+  render() {
+    const box = $("audition"); box.innerHTML = "";
+    hint(box, "Load dry, unplaced stems (WAV, 48 kHz best). Each goes to a player (matched by name); mono stems feed both inputs, stereo stems a section's two ends. Direct sound and first reflections only.");
+    const f = document.createElement("input"); f.type = "file"; f.multiple = true; f.accept = ".wav,audio/wav";
+    f.onchange = () => this.load(f.files);
+    row(box, "stems", f);
+    num(box, "start s", () => this.start, v => this.start = v, { step: 1 });
+    num(box, "master dB", () => this.gain, v => { this.gain = v; if (this.master) this.master.gain.value = Math.pow(10, v / 20); });
+    buttons(box, [["Play", () => this.play()], ["Stop", () => this.stop()]]);
+    this.stems.forEach(s => {
+      const d = document.createElement("div"); d.className = "stem";
+      const n = document.createElement("span"); n.textContent = `${s.name} (${s.buffer.numberOfChannels === 1 ? "mono" : "stereo"})`;
+      const sel = document.createElement("select");
+      sel.innerHTML = `<option value="-1">(off)</option>` + stage.players.map((p, i) => `<option value="${i}">${p.name}</option>`).join("");
+      sel.value = s.player; sel.onchange = () => { s.player = parseInt(sel.value); if (this.playing) this.play(); };
+      d.append(n, sel); box.appendChild(d);
+    });
+  },
+  async load(files) {
+    if (!this.ctx) this.ctx = new AudioContext({ sampleRate: 48000 });
+    for (const file of files) {
+      try {
+        const buffer = await this.ctx.decodeAudioData(await file.arrayBuffer());
+        const base = file.name.replace(/\.[^.]+$/, "").toLowerCase();
+        let player = stage.players.findIndex(p => base.includes(p.name.toLowerCase()));
+        this.stems.push({ name: file.name, buffer, player });
+      } catch (e) { status(`${file.name}: ${e.message}`); }
+    }
+    this.render();
+  },
+  async ir(i) {
+    const buf = new Float32Array(await api(`/api/ir/${i}`));
+    const n = buf.length / 4, b = this.ctx.createBuffer(4, n, 48000);
+    for (let c = 0; c < 4; c++) b.copyToChannel(buf.subarray(c * n, (c + 1) * n), c);
+    return b;
+  },
+  async play() {
+    this.stop();
+    if (!this.ctx) this.ctx = new AudioContext({ sampleRate: 48000 });
+    await this.ctx.resume();
+    this.master = this.ctx.createGain(); this.master.gain.value = Math.pow(10, this.gain / 20); this.master.connect(this.ctx.destination);
+    const when = this.ctx.currentTime + 0.3;
+    for (const s of this.stems.filter(s => s.player >= 0)) {
+      const src = this.ctx.createBufferSource(); src.buffer = s.buffer;
+      const conv = this.ctx.createConvolver(); conv.normalize = false; conv.buffer = await this.ir(s.player);
+      src.connect(conv); conv.connect(this.master);
+      src.start(when, Math.max(0, this.start));
+      this.nodes.push({ s, src, conv });
+    }
+    this.playing = true; status("playing");
+  },
+  stop() { this.nodes.forEach(n => { try { n.src.stop(); } catch (e) {} n.conv.disconnect(); }); this.nodes = []; this.playing = false; },
+  refresh() {
+    if (!this.playing) return;
+    clearTimeout(this.timer);
+    this.timer = setTimeout(async () => {
+      for (const n of this.nodes) {
+        const fresh = this.ctx.createConvolver(); fresh.normalize = false; fresh.buffer = await this.ir(n.s.player);
+        n.src.connect(fresh); fresh.connect(this.master);
+        n.src.disconnect(n.conv); n.conv.disconnect(); n.conv = fresh;
+      }
+    }, 250);
+  },
+};
+
+// ---------------------------------------------------------------- start
+$("save").onclick = async () => { try { const r = await api("/api/save", {}); status("saved " + new Date().toLocaleTimeString()); } catch (e) { status("save failed: " + e.message); } };
+$("fit").onclick = () => { fit(); draw(); };
+window.addEventListener("resize", () => { fit(); draw(); });
+(async () => {
+  try {
+    const r = await api("/api/stage");
+    stage = r.stage; placements = r.placements; latency = r.latency;
+    $("file").textContent = r.file;
+    fit(); renderAll(); status("loaded");
+    const m = location.hash.match(/^#(player|mic)=(\d+)$/); // a link straight to a selection
+    if (m) select(m[1], parseInt(m[2]));
+  } catch (e) { status("error: " + e.message); }
+})();
+</script>
+</body>
+</html>

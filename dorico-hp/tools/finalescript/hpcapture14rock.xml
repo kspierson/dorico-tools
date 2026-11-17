@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<script name="HP capture 14 rock">
+    <shortcut command="" enable="0" in-menu="0" />
+    <lines>
+        <line content="//Human Playback capture: rock" />
+        <line content='batch process source folder &quot;C:\Users\kspie\Documents\HPCaptures\finale&quot;' />
+        <line content='batch process destination folder &quot;C:\Users\kspie\Documents\HPCaptures\midi\14-rock&quot;' />
+        <line content="batch process folder" />
+        <line content="human playback rock" />
+        <line content="save as midi" />
+        <line content="expect to press return" />
+        <line content="close" />
+    </lines>
+</script>

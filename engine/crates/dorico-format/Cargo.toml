@@ -1,0 +1,12 @@
+[package]
+name = "dorico-format"
+description = "Read/write Dorico project files (.dorico zip, DTN binary score), plus a musical model and diff"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[dependencies]
+anyhow.workspace = true
+serde.workspace = true
+quick-xml.workspace = true
+zip.workspace = true

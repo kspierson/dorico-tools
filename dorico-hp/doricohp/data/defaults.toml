@@ -1,0 +1,130 @@
+# Engine defaults. Every value can be overridden by a style, a library profile,
+# an instrument entry inside a library profile, or a project file (<project>.hp.toml).
+# Units: levels in dynamic steps (mf = 0, mp = -1, p = -2, pp = -3; f = +1, ff = +2 …), times in ms, lengths in
+# crotchets unless stated. Sources of each default are in research/hp-engine.md and
+# research/score-vs-playback.md.
+
+[style]
+# which HP style to start from (research/hp-presets.tsv names, case-insensitive)
+name = "Standard"
+
+[dynamics]
+# hairpin without a following dynamic: how far it goes
+hairpin_default_steps = 2.0
+# ... and what happens after it. "swell": a local swell, the level returns to where it was
+# by the next phrase (first note after a rest or starting a slur, at most
+# open_hairpin_return_bars after the hairpin); "stay": raised until the next dynamic.
+# The user's choice 2026-10-31: in their HP FLUTE playback copy every open cresc. is
+# followed by a written return to mf/mp. Applied as shaping, so Dorico's own literal
+# reading stays the "marked" level and the dynamics lane (later) corrects it.
+open_hairpin = "swell"
+open_hairpin_return_bars = 1.0
+# hairpin curve: 0 = straight line, 1 = full S-curve (HP: S-shaped, slow at both ends)
+hairpin_s_curve = 0.7
+# level when a part has no dynamic at all
+unmarked_level = 0.5
+
+[espressivo]
+# HP "automatic espressivo": an arch on each long note not under a written hairpin.
+# depth (steps) = depth_at_mood_76 * mood / 76   (Last Temptation: ~1.8 steps at mood 76)
+enabled = true
+depth_at_mood_76 = 1.8
+min_crotchets = 1.1          # notes of one crotchet or less stay flat (threshold is in beats)
+peak_at = 0.45               # fraction of the note
+end_drop = 0.2               # steps below the start level at the note end
+headroom_level = 2.0         # above this level the swell shrinks to nothing at +3
+
+[phrase]
+# shaping the user added by hand in playback copies (score-vs-playback.md)
+enabled = true
+rise_swell_steps = 0.6       # crescendo across a rising slurred group, per octave of rise
+arrival_steps = 0.5          # crescendo into a longer/higher note on a beat
+arrival_crotchets = 2.0      # how long before the arrival it starts
+release_steps = 0.6          # diminuendo on the last note before a rest / slur end
+release_min_crotchets = 0.75 # only on notes at least this long
+
+[accents]
+# metric accents as velocity (attack) offsets: beat 1 and 3 above 2/4 (HP Standard 93/89/91/89 at 25)
+per_unit_beat1 = 0.16        # velocity per rhythmicAccents unit on the downbeat
+per_unit_beat3 = 0.08        # on the other strong beat (4/4: beat 3)
+per_unit_offbeat = -0.04     # on quaver off-beats
+syncopation_invert = true    # styles with emphasizeShortSyncops make off-beats louder
+
+[timing]
+# rhythmic feel: later onsets after the downbeat, shrinking towards the barline
+# delay_ms = rhythmicFeel * ms_per_unit * shape(position in bar)
+ms_per_unit = 0.8
+downbeat_ms_per_unit = 0.08
+# swing passages: weak-beat delays are scaled by this (0 = off) so they don't fight Dorico's swing
+under_swing = 0.0
+# unslurred notes always end at least this long before the next note starts, so legato
+# instruments (SWAM, LASS) re-articulate instead of slurring
+min_gap_ms = 25
+# notes shorter than this (crotchets) get proportionally less rhythmic-feel delay
+# (semiquavers half, demisemiquavers a quarter); HP applies it fully, which makes runs hitch
+short_note_ref = 0.5
+
+[articulation]
+# Short articulations are capped in time as well as by Dorico's percentage, so fast and slow
+# notes both come out crisp (Dorico's 50 % staccato on a slow note is long; on a fast one
+# fine). From the user's hand-tuned flute solo (HP project, bars 19-40): run notes ended up
+# ~36 ms long, separated notes ~71 ms, whether written as staccato or staccatissimo.
+staccato_max_ms = 90
+staccatissimo_max_ms = 50
+# passages marked light (brillante, leggiero, scherzando…): caps multiplied by this.
+# 0.45 → staccato ≤ ~40 ms on every note value: in the user's HP FLUTE playback copy
+# (2026-10-31) the "stacc., brillante" 32nds and 16ths all play ~36 ms (the 8ths 71 ms only
+# because staccatissimo was Dorico's shortest choice); the user asked for ~36–40 ms throughout.
+light_factor = 0.45
+# nothing shorter than this, so the note still speaks
+min_ms = 30
+
+[attack]
+# velocity for instruments whose dynamics are on a controller (velocity = attack only)
+# velocity = base + per_step * level (clipped to min/max), then accents added
+base = 96
+per_step = 7
+min = 40
+max = 124
+# passage character (passages.py): lighter attacks under leggiero/brillante, firmer under marcato
+light_offset = -6
+marcato_offset = 8
+
+[vibrato]
+# per-note vibrato curves, only for libraries that name a vibrato controller
+enabled = true
+depth_cc = 0                 # 0 = library has no vibrato controller
+rate_cc = 0
+base_depth = 40              # CC value on a plain note at mf
+per_step = 6                 # more vibrato when louder
+max_depth = 100              # cap (SWAM brass lip-trill near the top)
+min_depth = 0
+onset_ms = 180               # straight tone before vibrato starts on a long note
+bloom_ms = 450               # time to reach full depth
+short_note_ms = 250          # notes shorter than this get short_note_depth
+short_note_depth = 15
+espressivo_extra = 15        # extra depth at the espressivo peak on long notes
+release_ms = 120             # depth falls away over the last ms of a note before a rest
+rate_base = 0                # 0 = don't write rate
+rate_peak = 0
+
+[latency]
+# per-note attack compensation (ms earlier); constant look-ahead is handled by the
+# latency-reporter plug-in, not here
+attack_ms = 0
+legato_ms = 0
+
+[balance]
+# level offset in steps per family (filled by library/project profiles)
+strings = 0.0
+woodwind = 0.0
+brass = 0.0
+keyboard = 0.0
+harp = 0.0
+"pitched percussion" = 0.0
+percussion = 0.0
+voice = 0.0
+other = 0.0
+# soften basses: notes below this pitch get level * (1 - soften) offset in steps
+soften_below_pitch = 48
+soften_steps = 0.0

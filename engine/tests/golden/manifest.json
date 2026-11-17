@@ -1,0 +1,1557 @@
+{
+ "cases": {
+  "dorico-hp/apply/only-timing": {
+   "exit": 0,
+   "seconds": 9.5,
+   "files": {
+    "stdout": {
+     "sha256": "a0fb5850794523224c18535d838966c2fa222b47c74de1e4d1a562d3768628dd",
+     "size": 42029
+    },
+    "out.dorico": {
+     "sha256": "9e381369774f5c0677ee2d765d422f8b701d09ca292504e1fa8311f2cdadf859",
+     "size": 18408326,
+     "entries": {
+      "000 META-INF/": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 deflated 2021-11-28-17-55-52",
+      "001 META-INF/container.xml": "d7c0eb533c81b13951c3b58daf2108d9bbcc4777e321bc03acdb5286e2424be6 deflated 2021-11-28-18-35-14",
+      "002 score.dtn": "e1d0d54eb232e53cc85da13389320dd7b5c5e15dc5f2105de7b4f78612a5a3b4 deflated 2021-11-28-18-35-2",
+      "003 scorelibrary.dtn": "bccd20cb3d8d81e1fcfa42e852dfc852ad8eadb130d2ef647b1ca62e0ff939e1 deflated 2021-11-28-18-35-2",
+      "004 supplementary_data/": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 deflated 2021-11-28-18-35-14",
+      "005 supplementary_data/graphics/": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 deflated 2021-11-28-18-35-2",
+      "006 supplementary_data/graphics/graphicManifest.xml": "69ba2c73487ce34494ad9da36b8d497707b668efc04222e68cb2f4c743280235 deflated 2021-11-28-18-35-2",
+      "007 supplementary_data/scorelibraryresources/": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 deflated 2021-11-28-18-35-2",
+      "008 supplementary_data/vstaudioengine/": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 deflated 2021-11-28-18-35-14",
+      "009 supplementary_data/vstaudioengine/enginedata": "25d838cc457928f8df5d22d688c34a3cf84cc7bf9e9c9c03710ff2ee69433329 deflated 2021-11-28-18-35-14",
+      "010 supplementary_data/workspace/": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 deflated 2021-11-28-18-35-14",
+      "011 supplementary_data/workspace/workspace.xml": "e90dab1fc7d84d50f3cd167c53edcc783748f3d8ba1a8508997c3fdb219b01af deflated 2021-11-28-18-35-14"
+     }
+    }
+   }
+  },
+  "dorico-hp/apply/only-velocity": {
+   "exit": 0,
+   "seconds": 8.3,
+   "files": {
+    "stdout": {
+     "sha256": "5b9b928d4ace59304f40a5733014854b788988472250fdc4d8b1600c1f773e32",
+     "size": 44026
+    },
+    "out.dorico": {
+     "sha256": "cf500c291fd105ff819cd44355550e1e015127977040ed58d9ab4cab5de86fee",
+     "size": 18159152,
+     "entries": {
+      "000 META-INF/": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 deflated 2021-11-28-17-55-52",
+      "001 META-INF/container.xml": "d7c0eb533c81b13951c3b58daf2108d9bbcc4777e321bc03acdb5286e2424be6 deflated 2021-11-28-18-35-14",
+      "002 score.dtn": "58634daa6f8c29f5ab5c73301d0004a9742a86c9a1c73b461d5552a750f8a099 deflated 2021-11-28-18-35-2",
+      "003 scorelibrary.dtn": "bccd20cb3d8d81e1fcfa42e852dfc852ad8eadb130d2ef647b1ca62e0ff939e1 deflated 2021-11-28-18-35-2",
+      "004 supplementary_data/": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 deflated 2021-11-28-18-35-14",
+      "005 supplementary_data/graphics/": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 deflated 2021-11-28-18-35-2",
+      "006 supplementary_data/graphics/graphicManifest.xml": "69ba2c73487ce34494ad9da36b8d497707b668efc04222e68cb2f4c743280235 deflated 2021-11-28-18-35-2",
+      "007 supplementary_data/scorelibraryresources/": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 deflated 2021-11-28-18-35-2",
+      "008 supplementary_data/vstaudioengine/": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 deflated 2021-11-28-18-35-14",
+      "009 supplementary_data/vstaudioengine/enginedata": "25d838cc457928f8df5d22d688c34a3cf84cc7bf9e9c9c03710ff2ee69433329 deflated 2021-11-28-18-35-14",
+      "010 supplementary_data/workspace/": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 deflated 2021-11-28-18-35-14",
+      "011 supplementary_data/workspace/workspace.xml": "e90dab1fc7d84d50f3cd167c53edcc783748f3d8ba1a8508997c3fdb219b01af deflated 2021-11-28-18-35-14"
+     }
+    }
+   }
+  },
+  "dorico-hp/apply/only-vibrato": {
+   "exit": 0,
+   "seconds": 8.3,
+   "files": {
+    "stdout": {
+     "sha256": "739d5ffe3cfe937113675a5bfe678b59e27fed7122c5bd6444c7bd1d35adc02c",
+     "size": 42273
+    },
+    "out.dorico": {
+     "sha256": "03e90718c12c5596ebc81aa8a72ccfa54d13eb7bd572aaa5dcba277df9035e7e",
+     "size": 18647034,
+     "entries": {
+      "000 META-INF/": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 deflated 2021-11-28-17-55-52",
+      "001 META-INF/container.xml": "d7c0eb533c81b13951c3b58daf2108d9bbcc4777e321bc03acdb5286e2424be6 deflated 2021-11-28-18-35-14",
+      "002 score.dtn": "7fd858aa79e16b8a8be66e7c21ae1b97a2ad8ffafdcb6f072782d97773191673 deflated 2021-11-28-18-35-2",
+      "003 scorelibrary.dtn": "bccd20cb3d8d81e1fcfa42e852dfc852ad8eadb130d2ef647b1ca62e0ff939e1 deflated 2021-11-28-18-35-2",
+      "004 supplementary_data/": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 deflated 2021-11-28-18-35-14",
+      "005 supplementary_data/graphics/": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 deflated 2021-11-28-18-35-2",
+      "006 supplementary_data/graphics/graphicManifest.xml": "69ba2c73487ce34494ad9da36b8d497707b668efc04222e68cb2f4c743280235 deflated 2021-11-28-18-35-2",
+      "007 supplementary_data/scorelibraryresources/": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 deflated 2021-11-28-18-35-2",
+      "008 supplementary_data/vstaudioengine/": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 deflated 2021-11-28-18-35-14",
+      "009 supplementary_data/vstaudioengine/enginedata": "25d838cc457928f8df5d22d688c34a3cf84cc7bf9e9c9c03710ff2ee69433329 deflated 2021-11-28-18-35-14",
+      "010 supplementary_data/workspace/": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 deflated 2021-11-28-18-35-14",
+      "011 supplementary_data/workspace/workspace.xml": "e90dab1fc7d84d50f3cd167c53edcc783748f3d8ba1a8508997c3fdb219b01af deflated 2021-11-28-18-35-14"
+     }
+    }
+   }
+  },
+  "dorico-hp/apply/reapply": {
+   "exit": 0,
+   "seconds": 29.2,
+   "files": {
+    "stdout": {
+     "sha256": "27b1912b0269a182de43d551568f24692bdc7e5afcd193a44032d4b68e0c0a95",
+     "size": 54113
+    },
+    "b.dorico": {
+     "sha256": "c138a26ff7ff99b38073e7448a67454fb1ca407e5a75a39a80851f406e1d7e7a",
+     "size": 20042182,
+     "entries": {
+      "000 META-INF/": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 deflated 2021-11-28-17-55-52",
+      "001 META-INF/container.xml": "d7c0eb533c81b13951c3b58daf2108d9bbcc4777e321bc03acdb5286e2424be6 deflated 2021-11-28-18-35-14",
+      "002 score.dtn": "f4a28466bf76a7246f784c22cbc2c5e3e3753cd9a59f3f64486d2a9d8598771d deflated 2021-11-28-18-35-2",
+      "003 scorelibrary.dtn": "bccd20cb3d8d81e1fcfa42e852dfc852ad8eadb130d2ef647b1ca62e0ff939e1 deflated 2021-11-28-18-35-2",
+      "004 supplementary_data/": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 deflated 2021-11-28-18-35-14",
+      "005 supplementary_data/graphics/": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 deflated 2021-11-28-18-35-2",
+      "006 supplementary_data/graphics/graphicManifest.xml": "69ba2c73487ce34494ad9da36b8d497707b668efc04222e68cb2f4c743280235 deflated 2021-11-28-18-35-2",
+      "007 supplementary_data/scorelibraryresources/": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 deflated 2021-11-28-18-35-2",
+      "008 supplementary_data/vstaudioengine/": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 deflated 2021-11-28-18-35-14",
+      "009 supplementary_data/vstaudioengine/enginedata": "25d838cc457928f8df5d22d688c34a3cf84cc7bf9e9c9c03710ff2ee69433329 deflated 2021-11-28-18-35-14",
+      "010 supplementary_data/workspace/": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 deflated 2021-11-28-18-35-14",
+      "011 supplementary_data/workspace/workspace.xml": "e90dab1fc7d84d50f3cd167c53edcc783748f3d8ba1a8508997c3fdb219b01af deflated 2021-11-28-18-35-14"
+     }
+    }
+   }
+  },
+  "dorico-hp/apply/romantic": {
+   "exit": 0,
+   "seconds": 13.6,
+   "files": {
+    "stdout": {
+     "sha256": "80f66dc7103d674e15653a5ec976c3a23b8f67618c57781ad11ed4b6aa2623a7",
+     "size": 54056
+    },
+    "out.dorico": {
+     "sha256": "783049b201bdf30b348483ff7e7ecd4c403936599ac0110d5beead59a5946cb3",
+     "size": 20040356,
+     "entries": {
+      "000 META-INF/": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 deflated 2021-11-28-17-55-52",
+      "001 META-INF/container.xml": "d7c0eb533c81b13951c3b58daf2108d9bbcc4777e321bc03acdb5286e2424be6 deflated 2021-11-28-18-35-14",
+      "002 score.dtn": "19f7973cf39b4cb80b54bfc01b7e66c526567cb6d85b0461b7e3cbc857088406 deflated 2021-11-28-18-35-2",
+      "003 scorelibrary.dtn": "bccd20cb3d8d81e1fcfa42e852dfc852ad8eadb130d2ef647b1ca62e0ff939e1 deflated 2021-11-28-18-35-2",
+      "004 supplementary_data/": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 deflated 2021-11-28-18-35-14",
+      "005 supplementary_data/graphics/": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 deflated 2021-11-28-18-35-2",
+      "006 supplementary_data/graphics/graphicManifest.xml": "69ba2c73487ce34494ad9da36b8d497707b668efc04222e68cb2f4c743280235 deflated 2021-11-28-18-35-2",
+      "007 supplementary_data/scorelibraryresources/": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 deflated 2021-11-28-18-35-2",
+      "008 supplementary_data/vstaudioengine/": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 deflated 2021-11-28-18-35-14",
+      "009 supplementary_data/vstaudioengine/enginedata": "25d838cc457928f8df5d22d688c34a3cf84cc7bf9e9c9c03710ff2ee69433329 deflated 2021-11-28-18-35-14",
+      "010 supplementary_data/workspace/": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 deflated 2021-11-28-18-35-14",
+      "011 supplementary_data/workspace/workspace.xml": "e90dab1fc7d84d50f3cd167c53edcc783748f3d8ba1a8508997c3fdb219b01af deflated 2021-11-28-18-35-14"
+     }
+    },
+    "out.dorico.hp-apply.json": {
+     "sha256": "b7d2b976a66c60350db3cf2bf6bcd3a9ff9e0c1bc852e63b422ea08c01618145",
+     "size": 2153248
+    }
+   }
+  },
+  "dorico-hp/apply/test-file-A": {
+   "exit": 0,
+   "seconds": 5.3,
+   "files": {
+    "stdout": {
+     "sha256": "44f471e5b7d86cd5e04b1104c9c6b3768614d4ef2fd8d90757e9059d6dd6e1a2",
+     "size": 10666
+    },
+    "out.dorico": {
+     "sha256": "00c26af048b138be5a5713fc88523eb2b4a7489d18b3646f3c4515e936e8e04a",
+     "size": 4706320,
+     "entries": {
+      "000 META-INF/": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 deflated 2024-10-13-15-34-32",
+      "001 META-INF/container.xml": "d7c0eb533c81b13951c3b58daf2108d9bbcc4777e321bc03acdb5286e2424be6 deflated 2024-10-13-23-20-32",
+      "002 score.dtn": "cad06ff71bdfd3a96a884049d0dbed0eb97e7380ae98b22d004c43f44e3da2ea deflated 2024-10-13-23-20-30",
+      "003 scorelibrary.dtn": "9d0ae33876f7d184ae9d8146d89e7b757b809fab0b72bfd78b9e802cd3a38d06 deflated 2024-10-13-23-20-30",
+      "004 supplementary_data/": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 deflated 2024-10-13-23-20-32",
+      "005 supplementary_data/graphics/": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 deflated 2024-10-13-23-20-30",
+      "006 supplementary_data/graphics/graphicManifest.xml": "69ba2c73487ce34494ad9da36b8d497707b668efc04222e68cb2f4c743280235 deflated 2024-10-13-23-20-30",
+      "007 supplementary_data/guidedtutorial/": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 deflated 2024-10-13-23-20-30",
+      "008 supplementary_data/preview/": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 deflated 2024-10-13-23-20-30",
+      "009 supplementary_data/preview/preview.pdf": "525a6f2bc8c1c3bd747a433bc960f8e1a62fde339738dc9638d31ef75e2f0f30 deflated 2024-10-13-23-20-30",
+      "010 supplementary_data/preview/preview.png": "aa93a1c54cde3fa53fac6272453cd1f704e711f26b2b2e83411b1e6bf27df5b4 deflated 2024-10-13-23-20-30",
+      "011 supplementary_data/scoreinfo/": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 deflated 2024-10-13-23-20-30",
+      "012 supplementary_data/scoreinfo/scoreinfo.xml": "00ab2c574bd2568abe0ce92c8c46843a09baf8ee9af67501313d885f2b673828 deflated 2024-10-13-23-20-30",
+      "013 supplementary_data/scorelibraryresources/": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 deflated 2024-10-13-23-20-30",
+      "014 supplementary_data/virtualinstrument/": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 deflated 2024-10-13-23-20-30",
+      "015 supplementary_data/virtualinstrument/drumPads.xml": "da8effd7a5e8c7a885d9e5e0116026ea4c6120da21e04360295b549118592b78 deflated 2024-10-13-23-20-30",
+      "016 supplementary_data/vstaudioengine/": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 deflated 2024-10-13-23-20-32",
+      "017 supplementary_data/vstaudioengine/enginedata": "baf19db9b96afb5f5537a811a3cf9237f99541301eb3b6c92fbc12a659dd4845 deflated 2024-10-13-23-20-32",
+      "018 supplementary_data/workspace/": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 deflated 2024-10-13-23-20-32",
+      "019 supplementary_data/workspace/workspace.xml": "b3e628a410c1709c314776b91b7d2f126dc4e1b759a12fd05c0e7108b31f6a6e deflated 2024-10-13-23-20-32"
+     }
+    },
+    "out.dorico.hp-apply.json": {
+     "sha256": "00b9efb9f95b206cfedef77d3b357dea2a229c01cef94006aa1db7cfaadeedaf",
+     "size": 939979
+    }
+   }
+  },
+  "dorico-hp/playback/main": {
+   "exit": 0,
+   "seconds": 1.0,
+   "files": {
+    "stdout": {
+     "sha256": "6cf5c3529b76cd5a2cdb068f6f2a8a5c9072b9963cc055878b40b493aefe6216",
+     "size": 10667
+    }
+   }
+  },
+  "dorico-hp/render/ET The Flying Theme mASTER A-rebuilt": {
+   "exit": 0,
+   "seconds": 5.6,
+   "files": {
+    "out.mid": {
+     "sha256": "9d2853b3f56c64150a4644200a9d09bea551b4fd01de85288d94ffb951828001",
+     "size": 163390
+    }
+   }
+  },
+  "dorico-hp/render/ET The Flying Theme mASTER B-xml-inside": {
+   "exit": 0,
+   "seconds": 5.6,
+   "files": {
+    "out.mid": {
+     "sha256": "9d2853b3f56c64150a4644200a9d09bea551b4fd01de85288d94ffb951828001",
+     "size": 163390
+    }
+   }
+  },
+  "dorico-hp/render/ET The Flying Theme mASTER C-title-edit": {
+   "exit": 0,
+   "seconds": 5.5,
+   "files": {
+    "out.mid": {
+     "sha256": "9d2853b3f56c64150a4644200a9d09bea551b4fd01de85288d94ffb951828001",
+     "size": 163390
+    }
+   }
+  },
+  "dorico-hp/render/ET The Flying Theme mASTER D-note-edit": {
+   "exit": 0,
+   "seconds": 5.6,
+   "files": {
+    "out.mid": {
+     "sha256": "a55657c34c3155799c358bd198e96e9e15527246f409cfe887599c5270458bc9",
+     "size": 163390
+    }
+   }
+  },
+  "dorico-hp/render/ET The Flying Theme mASTER E-velocity": {
+   "exit": 0,
+   "seconds": 5.4,
+   "files": {
+    "out.mid": {
+     "sha256": "9d2853b3f56c64150a4644200a9d09bea551b4fd01de85288d94ffb951828001",
+     "size": 163390
+    }
+   }
+  },
+  "dorico-hp/render/ET The Flying Theme mASTER F-playback-write": {
+   "exit": 0,
+   "seconds": 5.6,
+   "files": {
+    "out.mid": {
+     "sha256": "9d2853b3f56c64150a4644200a9d09bea551b4fd01de85288d94ffb951828001",
+     "size": 163390
+    }
+   }
+  },
+  "dorico-hp/render/ET The Flying Theme mASTER G-offset": {
+   "exit": 0,
+   "seconds": 5.3,
+   "files": {
+    "out.mid": {
+     "sha256": "309bc25fd3e003bd109b66e7e501699d9887ac50c93a1d1863d6bfd5a1c63b58",
+     "size": 163397
+    }
+   }
+  },
+  "dorico-hp/render/ET The Flying Theme mASTER H-offset-units": {
+   "exit": 0,
+   "seconds": 5.4,
+   "files": {
+    "out.mid": {
+     "sha256": "9d2853b3f56c64150a4644200a9d09bea551b4fd01de85288d94ffb951828001",
+     "size": 163390
+    }
+   }
+  },
+  "dorico-hp/render/main": {
+   "exit": 0,
+   "seconds": 2.4,
+   "files": {
+    "stdout": {
+     "sha256": "9e96d1a7912a0a5f38bc4983f392462597d9f00721fdf7b6a58077a11e27f125",
+     "size": 7370
+    },
+    "out.mid": {
+     "sha256": "1be6caa8ba7656b7e1a36b83733974a48c497f9615ccdceb5f93a59bdda60bad",
+     "size": 21962
+    }
+   }
+  },
+  "dorigit/show/ET The Flying Theme mASTER A-rebuilt": {
+   "exit": 0,
+   "seconds": 0.2,
+   "files": {
+    "stdout": {
+     "sha256": "b3f3fe922994e2c3fc90f9d69127ed39383afadfa4432d93241b9badabbff44e",
+     "size": 1842498
+    }
+   }
+  },
+  "dorigit/show/ET The Flying Theme mASTER B-xml-inside": {
+   "exit": 0,
+   "seconds": 0.2,
+   "files": {
+    "stdout": {
+     "sha256": "b3f3fe922994e2c3fc90f9d69127ed39383afadfa4432d93241b9badabbff44e",
+     "size": 1842498
+    }
+   }
+  },
+  "dorigit/show/ET The Flying Theme mASTER C-title-edit": {
+   "exit": 0,
+   "seconds": 0.2,
+   "files": {
+    "stdout": {
+     "sha256": "ed61923eea94cf5c72b6916658308efa753e24354f38a6b8e1ef1ebecd241687",
+     "size": 1842522
+    }
+   }
+  },
+  "dorigit/show/ET The Flying Theme mASTER D-note-edit": {
+   "exit": 0,
+   "seconds": 0.2,
+   "files": {
+    "stdout": {
+     "sha256": "72e0973d3946540deb23135ae20e5d731244fa308c17ef7d29fa0226f1c47182",
+     "size": 1842521
+    }
+   }
+  },
+  "dorigit/show/ET The Flying Theme mASTER E-velocity": {
+   "exit": 0,
+   "seconds": 0.2,
+   "files": {
+    "stdout": {
+     "sha256": "27ed02fd8807babea79e1b8c442ecdbaaf01d1f148ed6811a6bd69c92d133337",
+     "size": 1842523
+    }
+   }
+  },
+  "dorigit/show/ET The Flying Theme mASTER F-playback-write": {
+   "exit": 0,
+   "seconds": 0.2,
+   "files": {
+    "stdout": {
+     "sha256": "ea7108ed80a334205df05728b2d2c0d97c3ce96899d7a273d6030b7916a26482",
+     "size": 1847567
+    }
+   }
+  },
+  "dorigit/show/ET The Flying Theme mASTER G-offset": {
+   "exit": 0,
+   "seconds": 0.1,
+   "files": {
+    "stdout": {
+     "sha256": "6217739c45049043457e9759e672f246e17f6471592faf1b151024015dfb7652",
+     "size": 1842561
+    }
+   }
+  },
+  "dorigit/show/ET The Flying Theme mASTER H-offset-units": {
+   "exit": 0,
+   "seconds": 0.2,
+   "files": {
+    "stdout": {
+     "sha256": "5bf4f63bbe160affdcdeacebd40b1b188250329850e51eaaaea2ced9abc4fa12",
+     "size": 1842655
+    }
+   }
+  },
+  "dorigit/show/FLYING SAILOR": {
+   "exit": 0,
+   "seconds": 0.1,
+   "files": {
+    "stdout": {
+     "sha256": "f286249aae3bf3257fb2dd8d490779f9919fab3cc2730f088291d8cbe98f2de4",
+     "size": 1064501
+    }
+   }
+  },
+  "dorigit/show/Full Orchestra Template NEW FULL": {
+   "exit": 0,
+   "seconds": 0.1,
+   "files": {
+    "stdout": {
+     "sha256": "96b23e645a5900e1e93385af40a63802934e72e70010317a9fead62cd0502fa0",
+     "size": 1721572
+    }
+   }
+  },
+  "dorigit/show/Full Orchestra Template NEW FULL SILENT": {
+   "exit": 0,
+   "seconds": 0.1,
+   "files": {
+    "stdout": {
+     "sha256": "96b23e645a5900e1e93385af40a63802934e72e70010317a9fead62cd0502fa0",
+     "size": 1721572
+    }
+   }
+  },
+  "dorigit/show/Full Orchestra Template NEW FULL v5": {
+   "exit": 0,
+   "seconds": 0.1,
+   "files": {
+    "stdout": {
+     "sha256": "2e256d63572312309702b0862431fdcccd5ab8c11d82170f18d6d021ad5086fd",
+     "size": 1885407
+    }
+   }
+  },
+  "dorigit/show/HP - birds": {
+   "exit": 0,
+   "seconds": 0.1,
+   "files": {
+    "stdout": {
+     "sha256": "d797cc78e86f7cce800e5d62e43a07f39771de400a0e6671f6d66afccd073492",
+     "size": 529640
+    }
+   }
+  },
+  "dorigit/show/HP BRASS TEST": {
+   "exit": 0,
+   "seconds": 0.4,
+   "files": {
+    "stdout": {
+     "sha256": "637e0d3b3e0fe02701e6dcd95d1ea3b537680a5340d8bd544b566f9279cea07a",
+     "size": 2154271
+    }
+   }
+  },
+  "dorigit/show/Harry Potter Cues": {
+   "exit": 0,
+   "seconds": 0.2,
+   "files": {
+    "stdout": {
+     "sha256": "afd530d25f5523e190057a8b6ecd315da11f77ad2ded14a600f07a8262956fd6",
+     "size": 1443615
+    }
+   }
+  },
+  "dorigit/show/Harry Potter Cues Plus": {
+   "exit": 0,
+   "seconds": 0.3,
+   "files": {
+    "stdout": {
+     "sha256": "7b6b89c9581da1e19f03ce6e88e986d4e7926d9f5dae0ec65477d34f660a94d8",
+     "size": 1842052
+    }
+   }
+  },
+  "dorigit/show/Harry Potter Cues Plus 2": {
+   "exit": 0,
+   "seconds": 0.3,
+   "files": {
+    "stdout": {
+     "sha256": "d69fa3c435cebe8d712ed821556e5ee00c818bd850548c49caf2c6950d93a5ff",
+     "size": 2079995
+    }
+   }
+  },
+  "dorigit/show/Harry Potter Cues Plus 3": {
+   "exit": 0,
+   "seconds": 0.4,
+   "files": {
+    "stdout": {
+     "sha256": "88d561f51e4773716bdca62b11e55e92acd4253aa96004e3044e49e38e766dcb",
+     "size": 2157120
+    }
+   }
+  },
+  "dorigit/show/Harry Potter Cues Plus 4": {
+   "exit": 0,
+   "seconds": 0.4,
+   "files": {
+    "stdout": {
+     "sha256": "88d561f51e4773716bdca62b11e55e92acd4253aa96004e3044e49e38e766dcb",
+     "size": 2157120
+    }
+   }
+  },
+  "dorigit/show/Harry Potter Cues Plus 5": {
+   "exit": 0,
+   "seconds": 0.4,
+   "files": {
+    "stdout": {
+     "sha256": "8946d5868b7e3c43fde213b831b6a1d52e017d059357f62384f33e47c2e3c220",
+     "size": 2156924
+    }
+   }
+  },
+  "dorigit/show/Harry Potter Cues Plus 5 (SILENT)": {
+   "exit": 0,
+   "seconds": 0.3,
+   "files": {
+    "stdout": {
+     "sha256": "b1b2956940a5a5a6db23f85d7beef9c3241ff08fba0af633df6c2c4e7581be1f",
+     "size": 2679101
+    }
+   }
+  },
+  "dorigit/show/Harry Potter Cues Plus 5 + LASS3": {
+   "exit": 0,
+   "seconds": 0.4,
+   "files": {
+    "stdout": {
+     "sha256": "43f6fe2faa8d1d12e0e85ee606bb0f08e41c60328c8474a145b0a097130b141c",
+     "size": 2549716
+    }
+   }
+  },
+  "dorigit/show/Harry Potter Cues Plus 5 + string test": {
+   "exit": 0,
+   "seconds": 0.4,
+   "files": {
+    "stdout": {
+     "sha256": "a38fcaca56dca5fcb67bb94896d853073766f7b16c08e19666ef7ec048b2e83b",
+     "size": 2549716
+    }
+   }
+  },
+  "dorigit/show/Harry Potter Cues Plus 5 - TEMPLATE WORK": {
+   "exit": 0,
+   "seconds": 0.4,
+   "files": {
+    "stdout": {
+     "sha256": "b1b2956940a5a5a6db23f85d7beef9c3241ff08fba0af633df6c2c4e7581be1f",
+     "size": 2679101
+    }
+   }
+  },
+  "dorigit/show/Harry Potter Cues Plus TEST": {
+   "exit": 0,
+   "seconds": 0.4,
+   "files": {
+    "stdout": {
+     "sha256": "247d431e68555431ed40cd9ec7dd3cb7e584847dc0435f0cf851b3d4e9cd398b",
+     "size": 2170140
+    }
+   }
+  },
+  "dorigit/show/Have Yourself A Merry Little Christmas": {
+   "exit": 0,
+   "seconds": 0.2,
+   "files": {
+    "stdout": {
+     "sha256": "4cb8f3f76a18ded9ab8119979caa0de95bc65e6ff6a2802dcb8d1e03883da6a3",
+     "size": 826583
+    }
+   }
+  },
+  "dorigit/show/Have Yourself A Merry Little Christmas 2": {
+   "exit": 0,
+   "seconds": 0.1,
+   "files": {
+    "stdout": {
+     "sha256": "2848c8d433c31ec0bcbe60343c9cadd05cb830f4342caadd10fa7f4d2eb0598d",
+     "size": 820157
+    }
+   }
+  },
+  "dorigit/show/Have Yourself A Merry Little Christmas 3": {
+   "exit": 0,
+   "seconds": 0.1,
+   "files": {
+    "stdout": {
+     "sha256": "0a0581b5b1f2da0730dd8e2f52a35be59459d751530effb446d23c4af3919083",
+     "size": 821681
+    }
+   }
+  },
+  "dorigit/show/Have Yourself A Merry Little Christmas STRINGS": {
+   "exit": 0,
+   "seconds": 0.1,
+   "files": {
+    "stdout": {
+     "sha256": "6e9dbf363083fc3fa9e039203896d2f55c18fb1211d7cc42a6eb1c91af14b2e3",
+     "size": 827322
+    }
+   }
+  },
+  "dorigit/show/IFMC BLANK": {
+   "exit": 0,
+   "seconds": 0.1,
+   "files": {
+    "stdout": {
+     "sha256": "f286249aae3bf3257fb2dd8d490779f9919fab3cc2730f088291d8cbe98f2de4",
+     "size": 1064501
+    }
+   }
+  },
+  "dorigit/show/Obi-Wan": {
+   "exit": 0,
+   "seconds": 0.1,
+   "files": {
+    "stdout": {
+     "sha256": "fe4ec125c0ea5796bba2076756d9dfd74f93d4f944b2135381ec51eb343db789",
+     "size": 1072430
+    }
+   }
+  },
+  "dorigit/show/Obi-Wan - End Credits": {
+   "exit": 0,
+   "seconds": 0.2,
+   "files": {
+    "stdout": {
+     "sha256": "79fcd33038d63dc780d5b245be5d17dd18bbe05dbf1244938d55407a376bfed4",
+     "size": 1260519
+    }
+   }
+  },
+  "dorigit/show/Obi-Wan - End Credits (VSS)": {
+   "exit": 0,
+   "seconds": 0.2,
+   "files": {
+    "stdout": {
+     "sha256": "d1084fc5d5b72ebcea46e2b51d8f1f6b53f5daf673b065e5eb55fa6188f50322",
+     "size": 1272551
+    }
+   }
+  },
+  "dorigit/show/Obi-Wan - End Credits IB": {
+   "exit": 0,
+   "seconds": 0.2,
+   "files": {
+    "stdout": {
+     "sha256": "22dac6961ea1307ddf8d88416f8ca918e252ae5d83d143699c53799229b3cb57",
+     "size": 1272974
+    }
+   }
+  },
+  "dorigit/show/Obi-Wan - End Credits SILENT": {
+   "exit": 0,
+   "seconds": 0.2,
+   "files": {
+    "stdout": {
+     "sha256": "d1084fc5d5b72ebcea46e2b51d8f1f6b53f5daf673b065e5eb55fa6188f50322",
+     "size": 1272551
+    }
+   }
+  },
+  "dorigit/show/Obi-Wan 2": {
+   "exit": 0,
+   "seconds": 0.1,
+   "files": {
+    "stdout": {
+     "sha256": "27754de02792ec93398b5a5e5e28be80486ee4427c3b83b334cfd2d02e3f0e20",
+     "size": 1180613
+    }
+   }
+  },
+  "dorigit/show/Rainy Nights, Dementors and Birds": {
+   "exit": 0,
+   "seconds": 0.2,
+   "files": {
+    "stdout": {
+     "sha256": "b4e341e911d3a70842f80fb1a32261e904cdada4a9a59b90648d69ccbfe9871a",
+     "size": 1300934
+    }
+   }
+  },
+  "dorigit/show/all i want 2": {
+   "exit": 0,
+   "seconds": 0.2,
+   "files": {
+    "stdout": {
+     "sha256": "08b5a41a30bfb47a678bc3bdf9bcbd063e187f2383d05abab2e4ca8d131c0d84",
+     "size": 967212
+    }
+   }
+  },
+  "dorigit/show/brass test": {
+   "exit": 0,
+   "seconds": 0.0,
+   "files": {
+    "stdout": {
+     "sha256": "42b050159048f11f3ee2a6a27f671f277364218f723ed9a338429a0700312a14",
+     "size": 465431
+    }
+   }
+  },
+  "dorigit/show/childrens choir template": {
+   "exit": 0,
+   "seconds": 0.1,
+   "files": {
+    "stdout": {
+     "sha256": "5f130e82601097b416b4fad1e252011de5bd30c98d4ab99cfb0776be6b885d5b",
+     "size": 361634
+    }
+   }
+  },
+  "f2d/convert-bootstrap/Willow": {
+   "exit": 0,
+   "seconds": 2.9,
+   "files": {
+    "stdout": {
+     "sha256": "d712340d1994640123cc89a324924bbcf40d848f03fe63afc310d0abd4aa1be4",
+     "size": 12868
+    },
+    "out.dorico": {
+     "sha256": "02187cf84b1870e398a084edc06104667db4cc8457b7bd1c7ef4c719bfbf8e3b",
+     "size": 363732,
+     "entries": {
+      "000 META-INF/container.xml": "da21e2740d97f6cabef1ad35a9a25c319fc967c5550b20cbfadc20065d99a95a deflated",
+      "001 score.xml": "a5ffb34eb2c595647e1847737645cae79cc2e3460404c6df4dfba5956a139aff deflated",
+      "002 supplementary_data/scoreinfo/scoreinfo.xml": "8fcd4cfbd070a2f2523134517915a34dfb1f78ccb6a5d3da6667a24ad49bb9da deflated",
+      "003 scorelibrary.dtn": "6f7c886b255e398e7b2c32fcfe8cfe8ce4fcef107300ca5395529a5b948c0009 deflated"
+     }
+    }
+   }
+  },
+  "f2d/convert-dtn/Willow": {
+   "exit": 0,
+   "seconds": 2.8,
+   "files": {
+    "stdout": {
+     "sha256": "dbe7be408ee06aab7eb00989735776a1f61680325236b67e9d452af732b9e6e3",
+     "size": 3612
+    },
+    "out.dorico": {
+     "sha256": "7ea952520cad1236a0763fb321c5cc03182b465add05ccf01aa608549f710bac",
+     "size": 669146,
+     "entries": {
+      "000 META-INF/container.xml": "3c39c46fe84e7647f9a17bfe558c8e917fab611f0c4f369ad51ec9763f871983 deflated",
+      "001 score.dtn": "989cd4b1fe811cc9a34255980bb099f12caff1995bd7c1400f8aef439a727835 deflated",
+      "002 supplementary_data/scoreinfo/scoreinfo.xml": "8fcd4cfbd070a2f2523134517915a34dfb1f78ccb6a5d3da6667a24ad49bb9da deflated",
+      "003 scorelibrary.dtn": "d32bab69674ae6f1e44e86c14902e008eee74338d2bcad026f19de976bc1182c deflated"
+     }
+    }
+   }
+  },
+  "f2d/convert/JW Asteroid Field": {
+   "exit": 0,
+   "seconds": 15.4,
+   "files": {
+    "stdout": {
+     "sha256": "c44537a3e8744b0d54789f9e4390a47a62cc72ea0e380f62735ac90177fbd169",
+     "size": 54625
+    },
+    "out.dorico": {
+     "sha256": "15a6fad09aeef3629d1b4e54c4c9167bd3d7b16ca14698e6faad121a87e4be4b",
+     "size": 737503,
+     "entries": {
+      "000 META-INF/container.xml": "da21e2740d97f6cabef1ad35a9a25c319fc967c5550b20cbfadc20065d99a95a deflated",
+      "001 score.xml": "b2b2392142eafe46d04f965bb4131d0fc6f6fcc18e4dd2358b15ecb29b9f7dbc deflated",
+      "002 supplementary_data/scoreinfo/scoreinfo.xml": "16b255adc1afe253650219da2972832036c857a9c5ea28fddc1fb2a60ad8685c deflated",
+      "003 scorelibrary.dtn": "72206533590f19a8f8ca371378da66baa13659e4deb4176fa24eb043edc4ed0a deflated"
+     }
+    },
+    "out.f2d-report.json": {
+     "sha256": "d6b2f5d323651f1eccf789dde53e72d36f980aa9cbcd894f4f4c243c1802ad9d",
+     "size": 7484
+    },
+    "review.json": {
+     "sha256": "478d22836b8a2e47d2dacfdf6f922054d50247f8a8cf497d5d6ca115a0f93eb1",
+     "size": 192723
+    }
+   }
+  },
+  "f2d/convert/JW ET Adventures On Earth": {
+   "exit": 0,
+   "seconds": 22.4,
+   "files": {
+    "stdout": {
+     "sha256": "870bd841e4070185638d043ff71cb39bdf7830278c3760ba90099d0529f16cf2",
+     "size": 154573
+    },
+    "out.dorico": {
+     "sha256": "54bb1aba4f8deed383e47a2c58472cd879cd4512563fd13dd3c1a809af939415",
+     "size": 819876,
+     "entries": {
+      "000 META-INF/container.xml": "da21e2740d97f6cabef1ad35a9a25c319fc967c5550b20cbfadc20065d99a95a deflated",
+      "001 score.xml": "bdddafecea7588ad9e154986e9848d76bd279b9b6d852877b608d9ae73967be4 deflated",
+      "002 supplementary_data/scoreinfo/scoreinfo.xml": "06cd6b09dde9f93c23fad408e29480ddb1c6b0ea48061009e6a0a467bb49bc14 deflated",
+      "003 scorelibrary.dtn": "be0bb3d8f45379d2669678d49519c2121801b274221a760d5ba408cb35764b59 deflated"
+     }
+    },
+    "out.f2d-report.json": {
+     "sha256": "959cd5bf7ed36189d05b24fe81ca2bca832eb05cbf856cc4453f6f62c57a13d3",
+     "size": 7813
+    },
+    "review.json": {
+     "sha256": "dbe873ce2ef2ffd531a31a4b2ef1535aa2b5ab072b1e2804337bc036997a6248",
+     "size": 600550
+    }
+   }
+  },
+  "f2d/convert/JW Raiders March": {
+   "exit": 0,
+   "seconds": 10.9,
+   "files": {
+    "stdout": {
+     "sha256": "db8664a2e4e381fdeffe58c7588073feef3348de5e58d49af1549f088f069f4d",
+     "size": 42292
+    },
+    "out.dorico": {
+     "sha256": "babee7c3cf1c677dbc8180844e242a4fb366eed018e0b425eff6e35ffccd3721",
+     "size": 587002,
+     "entries": {
+      "000 META-INF/container.xml": "da21e2740d97f6cabef1ad35a9a25c319fc967c5550b20cbfadc20065d99a95a deflated",
+      "001 score.xml": "5213fb727e39b070ef0c47777369a9f9bd767918d14f4bdf50bd329d3e5390e4 deflated",
+      "002 supplementary_data/scoreinfo/scoreinfo.xml": "705ddec57d1b3af62539999637c6eaab51872b379700fe73a9765120be51933f deflated",
+      "003 scorelibrary.dtn": "6682ff7247d1b6bdc45e8f81e3863f72ae770c214ddc7eb13d4c2fcaf1be0bbf deflated"
+     }
+    },
+    "out.f2d-report.json": {
+     "sha256": "d2a2f0b54a4cdd84c49b8c8e4c02d6190e4b9ab00eda1092548a0bb607dedf13",
+     "size": 3547
+    },
+    "review.json": {
+     "sha256": "e0b937c975c4513cbee5685867512260ba9169891caf9da9d7eec132e5dab416",
+     "size": 147909
+    }
+   }
+  },
+  "f2d/convert/Trex": {
+   "exit": 0,
+   "seconds": 4.8,
+   "files": {
+    "stdout": {
+     "sha256": "9ebb6a7de7219451f14222021c30054320cde70829bebd5d8b6b57e2fb14c671",
+     "size": 30573
+    },
+    "out.dorico": {
+     "sha256": "ddffcef869a34ca86e88cdb8ee87de4d39cfaa375987a749d06b3f8ae74d46ff",
+     "size": 466150,
+     "entries": {
+      "000 META-INF/container.xml": "da21e2740d97f6cabef1ad35a9a25c319fc967c5550b20cbfadc20065d99a95a deflated",
+      "001 score.xml": "73381c49565019116614f02ef9e97e84e772270953d890697f6ec3d9f41f7ad8 deflated",
+      "002 supplementary_data/scoreinfo/scoreinfo.xml": "9c8ba6c5a78a4d23eba0147510e51821c61a9e5d3d4b9c39387adf6b73aefdba deflated",
+      "003 scorelibrary.dtn": "3f9f2d594d45f86398a000d16e1d033f206b16ba71d3e2581d395f13f9859ead deflated"
+     }
+    },
+    "out.f2d-report.json": {
+     "sha256": "3e065519c2f7b6fb63e1f04fc928c0192569ca59a37ca1043e1d1f5e7c506082",
+     "size": 5147
+    },
+    "review.json": {
+     "sha256": "dd57e11dcf1e591c9edc1bf1ff7cf85b8ecd83eae74e91aa7a8d526b4b498e55",
+     "size": 111322
+    }
+   }
+  },
+  "f2d/convert/VV_Full": {
+   "exit": 0,
+   "seconds": 3.8,
+   "files": {
+    "stdout": {
+     "sha256": "866acc21206899740f03f428db9e2d3ba391fdc3f46bdb715abfb933f958788b",
+     "size": 12096
+    },
+    "out.dorico": {
+     "sha256": "5bf79ca829b2d0e1a7a1b446ba48f1b349dedb762eb9e9234e80cb031d12fe48",
+     "size": 396578,
+     "entries": {
+      "000 META-INF/container.xml": "da21e2740d97f6cabef1ad35a9a25c319fc967c5550b20cbfadc20065d99a95a deflated",
+      "001 score.xml": "28c9655b58c6ff42eff6b493d0da3436fa9129f8a95103ccebfc3e54fd4a4200 deflated",
+      "002 supplementary_data/scoreinfo/scoreinfo.xml": "89e446855de0d142ffae12ec480553e3e18d214eaba11645c03140f8721dea3b deflated",
+      "003 scorelibrary.dtn": "20fd5a4eecd3f925fcc92c35b9a2aaaa57631ad6333ce3ecc249a655b4a0580c deflated"
+     }
+    },
+    "out.f2d-report.json": {
+     "sha256": "9188aa68d4bf5bfa15e88207ed39cd559b7d3482035c822230b5cd94ecae7634",
+     "size": 2366
+    },
+    "review.json": {
+     "sha256": "e716cf12fb3f323881c4f345c9c974d575711011607fff681e57b687cf001def",
+     "size": 44055
+    }
+   }
+  },
+  "f2d/convert/Venus": {
+   "exit": 0,
+   "seconds": 2.2,
+   "files": {
+    "stdout": {
+     "sha256": "9e7cdd3e851efd3f9fb5f576021cff3a5077125820579430e92ccf7380297ad2",
+     "size": 3201
+    },
+    "out.dorico": {
+     "sha256": "554ddead5d39945c2a535e26a06d45676e4c7fb2f0683124397a4d2ad06bcffb",
+     "size": 312462,
+     "entries": {
+      "000 META-INF/container.xml": "da21e2740d97f6cabef1ad35a9a25c319fc967c5550b20cbfadc20065d99a95a deflated",
+      "001 score.xml": "bd4ba6be5581e2b6aff2a805c8ee0fc20d85bd988d1897859b42567c22e187a1 deflated",
+      "002 supplementary_data/scoreinfo/scoreinfo.xml": "f96a34d88a0cd9e566fd38835346bcd33225060999dabbe5d01325c25c48b89e deflated",
+      "003 scorelibrary.dtn": "57947b1fb31bacee38ec37693a1160ffd875777622c084c4be99a741b110a7b3 deflated"
+     }
+    },
+    "out.f2d-report.json": {
+     "sha256": "395d1fecc78329a3db56def7d3d79c93777193e475fad229a7f52f8f3e6b9567",
+     "size": 971
+    },
+    "review.json": {
+     "sha256": "f3e2c6bd9083a583ebab253faa48f55875657e400813c36be68fc65517f6665f",
+     "size": 9478
+    }
+   }
+  },
+  "f2d/convert/WW": {
+   "exit": 0,
+   "seconds": 2.2,
+   "files": {
+    "stdout": {
+     "sha256": "0e637e9b5df63f742aa5c978246a79aa079f772cb0c61dbb1f8cb36e52458360",
+     "size": 1393
+    },
+    "out.dorico": {
+     "sha256": "65ea231f117a6006763b77ca3966c5bdf3eb2b17b9956698e5ae32f203a49d4c",
+     "size": 284208,
+     "entries": {
+      "000 META-INF/container.xml": "da21e2740d97f6cabef1ad35a9a25c319fc967c5550b20cbfadc20065d99a95a deflated",
+      "001 score.xml": "7b2c55faef1ec1893aa219c4aaf9c91bab928aacdac2624adc99c09e8fd0889b deflated",
+      "002 supplementary_data/scoreinfo/scoreinfo.xml": "7545dc57454f3e5cd9316692b58ba23ba31e625ed064a4482580766f2cdcdd5b deflated",
+      "003 scorelibrary.dtn": "ad32e68514ddce02a6adf8c4afa03e1dce11f3ab706f2e8d744a303fd877038f deflated"
+     }
+    },
+    "out.f2d-report.json": {
+     "sha256": "48313b06baad65e830b998da7dbd20f799da47b0b3ebea42294645877941d1ff",
+     "size": 496
+    },
+    "review.json": {
+     "sha256": "674e77dd93825392c7a9439b33568034844e3f9e666c94babd03d5485473ece0",
+     "size": 3535
+    }
+   }
+  },
+  "f2d/convert/Willow": {
+   "exit": 0,
+   "seconds": 3.6,
+   "files": {
+    "stdout": {
+     "sha256": "69f3ca2f9a55ca2edf7ee43eaaef82b1012874da733a1f2b0efe5b6348d76b99",
+     "size": 12461
+    },
+    "out.dorico": {
+     "sha256": "6ef0ca84b2964842399b27cc785763c428069186eaf1ae0d858e2615c6dba727",
+     "size": 365066,
+     "entries": {
+      "000 META-INF/container.xml": "da21e2740d97f6cabef1ad35a9a25c319fc967c5550b20cbfadc20065d99a95a deflated",
+      "001 score.xml": "989cd4b1fe811cc9a34255980bb099f12caff1995bd7c1400f8aef439a727835 deflated",
+      "002 supplementary_data/scoreinfo/scoreinfo.xml": "8fcd4cfbd070a2f2523134517915a34dfb1f78ccb6a5d3da6667a24ad49bb9da deflated",
+      "003 scorelibrary.dtn": "d32bab69674ae6f1e44e86c14902e008eee74338d2bcad026f19de976bc1182c deflated"
+     }
+    },
+    "out.f2d-report.json": {
+     "sha256": "e79d8cf8be1518d7fcdbe7aeb52c588e0698c02b4bc13bfa82be8996bd7e93e2",
+     "size": 3473
+    },
+    "review.json": {
+     "sha256": "f60506c989482b0d9ba2c3a517a0f9b0e652633c8c4ea2e83e302f9ef8cfde53",
+     "size": 40049
+    }
+   }
+  },
+  "f2d/dump/ET The Flying Theme mASTER A-rebuilt": {
+   "exit": 0,
+   "seconds": 0.6,
+   "files": {
+    "stdout": {
+     "sha256": "49035fee2de4707be51d3624308dc2a0547190f66d5ed023f043b3caf2d0b8a7",
+     "size": 17370173
+    }
+   }
+  },
+  "f2d/dump/ET The Flying Theme mASTER B-xml-inside": {
+   "exit": 0,
+   "seconds": 0.7,
+   "files": {
+    "stdout": {
+     "sha256": "49035fee2de4707be51d3624308dc2a0547190f66d5ed023f043b3caf2d0b8a7",
+     "size": 17370173
+    }
+   }
+  },
+  "f2d/dump/Harry Potter Cues Plus 5 + LASS3": {
+   "exit": 0,
+   "seconds": 1.6,
+   "files": {
+    "stdout": {
+     "sha256": "f3f90d56155f968bc7638490a7f863343640c80e8f6d247c0047d36217517317",
+     "size": 30630205
+    }
+   }
+  },
+  "f2d/ir/Willow": {
+   "exit": 0,
+   "seconds": 1.0,
+   "files": {
+    "stdout": {
+     "sha256": "701cb4f9ab80e9543828a70c26d3f634cb28f305c661cc41f00621a129ae5602",
+     "size": 2980157
+    }
+   }
+  },
+  "f2d/review/ET The Flying Theme mASTER A-rebuilt": {
+   "exit": 0,
+   "seconds": 2.6,
+   "files": {
+    "stdout": {
+     "sha256": "9b7dd8fc3f432dabdf5e82c2d60acc7168e32a4c7a00f4146abfb660321594c9",
+     "size": 49634
+    },
+    "review.json": {
+     "sha256": "b3fa59e51a4d5f0990e6ba847a592e8d8af42b58ef9fbdabc5a0c8df23bda223",
+     "size": 225288
+    }
+   }
+  },
+  "f2d/review/ET The Flying Theme mASTER B-xml-inside": {
+   "exit": 0,
+   "seconds": 2.5,
+   "files": {
+    "stdout": {
+     "sha256": "9b7dd8fc3f432dabdf5e82c2d60acc7168e32a4c7a00f4146abfb660321594c9",
+     "size": 49634
+    },
+    "review.json": {
+     "sha256": "dbf5e7183d335cdbd9d93bb31699374ddea7f763e9d4b050fa8edc8940836e35",
+     "size": 225291
+    }
+   }
+  },
+  "f2d/review/ET The Flying Theme mASTER C-title-edit": {
+   "exit": 0,
+   "seconds": 2.6,
+   "files": {
+    "stdout": {
+     "sha256": "9b7dd8fc3f432dabdf5e82c2d60acc7168e32a4c7a00f4146abfb660321594c9",
+     "size": 49634
+    },
+    "review.json": {
+     "sha256": "67ee49443f3feca352fbf20d80b52c53a5835ffc6440ffa0bd172861a2b09db4",
+     "size": 225291
+    }
+   }
+  },
+  "f2d/review/ET The Flying Theme mASTER D-note-edit": {
+   "exit": 0,
+   "seconds": 2.5,
+   "files": {
+    "stdout": {
+     "sha256": "ff2dc94cdebe941ab5b80a8a9c843056d205c79f2465497e42fa3c92c32f0aa1",
+     "size": 49721
+    },
+    "review.json": {
+     "sha256": "9eb2cf4bed64d4f8c5999e13f34ae541f3c0533daa16f982aa0f701f8b21ec47",
+     "size": 225637
+    }
+   }
+  },
+  "f2d/review/ET The Flying Theme mASTER E-velocity": {
+   "exit": 0,
+   "seconds": 2.6,
+   "files": {
+    "stdout": {
+     "sha256": "9b7dd8fc3f432dabdf5e82c2d60acc7168e32a4c7a00f4146abfb660321594c9",
+     "size": 49634
+    },
+    "review.json": {
+     "sha256": "fbdfd5a25aae60d4eac52c85ef566293a0043649290246a76295728070a8dfd7",
+     "size": 225289
+    }
+   }
+  },
+  "f2d/review/ET The Flying Theme mASTER F-playback-write": {
+   "exit": 0,
+   "seconds": 2.5,
+   "files": {
+    "stdout": {
+     "sha256": "9b7dd8fc3f432dabdf5e82c2d60acc7168e32a4c7a00f4146abfb660321594c9",
+     "size": 49634
+    },
+    "review.json": {
+     "sha256": "080d9993ec19553b917216394d866114d9260c2184268be26d79f74aa18d0734",
+     "size": 225295
+    }
+   }
+  },
+  "f2d/review/ET The Flying Theme mASTER G-offset": {
+   "exit": 0,
+   "seconds": 2.5,
+   "files": {
+    "stdout": {
+     "sha256": "f8bb9a84b1a9b8a4b2d1fc12fcc727d65477a60f7ad60c65a3b9f06dd3df58fa",
+     "size": 49634
+    },
+    "review.json": {
+     "sha256": "44040acba7810580577f64165f596fef69ab592169f7639c08cf1b5277f57dee",
+     "size": 225287
+    }
+   }
+  },
+  "f2d/review/ET The Flying Theme mASTER H-offset-units": {
+   "exit": 0,
+   "seconds": 2.4,
+   "files": {
+    "stdout": {
+     "sha256": "9b7dd8fc3f432dabdf5e82c2d60acc7168e32a4c7a00f4146abfb660321594c9",
+     "size": 49634
+    },
+    "review.json": {
+     "sha256": "aae18244a3d7874c2b12e45f6bd3dc72ab64c450dea915107cdeb9d4ee9c2052",
+     "size": 225293
+    }
+   }
+  },
+  "f2d/review/FLYING SAILOR": {
+   "exit": 0,
+   "seconds": 0.1,
+   "files": {
+    "stdout": {
+     "sha256": "4eed47da0fdb59ce11a2c98c66f7d374cacd5624ab5e786124ef86de607f4046",
+     "size": 43
+    },
+    "review.json": {
+     "sha256": "2ddfda2d22ef30a054424d2d34f9bcbae7e3ed453517d1b818b1e06f5bb2676c",
+     "size": 902
+    }
+   }
+  },
+  "f2d/review/Full Orchestra Template NEW FULL": {
+   "exit": 0,
+   "seconds": 0.2,
+   "files": {
+    "stdout": {
+     "sha256": "4eed47da0fdb59ce11a2c98c66f7d374cacd5624ab5e786124ef86de607f4046",
+     "size": 43
+    },
+    "review.json": {
+     "sha256": "d711547fad9252f8e212f456d8a9e9115b6d83c2c4cbd1130c3f4a1a05c5281d",
+     "size": 921
+    }
+   }
+  },
+  "f2d/review/Full Orchestra Template NEW FULL SILENT": {
+   "exit": 0,
+   "seconds": 0.1,
+   "files": {
+    "stdout": {
+     "sha256": "4eed47da0fdb59ce11a2c98c66f7d374cacd5624ab5e786124ef86de607f4046",
+     "size": 43
+    },
+    "review.json": {
+     "sha256": "0f00d94fb672d5f015f1dee42656071bbdb9b5e875c8f93a9e1a71e4fc7292b8",
+     "size": 928
+    }
+   }
+  },
+  "f2d/review/Full Orchestra Template NEW FULL v5": {
+   "exit": 0,
+   "seconds": 0.1,
+   "files": {
+    "stdout": {
+     "sha256": "4eed47da0fdb59ce11a2c98c66f7d374cacd5624ab5e786124ef86de607f4046",
+     "size": 43
+    },
+    "review.json": {
+     "sha256": "741fa106bc3634c0720dc994823ef3fc963454576cd2a00da78754c1bfe4a97a",
+     "size": 924
+    }
+   }
+  },
+  "f2d/review/HP - birds": {
+   "exit": 0,
+   "seconds": 0.2,
+   "files": {
+    "stdout": {
+     "sha256": "5fc18d011f4ae81bbc6082f18eea0bf82a1f06e4393b7272b961ca97eb66c801",
+     "size": 1202
+    },
+    "review.json": {
+     "sha256": "e8fec1bb6757621edd87b3d8651dc191edc2f941650719a4b22b9c4205b02c5c",
+     "size": 4531
+    }
+   }
+  },
+  "f2d/review/HP BRASS TEST": {
+   "exit": 0,
+   "seconds": 6.6,
+   "files": {
+    "stdout": {
+     "sha256": "3c83df0a55bc297be73aed1d3f9192da2b95beb9ea3dd4cde67b80230dad1937",
+     "size": 73429
+    },
+    "review.json": {
+     "sha256": "df6c9441662bce2219be0089009352fde7426b145078b5c66bbcd384995ac70a",
+     "size": 306403
+    }
+   }
+  },
+  "f2d/review/Harry Potter Cues": {
+   "exit": 0,
+   "seconds": 1.1,
+   "files": {
+    "stdout": {
+     "sha256": "853d1e5342ddc92260dbaeb32f71abdbbc9a6c1e7a2cf06bbaeaab0c26592192",
+     "size": 12329
+    },
+    "review.json": {
+     "sha256": "9d07604c603d64931404b6df0da32dbb8afbe3b2b32615ba52a7972b9d06bf0d",
+     "size": 48797
+    }
+   }
+  },
+  "f2d/review/Harry Potter Cues Plus": {
+   "exit": 0,
+   "seconds": 2.5,
+   "files": {
+    "stdout": {
+     "sha256": "353b708143f09ef6bf81174f897c704434e488def0bd0a7d386df1816ae2d238",
+     "size": 40888
+    },
+    "review.json": {
+     "sha256": "c3a82a2c759177f5f9676788e391116d5082d29090ba5c888070ef02cad19d3f",
+     "size": 166902
+    }
+   }
+  },
+  "f2d/review/Harry Potter Cues Plus 2": {
+   "exit": 0,
+   "seconds": 3.9,
+   "files": {
+    "stdout": {
+     "sha256": "71c6bb53b62d01417670634cdd5c22583d838eaf662cf43ec47b3ad08460c20a",
+     "size": 60820
+    },
+    "review.json": {
+     "sha256": "2ff7558347be94bebcc223ab88c6ff43e5ffb6910ddd7354c92b11e0e0180f47",
+     "size": 248307
+    }
+   }
+  },
+  "f2d/review/Harry Potter Cues Plus 3": {
+   "exit": 0,
+   "seconds": 6.7,
+   "files": {
+    "stdout": {
+     "sha256": "cad67942d5f691b6fe3f92c9d76caf8b72d3978875d80d7eaa3d673183750100",
+     "size": 73607
+    },
+    "review.json": {
+     "sha256": "957c35de6fb12f854de46a5525f497f5980688e6c1a7322b761f2beeee41bab1",
+     "size": 307160
+    }
+   }
+  },
+  "f2d/review/Harry Potter Cues Plus 4": {
+   "exit": 0,
+   "seconds": 6.6,
+   "files": {
+    "stdout": {
+     "sha256": "cad67942d5f691b6fe3f92c9d76caf8b72d3978875d80d7eaa3d673183750100",
+     "size": 73607
+    },
+    "review.json": {
+     "sha256": "44fc2de1b93bc073afa3d0e35b92c8b36d584e0450a244ebb03053a23a03acc0",
+     "size": 307160
+    }
+   }
+  },
+  "f2d/review/Harry Potter Cues Plus 5": {
+   "exit": 0,
+   "seconds": 6.5,
+   "files": {
+    "stdout": {
+     "sha256": "cad67942d5f691b6fe3f92c9d76caf8b72d3978875d80d7eaa3d673183750100",
+     "size": 73607
+    },
+    "review.json": {
+     "sha256": "477b8ace56640aebc678ff2bccb139228ed79f1ca16d7855127ff93233f4a7b5",
+     "size": 307160
+    }
+   }
+  },
+  "f2d/review/Harry Potter Cues Plus 5 (SILENT)": {
+   "exit": 0,
+   "seconds": 8.9,
+   "files": {
+    "stdout": {
+     "sha256": "a303752eba682d1f85586b260bb613b449904b8f1d0c00f6a279353c062190af",
+     "size": 95346
+    },
+    "review.json": {
+     "sha256": "5f5198f829c5049dd1f9a300510e5449ac3d2120fabbce5045ec4191c0ed791d",
+     "size": 398019
+    }
+   }
+  },
+  "f2d/review/Harry Potter Cues Plus 5 + LASS3": {
+   "exit": 0,
+   "seconds": 9.0,
+   "files": {
+    "stdout": {
+     "sha256": "a303752eba682d1f85586b260bb613b449904b8f1d0c00f6a279353c062190af",
+     "size": 95346
+    },
+    "review.json": {
+     "sha256": "c2c570de76aae0a6408015c5697d999f0a1d568bf89e303b13b9fea07cb061a9",
+     "size": 398018
+    }
+   }
+  },
+  "f2d/review/Harry Potter Cues Plus 5 + string test": {
+   "exit": 0,
+   "seconds": 9.2,
+   "files": {
+    "stdout": {
+     "sha256": "a303752eba682d1f85586b260bb613b449904b8f1d0c00f6a279353c062190af",
+     "size": 95346
+    },
+    "review.json": {
+     "sha256": "129859e43f9a370c686b73241cdd3b72f85086b4b4e6b74ddec51157848c2ed2",
+     "size": 398024
+    }
+   }
+  },
+  "f2d/review/Harry Potter Cues Plus 5 - TEMPLATE WORK": {
+   "exit": 0,
+   "seconds": 9.4,
+   "files": {
+    "stdout": {
+     "sha256": "a303752eba682d1f85586b260bb613b449904b8f1d0c00f6a279353c062190af",
+     "size": 95346
+    },
+    "review.json": {
+     "sha256": "d4092bd62612c5ec0a588308f0b17338416d757570a1a74ae27f3ae1a685c847",
+     "size": 398026
+    }
+   }
+  },
+  "f2d/review/Harry Potter Cues Plus TEST": {
+   "exit": 0,
+   "seconds": 5.5,
+   "files": {
+    "stdout": {
+     "sha256": "2b0eaff2d2fd2bff61ee45a30f1f7756a2e1efe2c71594a795724acaa7e8ae2c",
+     "size": 71388
+    },
+    "review.json": {
+     "sha256": "cb48e550353ca0fbf5139ec879585334ea2abe50ac3aff0aadc9f737336d71bc",
+     "size": 297018
+    }
+   }
+  },
+  "f2d/review/Have Yourself A Merry Little Christmas": {
+   "exit": 0,
+   "seconds": 0.6,
+   "files": {
+    "stdout": {
+     "sha256": "6631e34859a41614889f4332ee5ca410687e1964441d18ea3c651e5e3b7921bb",
+     "size": 12025
+    },
+    "review.json": {
+     "sha256": "3f88f4d37381c3cc7af2dd679350dcd5b31e523f9ab728ee15a18bbefaa2b5e6",
+     "size": 46622
+    }
+   }
+  },
+  "f2d/review/Have Yourself A Merry Little Christmas 2": {
+   "exit": 0,
+   "seconds": 0.6,
+   "files": {
+    "stdout": {
+     "sha256": "8700cf8b8169cd38e001472b5ec1b1f9d4381605fbf2f898f27ca92da9271cd3",
+     "size": 11963
+    },
+    "review.json": {
+     "sha256": "844b577772885b6c77942efb52e84d17b31ec18b4169eecb4cf2456de9b19509",
+     "size": 46727
+    }
+   }
+  },
+  "f2d/review/Have Yourself A Merry Little Christmas 3": {
+   "exit": 0,
+   "seconds": 0.6,
+   "files": {
+    "stdout": {
+     "sha256": "bb7a16fdcc80b9fc86efea1d1b6e33b1bc7bd8945c201ca6b0f9e0ac03e8c7a1",
+     "size": 12080
+    },
+    "review.json": {
+     "sha256": "9bf6660908d78baf90dea3274684bfa1951f1f5cea290dccd598cc7327ed4560",
+     "size": 47103
+    }
+   }
+  },
+  "f2d/review/Have Yourself A Merry Little Christmas STRINGS": {
+   "exit": 0,
+   "seconds": 0.6,
+   "files": {
+    "stdout": {
+     "sha256": "4a1b5b88f8c133ec7924371e1e8eca96f715640448d0fd5d8f787c216190cad0",
+     "size": 11856
+    },
+    "review.json": {
+     "sha256": "a7fcd134dfad332b46033146ed3cd2e2d9d051b3dc0db64e29fd6b9e90fd0188",
+     "size": 46078
+    }
+   }
+  },
+  "f2d/review/IFMC BLANK": {
+   "exit": 0,
+   "seconds": 0.1,
+   "files": {
+    "stdout": {
+     "sha256": "4eed47da0fdb59ce11a2c98c66f7d374cacd5624ab5e786124ef86de607f4046",
+     "size": 43
+    },
+    "review.json": {
+     "sha256": "0566126cd440dc14289a4add5e77e5da126cd5110f512c2b7e922a9929c2eed9",
+     "size": 899
+    }
+   }
+  },
+  "f2d/review/Obi-Wan": {
+   "exit": 0,
+   "seconds": 0.2,
+   "files": {
+    "stdout": {
+     "sha256": "524f445060b87d4ceb4d66f410603d8ec25047868fc9f83ded764492f0e3ba29",
+     "size": 1582
+    },
+    "review.json": {
+     "sha256": "e7e16b620f2f3f1d27f0d30ab764ae21bd28fd19759b69abecfabcc1fc0a212d",
+     "size": 6207
+    }
+   }
+  },
+  "f2d/review/Obi-Wan - End Credits": {
+   "exit": 0,
+   "seconds": 0.8,
+   "files": {
+    "stdout": {
+     "sha256": "00e8aa5e9b839c5e586ac5dd914c42a74b18173e3612adf5f68d0e4129b21f02",
+     "size": 2608
+    },
+    "review.json": {
+     "sha256": "244e07d5e3bc06b1964a43a2b64556fd5d011f9be048ef57f0123c42b2bcec34",
+     "size": 10173
+    }
+   }
+  },
+  "f2d/review/Obi-Wan - End Credits (VSS)": {
+   "exit": 0,
+   "seconds": 1.2,
+   "files": {
+    "stdout": {
+     "sha256": "c9a486abbf9518e904034da8c5b2057ef1ae11b07c3c01134d4d42aa516c7c08",
+     "size": 5548
+    },
+    "review.json": {
+     "sha256": "53514245c1bc0c8a344d8b2e70a87e87f34510d862015b213776c95f1724cdbe",
+     "size": 21724
+    }
+   }
+  },
+  "f2d/review/Obi-Wan - End Credits IB": {
+   "exit": 0,
+   "seconds": 1.2,
+   "files": {
+    "stdout": {
+     "sha256": "5c508b3f72a825ad52e0637c24f66ed429812f55fb7cee249005df893f728cc2",
+     "size": 4861
+    },
+    "review.json": {
+     "sha256": "f1ba771f55e20594da4d99dcb5bc771988b8db5c8c157b74af83a9cdd1fb9e13",
+     "size": 19978
+    }
+   }
+  },
+  "f2d/review/Obi-Wan - End Credits SILENT": {
+   "exit": 0,
+   "seconds": 1.3,
+   "files": {
+    "stdout": {
+     "sha256": "c9a486abbf9518e904034da8c5b2057ef1ae11b07c3c01134d4d42aa516c7c08",
+     "size": 5548
+    },
+    "review.json": {
+     "sha256": "9acd756c07967d442bb90acf694c305cce09e4ef839475520daeac77c9bbb2e8",
+     "size": 21725
+    }
+   }
+  },
+  "f2d/review/Obi-Wan 2": {
+   "exit": 0,
+   "seconds": 0.3,
+   "files": {
+    "stdout": {
+     "sha256": "e9281842726ee12b964673da04819b00f879e8b643d913aef4262c5aeae6f670",
+     "size": 4940
+    },
+    "review.json": {
+     "sha256": "965fe90d47717be6abd6fc7d76fe3799c69395e935fd0891ae3f456e1050466d",
+     "size": 19491
+    }
+   }
+  },
+  "f2d/review/Rainy Nights, Dementors and Birds": {
+   "exit": 0,
+   "seconds": 0.6,
+   "files": {
+    "stdout": {
+     "sha256": "6cf90250a3db4c457ae7e08cde616bad2175ec6cfc5d8bca22f72fc93b88d70e",
+     "size": 9916
+    },
+    "review.json": {
+     "sha256": "ff09831ced335bf2fe8d4840e7fe07e309843b26865cdef42c8dad9936794c23",
+     "size": 39727
+    }
+   }
+  },
+  "f2d/review/all i want 2": {
+   "exit": 0,
+   "seconds": 0.9,
+   "files": {
+    "stdout": {
+     "sha256": "5ff06c2ac396476b2aed4a365b29f104318e4061ddbb60b809525940ca9e5347",
+     "size": 18802
+    },
+    "review.json": {
+     "sha256": "5de510ba5b77aff7372434138d3a3345d84dd763aa921f386b8681aadcbcf8a5",
+     "size": 72849
+    }
+   }
+  },
+  "f2d/review/brass test": {
+   "exit": 0,
+   "seconds": 0.1,
+   "files": {
+    "stdout": {
+     "sha256": "af59a843bbb7146a933ab13b05ac45e48b193f1d7cf885ce9b5dbfa280af4bfe",
+     "size": 176
+    },
+    "review.json": {
+     "sha256": "043c1f5e877292666bb1284cbcd1bb9a1a7d6cb86acd1dfbd4233168cfe071ef",
+     "size": 1246
+    }
+   }
+  },
+  "f2d/review/childrens choir template": {
+   "exit": 0,
+   "seconds": 0.2,
+   "files": {
+    "stdout": {
+     "sha256": "4eed47da0fdb59ce11a2c98c66f7d374cacd5624ab5e786124ef86de607f4046",
+     "size": 43
+    },
+    "review.json": {
+     "sha256": "762070d6995ae07b5bb3e93f7b4d49e96a409fd8361ef29ea579ca02826076fd",
+     "size": 913
+    }
+   }
+  }
+ },
+ "recorded": "2026-11-01 21:28"
+}

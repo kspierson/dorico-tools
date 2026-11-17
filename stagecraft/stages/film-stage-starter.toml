@@ -1,0 +1,116 @@
+# A starting point for a film scoring stage, using what stagecraft adds beyond VSS2. Values are
+# typical of published scoring-stage setups, not measured: tune them by ear and against the
+# user's reference recordings (PLANNED_WORK §7, E5/E7). Use with
+#   stagecraft stage from-project PROJECT --space stagecraft/stages/film-stage-starter.toml
+# which keeps the project's seating and replaces VSS2's space with this one.
+
+[space]
+name = "Film scoring stage (starter)"
+speed_of_sound = 343.0
+distance_exponent = 1.0      # inverse distance (physical)
+level_db = 14.0              # a player 5 m from the tree ≈ 0 dB
+depth_delay = 1.0            # real arrival times: the back arrives later than the front
+depth_reference_m = 4.0      # the front desks arrive with no delay
+exact_delays = true
+air_absorption = true        # treble loss by path length (ISO 9613-1)
+temperature_c = 20.0
+humidity_pct = 50.0
+
+# Main array: Decca tree above and just behind the conductor
+[[space.mics]]
+name = "Tree L"
+position = [-1.0, -1.5, 3.4]
+direction = [-0.7071, 0.7071, -0.3]
+pattern = 0.0
+left_db = 0.0
+
+[[space.mics]]
+name = "Tree C"
+position = [0.0, 0.0, 3.4]
+direction = [0.0, 1.0, -0.3]
+pattern = 0.0
+left_db = -4.0
+right_db = -4.0
+
+[[space.mics]]
+name = "Tree R"
+position = [1.0, -1.5, 3.4]
+direction = [0.7071, 0.7071, -0.3]
+pattern = 0.0
+right_db = 0.0
+
+# Outriggers: wide omnis at the sides of the strings
+[[space.mics]]
+name = "Outrigger L"
+position = [-6.0, 0.5, 3.6]
+direction = [0.0, 1.0, -0.3]
+pattern = 0.0
+left_db = -4.0
+
+[[space.mics]]
+name = "Outrigger R"
+position = [6.0, 0.5, 3.6]
+direction = [0.0, 1.0, -0.3]
+pattern = 0.0
+right_db = -4.0
+
+# Section spots (cardioids above the sections, panned by position, mixed low): they pick up
+# the rest of the orchestra too (bleed)
+[[space.mics]]
+name = "Woodwinds L"
+position = [-1.5, 5.0, 3.2]
+direction = [0.0, 0.3, -1.0]
+pattern = 0.5
+left_db = -13.0
+right_db = -19.0
+
+[[space.mics]]
+name = "Woodwinds R"
+position = [1.5, 5.0, 3.2]
+direction = [0.0, 0.3, -1.0]
+pattern = 0.5
+left_db = -19.0
+right_db = -13.0
+
+[[space.mics]]
+name = "Horns"
+position = [-4.0, 9.5, 3.5]
+direction = [0.0, -0.5, -1.0]
+pattern = 0.5
+left_db = -15.0
+right_db = -21.0
+
+[[space.mics]]
+name = "Brass"
+position = [4.0, 8.0, 3.5]
+direction = [0.0, 0.3, -1.0]
+pattern = 0.5
+left_db = -21.0
+right_db = -15.0
+
+# The hall around the stage: one first reflection per surface for every player
+[space.room]
+width_m = 26.0
+length_m = 32.0
+height_m = 12.0
+front_m = -10.0
+floor_db = -1.0              # wooden floor: strong reflection
+ceiling_db = -6.0
+left_db = -4.0
+right_db = -4.0
+front_db = -4.0
+back_db = -6.0
+
+# Sends into the shared early-reflection layer (the Fx Reverb): front drier, back wetter
+[space.reflections]
+send_db = -14.0
+per_m_db = 0.6
+reference_m = 6.0
+
+# Brightness uses the same curve as VSS2's Air (dB per unit at these frequencies)
+[air]
+shape_hz = [800, 1000, 1260, 1587, 2000, 2520, 3175, 4000, 5040, 6350, 8000, 10079, 12699, 16000]
+shape_db = [0.0, 0.0, -0.01, -0.04, -0.07, -0.13, -0.21, -0.34, -0.55, -0.87, -1.37, -2.12, -3.23, -4.81]
+amount_air = [-100.0, -50.0, -10.0, 0.0, 10.0, 30.0, 50.0, 80.0]
+amount = [-3.63, -1.04, -0.18, 0.18, 1.0, 2.67, 3.96, 6.03]
+no_air_amount = 0.0

@@ -1,0 +1,56 @@
+# One Rust workspace for the whole repo (Project S, PLANNED_WORK.md §2): the shared engine
+# crates in engine/crates and the tools built on them. One Cargo.lock, one target/.
+[workspace]
+resolver = "3"
+members = [
+    "engine/crates/*",
+    "dorigit/crates/dorigit-core",
+    "dorigit/crates/dorigit-cli",
+    "dorigit/app/src-tauri",
+    "stagecraft",
+]
+# `cargo test` / `cargo build` at the root skip the Tauri app (it needs the Windows build;
+# see dorigit/docs/DEV_SETUP.md) and the Python extension (built by uv/maturin).
+default-members = [
+    "engine/crates/dorico-format",
+    "engine/crates/dorico-model",
+    "engine/crates/paths",
+    "engine/crates/timeline",
+    "dorigit/crates/dorigit-core",
+    "dorigit/crates/dorigit-cli",
+    "stagecraft",
+]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2024"
+license = "MIT"
+
+[workspace.dependencies]
+# engine
+dorico-format = { path = "engine/crates/dorico-format" }
+dorico-model = { path = "engine/crates/dorico-model" }
+dorico-paths = { path = "engine/crates/paths" }
+dorico-timeline = { path = "engine/crates/timeline" }
+# dorigit
+dorigit-core = { path = "dorigit/crates/dorigit-core" }
+# external
+anyhow = "1"
+thiserror = "2"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+quick-xml = "0.37"
+zip = { version = "2", default-features = false, features = ["deflate"] }
+git2 = { version = "0.20", default-features = false }
+notify = "8"
+image = { version = "0.25", default-features = false, features = ["png"] }
+clap = { version = "4", features = ["derive"] }
+sha1 = "0.10"
+toml = "0.9"
+pyo3 = { version = "0.30", features = ["abi3-py312"] }
+
+[profile.dev.package."*"]
+opt-level = 2
+
+[profile.release]
+strip = true

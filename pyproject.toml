@@ -1,0 +1,19 @@
+# uv workspace root (Project S, PLANNED_WORK.md §2.10): one Python version and one lockfile for
+# every Python tool, like npm workspaces. `uv sync` builds doricokit (Rust) and installs the tools
+# into .venv; `uv run ...` runs inside it. Tools still also run with plain `python3 -m ...`.
+[project]
+name = "dorico-test"
+version = "0.0.0"
+requires-python = ">=3.12"
+dependencies = ["doricokit", "dorico-hp", "finale2dorico"]
+
+[tool.uv]
+package = false
+
+[tool.uv.workspace]
+members = ["engine/python", "dorico-hp", "finale2dorico"]
+
+[tool.uv.sources]
+doricokit = { workspace = true }
+dorico-hp = { workspace = true }
+finale2dorico = { workspace = true }

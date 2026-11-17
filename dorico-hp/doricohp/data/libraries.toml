@@ -1,0 +1,79 @@
+# Library profiles. A part uses the first profile whose `match` regular expression is
+# found in its expression map name, its plug-in name or its entity id (case-insensitive).
+# Anything not set here falls back to defaults.toml (and the style).
+#
+# Instrument overrides: [library.<name>.instrument.<word>] where <word> is matched against
+# the part name ("violin", "cello", "horn" …).
+#
+# Values marked VERIFY are educated guesses until checked against the instrument.
+
+[library.swam_strings]
+match = "SWAM.*(Solo Strings|Violin|Viola|Cello|Double Bass)"
+attack.base = 90
+attack.per_step = 8
+# SWAM solo strings: vibrato depth CC1. NOT rate: CC14 is Main Volume (the map's init CC14=46
+# is a volume setting), vibrato rate is CC19, which the user's SWAM Violin 3 instances also
+# map to bow force (plug-in state in the HP project, read 2026-11-01). Until a VI session
+# settles it, no rate curves (Apply wrote CC14 = volume curves here before 2026-11-01).
+vibrato.depth_cc = 1
+vibrato.rate_cc = 0
+vibrato.base_depth = 40
+vibrato.max_depth = 90
+vibrato.rate_base = 0
+latency.attack_ms = 0
+
+[library.swam_brass]
+match = "SWAM.*(Horn|Trumpet|Trombone|Tuba|Euphonium|Brass)"
+# vibrato depth CC1 (init CC1=0); rate not written (CC14 in the map's init is probably Main
+# Volume as in SWAM woodwinds/strings; rate CC unverified for SWAM brass) VERIFY
+vibrato.depth_cc = 1
+vibrato.rate_cc = 0
+vibrato.base_depth = 0
+vibrato.per_step = 3
+vibrato.espressivo_extra = 25
+vibrato.max_depth = 60
+vibrato.onset_ms = 300
+vibrato.rate_base = 0
+phrase.arrival_steps = 0.8
+espressivo.depth_at_mood_76 = 2.2
+
+[library.swam_woodwinds]
+match = "SWAM.*(Flute|Piccolo|Oboe|English Horn|Clarinet|Bassoon|Sax)"
+# woodwind vibrato depth CC1 (flute/oboe init CC1=32; clarinets 0 = no vibrato), rate CC19
+# (SWAM Woodwinds 2.8 manual + the user's plug-in states; CC14 is Main Volume). Rate not written.
+vibrato.depth_cc = 1
+vibrato.rate_cc = 19
+vibrato.base_depth = 32
+vibrato.max_depth = 80
+vibrato.rate_base = 0
+
+[library.swam_woodwinds.instrument.clarinet]
+vibrato.base_depth = 0
+vibrato.espressivo_extra = 0
+vibrato.per_step = 0
+
+[library.lass3]
+match = "LA Scoring Strings 3|LASS 3"
+# constant look-ahead (~440 ms) is for the latency-reporter plug-in; per-note corrections
+# here apply when look-ahead is OFF (legato transitions speak late) VERIFY values
+latency.legato_ms = 0
+lookahead_ms = 440
+balance.strings = 0.0
+
+[library.lass]
+match = "LA Scoring Strings|LASS"
+lookahead_ms = 0
+
+[library.infinite_brass]
+match = "^IB -|Infinite Brass"
+
+[library.infinite_woodwinds]
+match = "^IW -|Infinite Woodwinds"
+
+[library.pianoteq]
+match = "Pianoteq"
+espressivo.enabled = false
+vibrato.enabled = false
+
+[library.default]
+match = "."

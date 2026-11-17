@@ -1,0 +1,15 @@
+[package]
+name = "stagecraft"
+description = "Stage placement and audio-chain profiles for virtual instruments (PLANNED_WORK.md §7, Project E)"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[dependencies]
+anyhow.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+clap.workspace = true
+flate2 = "1"
+dorico-format.workspace = true
+toml.workspace = true

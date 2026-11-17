@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<script name="HP capture 16 scores own style">
+    <shortcut command="" enable="0" in-menu="0" />
+    <lines>
+        <line content="//Human Playback capture: scores own style" />
+        <line content='batch process source folder &quot;C:\Users\kspie\Documents\HPCaptures\finale\scores&quot;' />
+        <line content='batch process destination folder &quot;C:\Users\kspie\Documents\HPCaptures\midi\scores-own-style&quot;' />
+        <line content="batch process folder" />
+        <line content="save as midi" />
+        <line content="expect to press return" />
+        <line content="close" />
+    </lines>
+</script>

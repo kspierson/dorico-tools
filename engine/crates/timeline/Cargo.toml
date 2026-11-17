@@ -1,0 +1,15 @@
+[package]
+name = "dorico-timeline"
+description = "Time in a Dorico project: tempo map, performed order (repeats, jumps), seconds, timecode, MIDI ticks"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[dependencies]
+anyhow.workspace = true
+dorico-format.workspace = true
+dorico-model.workspace = true
+serde.workspace = true
+
+[dev-dependencies]
+dorico-paths.workspace = true

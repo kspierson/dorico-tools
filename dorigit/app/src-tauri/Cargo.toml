@@ -1,0 +1,28 @@
+[package]
+name = "dorigit-app"
+description = "dorigit desktop app: history, musical diffs and restore for Dorico projects"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[[bin]]
+name = "dorigit-app"
+path = "src/main.rs"
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+dorico-format.workspace = true
+dorigit-core.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+anyhow.workspace = true
+tauri = { version = "2", features = ["tray-icon", "image-png"] }
+tauri-plugin-dialog = "2"
+tauri-plugin-opener = "2"
+tauri-plugin-single-instance = "2"
+
+[features]
+# `tauri build` enables this to embed the built frontend instead of using the dev server.
+custom-protocol = ["tauri/custom-protocol"]

@@ -1,0 +1,17 @@
+[package]
+name = "dorigit-cli"
+description = "Command-line access to dorigit: musical diffs, git textconv, snapshots, restore"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[[bin]]
+name = "dorigit"
+path = "src/main.rs"
+
+[dependencies]
+dorico-format.workspace = true
+dorigit-core.workspace = true
+anyhow.workspace = true
+serde_json.workspace = true
+clap.workspace = true

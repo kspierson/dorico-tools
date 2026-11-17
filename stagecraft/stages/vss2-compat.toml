@@ -1,0 +1,36 @@
+# VSS2 as stagecraft numbers: how Virtual Sound Stage 2 turns a source position into sound,
+# measured from 904 captures of the user's settings and presets (stagecraft/docs/STATUS.md,
+# E3, 2026-11-02). `stagecraft stage` builds a VSS2-compatible stage from a project with these
+# values; every one of them can be changed in a stage file.
+
+# Direct sound of each microphone copy:
+#   gain dB = room base + room level (VSS2's GOLv) + source gain (PiOG)
+#             − 20 · distance_exponent · log10(distance) + capsule mix gain + polar pattern
+#   delay   = distance / speed_of_sound (VSS2 then moves the earliest copy to its latency)
+speed_of_sound = 343.0
+centre_mix_db = -9.0          # the Decca tree's centre capsule, into each output
+
+[rooms.ScSA]                  # VSS2 room id 1399018305 ("scoring stage A")
+base_db = 16.5
+distance_exponent = 0.88      # 1.0 = inverse distance
+mic_max_front = 3.0           # VSS2 keeps the tree within this many metres in front of the stage …
+mic_max_height = 8.0          # … and this high, whatever the project stores
+
+[rooms.ScSB]                  # 1399018306
+base_db = 19.3
+distance_exponent = 1.0
+mic_max_front = 3.5
+
+[rooms.Stdi]                  # 1400136809 ("studio")
+base_db = 19.0
+distance_exponent = 1.0
+
+# VSS2's "Air" setting: a fixed, linear-phase EQ, the same at any distance:
+#   EQ dB(f) = amount(Air) · shape(f)      (fits every Air value within 0.25 dB)
+# shape = dB per unit at third-octave centres (Hz); above the last point it continues ∝ f².
+[air]
+shape_hz = [800, 1000, 1260, 1587, 2000, 2520, 3175, 4000, 5040, 6350, 8000, 10079, 12699, 16000]
+shape_db = [0.0, 0.0, -0.01, -0.04, -0.07, -0.13, -0.21, -0.34, -0.55, -0.87, -1.37, -2.12, -3.23, -4.81]
+amount_air = [-100.0, -50.0, -10.0, 0.0, 10.0, 30.0, 50.0, 80.0]
+amount = [-3.63, -1.04, -0.18, 0.18, 1.0, 2.67, 3.96, 6.03]
+no_air_amount = 0.3           # states without an Air value (e.g. piano presets)

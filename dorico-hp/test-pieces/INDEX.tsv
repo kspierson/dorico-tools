@@ -1,0 +1,59 @@
+01-baseline-violin	01 Baseline (Violin)	
+01-baseline-flute	01 Baseline (Flute)	
+01-baseline-trumpet-c	01 Baseline (Trumpet in C)	
+01-baseline-piano	01 Baseline (Piano)	
+02-lengths-violin	02 Note lengths	
+03-articulations-violin	03 Articulations (Violin)	bars 1-9: none, stacc, staccatissimo, tenuto, accent, marcato, portato, accent+stacc, tenuto+accent; bars 10-13 quavers: none, stacc, accent, tenuto
+03-articulations-trumpet-c	03 Articulations (Trumpet in C)	bars 1-9: none, stacc, staccatissimo, tenuto, accent, marcato, portato, accent+stacc, tenuto+accent; bars 10-13 quavers: none, stacc, accent, tenuto
+03-articulations-flute	03 Articulations (Flute)	bars 1-9: none, stacc, staccatissimo, tenuto, accent, marcato, portato, accent+stacc, tenuto+accent; bars 10-13 quavers: none, stacc, accent, tenuto
+04-slurs-violin	04 Slurs (Violin)	pairs of bars: unslurred, 2-note, 4-note, 8-note slurs; crotchets unslurred/slurred; long slur
+04-slurs-flute	04 Slurs (Flute)	pairs of bars: unslurred, 2-note, 4-note, 8-note slurs; crotchets unslurred/slurred; long slur
+04-slurs-cello	04 Slurs (Cello)	pairs of bars: unslurred, 2-note, 4-note, 8-note slurs; crotchets unslurred/slurred; long slur
+05-dynamics-violin	05 Dynamics (Violin)	
+05-dynamics-piano	05 Dynamics (Piano)	
+05-dynamics-trumpet-c	05 Dynamics (Trumpet in C)	
+06-hairpins-violin	06 Hairpins (Violin)	
+06-hairpins-flute	06 Hairpins (Flute)	
+06-hairpins-piano	06 Hairpins (Piano)	
+06-hairpins-horn-f	06 Hairpins (Horn in F)	
+07-tempo-violin	07 Tempo changes	
+08-ornaments-violin	08 Ornaments (Violin)	
+08-ornaments-flute	08 Ornaments (Flute)	
+09-rhythms-violin	09 Rhythms	
+10-waltz-piano	10 Waltz (piano)	
+10-triple-violin	10 Triple metre	
+10-compound-violin	10 Compound metre	
+11-ode-violin	11 Ode to Joy (Violin)	
+11-ode-flute	11 Ode to Joy (Flute)	
+11-ode-trumpet-c	11 Ode to Joy (Trumpet in C)	
+11-ode-cello	11 Ode to Joy (Cello)	
+11-ode-oboe	11 Ode to Joy (Oboe)	
+11-amazing-grace-violin	11 Amazing Grace (Violin)	
+11-amazing-grace-cello	11 Amazing Grace (Cello)	
+11-amazing-grace-flute	11 Amazing Grace (Flute)	
+12-piano-textures	12 Piano textures	
+13-solo-accompaniment	13 Solo with accompaniment	
+14-long-notes-violin	14 Long notes (Violin)	
+14-long-notes-cello	14 Long notes (Cello)	
+14-long-notes-flute	14 Long notes (Flute)	
+14-long-notes-oboe	14 Long notes (Oboe)	
+15-techniques-violin	15 Techniques	
+16-gliss-harp	16 Glissandi (harp)	
+16-gliss-violin	16 Glissandi (violin)	
+16-gliss-trombone	16 Glissandi (trombone)	
+16-gliss-piano	16 Glissandi (piano)	
+17-chords-harp	17 Chords (Harp)	
+17-chords-harpsichord	17 Chords (Harpsichord)	
+17-chords-piano	17 Chords (Piano)	
+17-chords-guitar	17 Chords (guitar)	
+18-pedal-piano	18 Pedalling (piano)	
+19-jazz-alto-sax	19 Jazz (Alto Sax)	
+19-jazz-trumpet-c	19 Jazz (Trumpet in C)	
+20-timpani	20 Timpani	
+21-harmonics-violin	21 Harmonics (violin)	
+21-harmonics-harp	21 Harmonics (harp)	
+22-chorale-strings	22 Chorale (strings)	
+23-techniques-trumpet	23 Techniques (trumpet)	
+23-techniques-horn	23 Techniques (horn)	
+23-techniques-strings	23 Techniques (violin)	
+24-dynamic-words-violin	24 Dynamic words	

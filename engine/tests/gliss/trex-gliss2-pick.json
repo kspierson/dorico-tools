@@ -1,0 +1,144 @@
+{
+ "plan": {
+  "start": 31.65040499999999,
+  "end": 37.27334914160155,
+  "pedals": "D\u266f C\u266f B\u266d | E\u266e F\u266f G\u266e A\u266d",
+  "low": 55,
+  "high": 90,
+  "range_jitter": 4,
+  "first": 67,
+  "last": 55,
+  "sweep": 0.4863293393554713,
+  "hang": 1.2165,
+  "pattern": "UDUUUDUDUDUD",
+  "velocity": 127,
+  "seed": 2
+ },
+ "spec": {
+  "pedals": "D\u266f C\u266f B\u266d | E\u266e F\u266f G\u266e A\u266d",
+  "release": 0.25,
+  "dynamics": [],
+  "sweeps": [
+   {
+    "start": 31.65040499999999,
+    "end": 32.138541076958916,
+    "from_string": 25,
+    "to_string": 38,
+    "velocity": 127,
+    "hang": 1.2165,
+    "layer": 0,
+    "skip": []
+   },
+   {
+    "start": 32.1698438561096,
+    "end": 32.77137371165881,
+    "from_string": 37,
+    "to_string": 18,
+    "velocity": 127,
+    "hang": 1.2165,
+    "layer": 0,
+    "skip": []
+   },
+   {
+    "start": 32.80145445262087,
+    "end": 33.379501011318155,
+    "from_string": 19,
+    "to_string": 38,
+    "velocity": 127,
+    "hang": 1.2165,
+    "layer": 0,
+    "skip": []
+   },
+   {
+    "start": 33.234989371643834,
+    "end": 33.66402068518509,
+    "from_string": 21,
+    "to_string": 36,
+    "velocity": 127,
+    "hang": 1.2165,
+    "layer": 1,
+    "skip": []
+   },
+   {
+    "start": 33.55676285679978,
+    "end": 33.89371601354033,
+    "from_string": 24,
+    "to_string": 37,
+    "velocity": 127,
+    "hang": 1.2165,
+    "layer": 0,
+    "skip": []
+   },
+   {
+    "start": 33.919004770474196,
+    "end": 34.27852238342455,
+    "from_string": 36,
+    "to_string": 22,
+    "velocity": 127,
+    "hang": 1.2165,
+    "layer": 0,
+    "skip": []
+   },
+   {
+    "start": 34.30916199795035,
+    "end": 34.77538969238213,
+    "from_string": 23,
+    "to_string": 38,
+    "velocity": 127,
+    "hang": 1.2165,
+    "layer": 0,
+    "skip": []
+   },
+   {
+    "start": 34.804209139296766,
+    "end": 35.242740253273396,
+    "from_string": 37,
+    "to_string": 22,
+    "velocity": 127,
+    "hang": 1.2165,
+    "layer": 0,
+    "skip": []
+   },
+   {
+    "start": 35.272426692659614,
+    "end": 35.69446395819381,
+    "from_string": 23,
+    "to_string": 37,
+    "velocity": 127,
+    "hang": 1.2165,
+    "layer": 0,
+    "skip": []
+   },
+   {
+    "start": 35.73041005536256,
+    "end": 36.27738384293094,
+    "from_string": 36,
+    "to_string": 21,
+    "velocity": 127,
+    "hang": 1.2165,
+    "layer": 0,
+    "skip": []
+   },
+   {
+    "start": 36.309012610859334,
+    "end": 36.727034222185004,
+    "from_string": 22,
+    "to_string": 35,
+    "velocity": 127,
+    "hang": 1.2165,
+    "layer": 0,
+    "skip": []
+   },
+   {
+    "start": 36.75876627686607,
+    "end": 37.27334914160155,
+    "from_string": 34,
+    "to_string": 18,
+    "velocity": 127,
+    "hang": 1.2165,
+    "layer": 0,
+    "skip": []
+   }
+  ]
+ }
+}

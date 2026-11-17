@@ -1,0 +1,28 @@
+# Repo-wide ignores (tool folders keep their own .gitignore too)
+/target/
+.venv/
+__pycache__/
+*.pyc
+*.so
+node_modules/
+# Local Claude Code settings
+.claude/settings.local.json
+# Editor / OS clutter (Zone.Identifier files appear when copying from Windows into WSL)
+.vscode/
+*:Zone.Identifier
+Thumbs.db
+desktop.ini
+.DS_Store
+# Scratch files at the repo root
+/test
+/test.*
+/package.json
+/package-lock.json
+# Shared Dorico test files A-H: generated from personal scores
+/engine/tests/dorico-files/
+# Golden outputs (full files; only manifest.json is committed)
+/engine/tests/golden/out/
+/engine/tests/golden/out-failed/
+/engine/tests/dorico-check/*.dorico
+# MIDI exports of third-party scores (the user's ET project): keep out of the repo
+/engine/tests/dorico-check/timeline-ref-midi/ET *

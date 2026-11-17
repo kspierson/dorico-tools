@@ -1,0 +1,149 @@
+{
+"name": "21-harmonics-violin",
+"title": "21 Harmonics (violin)",
+"time": [
+4,
+4
+],
+"tempo": 100,
+"key": 0,
+"parts": [
+"Violin"
+],
+"notes": [
+{
+"part": 0,
+"stave": 0,
+"instrument": "Violin",
+"bar": 1,
+"beat": 0.0,
+"pos": 0.0,
+"dur": 2.0,
+"pitch": 81,
+"grace": "",
+"marks": [
+"harm"
+],
+"dyn": "mf",
+"wedge": null,
+"slur": "",
+"words": [],
+"chord": false,
+"tuplet": false
+},
+{
+"part": 0,
+"stave": 0,
+"instrument": "Violin",
+"bar": 1,
+"beat": 2.0,
+"pos": 2.0,
+"dur": 2.0,
+"pitch": 81,
+"grace": "",
+"marks": [],
+"dyn": "mf",
+"wedge": null,
+"slur": "",
+"words": [],
+"chord": false,
+"tuplet": false
+},
+{
+"part": 0,
+"stave": 0,
+"instrument": "Violin",
+"bar": 2,
+"beat": 0.0,
+"pos": 4.0,
+"dur": 1.0,
+"pitch": 88,
+"grace": "",
+"marks": [
+"harm"
+],
+"dyn": "mf",
+"wedge": null,
+"slur": "",
+"words": [],
+"chord": false,
+"tuplet": false
+},
+{
+"part": 0,
+"stave": 0,
+"instrument": "Violin",
+"bar": 2,
+"beat": 1.0,
+"pos": 5.0,
+"dur": 1.0,
+"pitch": 88,
+"grace": "",
+"marks": [
+"harm"
+],
+"dyn": "mf",
+"wedge": null,
+"slur": "",
+"words": [],
+"chord": false,
+"tuplet": false
+},
+{
+"part": 0,
+"stave": 0,
+"instrument": "Violin",
+"bar": 2,
+"beat": 2.0,
+"pos": 6.0,
+"dur": 2.0,
+"pitch": 81,
+"grace": "",
+"marks": [],
+"dyn": "mf",
+"wedge": null,
+"slur": "",
+"words": [],
+"chord": false,
+"tuplet": false
+},
+{
+"part": 0,
+"stave": 0,
+"instrument": "Violin",
+"bar": 3,
+"beat": 0.0,
+"pos": 8.0,
+"dur": 4.0,
+"pitch": 81,
+"grace": "",
+"marks": [
+"harm"
+],
+"dyn": "mf",
+"wedge": null,
+"slur": "",
+"words": [],
+"chord": false,
+"tuplet": false
+},
+{
+"part": 0,
+"stave": 0,
+"instrument": "Violin",
+"bar": 4,
+"beat": 0.0,
+"pos": 12.0,
+"dur": 4.0,
+"pitch": 69,
+"grace": "",
+"marks": [],
+"dyn": "mf",
+"wedge": null,
+"slur": "",
+"words": [],
+"chord": false,
+"tuplet": false
+}
+]
+}

@@ -1,0 +1,18 @@
+__pycache__/
+*.pyc
+# generated test projects (re-create with experiments/make_round*.py; seeded ones contain Steinberg tutorial data)
+experiments/round*/**/*.dorico
+# Dorico PDF exports of the round files (make_round*.py regenerates them; some are third-party scores)
+experiments/round*/**/*.pdf
+# keep the hand-made reference export
+!experiments/round7/01 - Full score - Reference markings.pdf
+# C++ extractor build tree (fetched dependencies live here too)
+extract/build/
+# decoded Dorico saves (contain Steinberg library data)
+experiments/round*-results/*/
+# generated converter reports and reviews next to test files
+experiments/round*/*.f2d-report.json
+experiments/round*/*.review.json
+experiments/round*/*.review.txt
+# cleaner runs on real scores (experiment output, not needed by the tool)
+experiments/cleaner/

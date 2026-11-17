@@ -1,0 +1,129 @@
+{
+"name": "21-harmonics-harp",
+"title": "21 Harmonics (harp)",
+"time": [
+4,
+4
+],
+"tempo": 100,
+"key": 0,
+"parts": [
+"Harp"
+],
+"notes": [
+{
+"part": 0,
+"stave": 0,
+"instrument": "Harp",
+"bar": 1,
+"beat": 0.0,
+"pos": 0.0,
+"dur": 1.0,
+"pitch": 72,
+"grace": "",
+"marks": [
+"harm"
+],
+"dyn": "mf",
+"wedge": null,
+"slur": "",
+"words": [],
+"chord": false,
+"tuplet": false
+},
+{
+"part": 0,
+"stave": 0,
+"instrument": "Harp",
+"bar": 1,
+"beat": 1.0,
+"pos": 1.0,
+"dur": 1.0,
+"pitch": 79,
+"grace": "",
+"marks": [
+"harm"
+],
+"dyn": "mf",
+"wedge": null,
+"slur": "",
+"words": [],
+"chord": false,
+"tuplet": false
+},
+{
+"part": 0,
+"stave": 0,
+"instrument": "Harp",
+"bar": 1,
+"beat": 2.0,
+"pos": 2.0,
+"dur": 2.0,
+"pitch": 72,
+"grace": "",
+"marks": [],
+"dyn": "mf",
+"wedge": null,
+"slur": "",
+"words": [],
+"chord": false,
+"tuplet": false
+},
+{
+"part": 0,
+"stave": 0,
+"instrument": "Harp",
+"bar": 2,
+"beat": 0.0,
+"pos": 4.0,
+"dur": 2.0,
+"pitch": 76,
+"grace": "",
+"marks": [
+"harm"
+],
+"dyn": "mf",
+"wedge": null,
+"slur": "",
+"words": [],
+"chord": false,
+"tuplet": false
+},
+{
+"part": 0,
+"stave": 0,
+"instrument": "Harp",
+"bar": 2,
+"beat": 2.0,
+"pos": 6.0,
+"dur": 2.0,
+"pitch": 72,
+"grace": "",
+"marks": [],
+"dyn": "mf",
+"wedge": null,
+"slur": "",
+"words": [],
+"chord": false,
+"tuplet": false
+},
+{
+"part": 0,
+"stave": 0,
+"instrument": "Harp",
+"bar": 3,
+"beat": 0.0,
+"pos": 8.0,
+"dur": 4.0,
+"pitch": 72,
+"grace": "",
+"marks": [],
+"dyn": "mf",
+"wedge": null,
+"slur": "",
+"words": [],
+"chord": false,
+"tuplet": false
+}
+]
+}

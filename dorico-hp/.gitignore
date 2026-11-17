@@ -1,0 +1,6 @@
+# Tool output, kept local only (not needed by the engine or tools):
+# Finale HP MIDI captures, engine renders and their analysis/ TSVs (tools/analyze_capture.py, render_tests.py)
+/captures/
+# Plans and results written by tools/vi_measure.py and tools/swam_measure.py
+/research/vi/measurements/
+/research/vi/swam-measurements/

@@ -1,0 +1,20 @@
+[project]
+name = "dorico-hp"
+version = "0.1.0"
+description = "Human Playback for Dorico: performance rules applied as playback-only data"
+requires-python = ">=3.12"
+dependencies = ["doricokit"]
+
+[project.scripts]
+doricohp-apply = "doricohp.apply:main"
+
+[build-system]
+requires = ["uv_build>=0.13,<0.14"]
+build-backend = "uv_build"
+
+[tool.uv.build-backend]
+module-name = "doricohp"
+module-root = ""
+
+[tool.uv.sources]
+doricokit = { workspace = true }

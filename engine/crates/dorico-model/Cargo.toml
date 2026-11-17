@@ -1,0 +1,15 @@
+[package]
+name = "dorico-model"
+description = "One read model of a Dorico score for every tool: flows, bars, parts, staves, voices, notes, dynamics, marks"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[dependencies]
+anyhow.workspace = true
+dorico-format.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+
+[dev-dependencies]
+dorico-paths.workspace = true

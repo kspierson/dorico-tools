@@ -1,0 +1,1492 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<!--Default Human Playback preference-->
+<humanplayback-defaults>
+    <preference name="Default Prefs" locked="false">
+        <dynamics hairpin-type="automatic" dynamic-curve-type="automatic" dynamic-approach="automatic" auto-diminuendo="true" hairpin-emphasis="50" auto-expression-emphasis="40" base-volume="75" optimize-for-garritan="true" garritan-base-attack="80" />
+        <midi volume-type="ignore" velocity-type="ignore" tempo-type="incorporate" start-stop-time-type="ignore" midi-anticipation="15" />
+        <glissandi glissando-type="automatic" glissando-curve-type="automatic" pitch-bend-range="12" delay="true" />
+        <ornaments trill-speed="1300" tremolo-speed="1200" humanize-trills="true" use-pitchbend-for-shakes="true" />
+        <tempo fermata-duration="160" rit-before-fermata="true" dont-randomize-tempo="false" />
+        <garritan jazz-tonguing="true" enhance-roll-with-cc="true" enhance-trill-with-cc="true" kontakt-specials="true" optimize-solo-strings-series="true" solo-strings-vibrato="true" />
+        <techniques>
+            <container name="General controls">
+                <technique name="Solo" enabled="true" instrument-type="any-sustaining" technique-type="solo">
+                    <actions>
+                        <action action1="base-volume" value1="35" value2="0" />
+                        <action action2="skip" value1="0" value2="0" />
+                        <action action3="skip" value1="0" />
+                    </actions>
+                    <filter filter-type="no-filter" content="" />
+                </technique>
+                <technique name="Tutti (default)" enabled="true" instrument-type="any-sustaining" technique-type="tutti">
+                    <actions>
+                        <action action1="base-volume" value1="20" value2="0" />
+                        <action action2="skip" value1="0" value2="0" />
+                        <action action3="skip" value1="0" />
+                    </actions>
+                    <filter filter-type="no-filter" content="" />
+                </technique>
+                <technique name="Legato" enabled="true" instrument-type="any-sustaining" technique-type="legato">
+                    <actions>
+                        <action action1="controller" value1="68" value2="127" />
+                        <action action2="skip" value1="0" value2="0" />
+                        <action action3="skip" value1="0" />
+                    </actions>
+                    <filter filter-type="device-or-library-name" content="Garritan" />
+                </technique>
+            </container>
+            <container name="Garritan: Strings">
+                <technique name="Standard (arco)" enabled="true" instrument-type="strings" technique-type="standard">
+                    <actions>
+                        <action action1="keyswitch" value1="0" value2="0" />
+                        <action action2="skip" value1="0" value2="0" />
+                        <action action3="skip" value1="0" />
+                    </actions>
+                    <filter filter-type="device-or-library-name" content="Garritan" />
+                </technique>
+                <technique name="Mute" enabled="true" instrument-type="strings" technique-type="mute">
+                    <actions>
+                        <action action1="keyswitch" value1="1" value2="0" />
+                        <action action2="skip" value1="0" value2="0" />
+                        <action action3="skip" value1="0" />
+                    </actions>
+                    <filter filter-type="device-or-library-name" content="Garritan" />
+                </technique>
+                <technique name="Pizzicato" enabled="true" instrument-type="strings" technique-type="pizzicato">
+                    <actions>
+                        <action action1="keyswitch" value1="5" value2="0" />
+                        <action action2="dynamic-velocity" value1="0" value2="0" />
+                        <action action3="skip" value1="0" />
+                    </actions>
+                    <filter filter-type="device-or-library-name" content="Garritan" />
+                </technique>
+                <technique name="Tremolo" enabled="true" instrument-type="strings" technique-type="tremolo-sampled">
+                    <actions>
+                        <action action1="keyswitch" value1="7" value2="0" />
+                        <action action2="skip" value1="0" value2="0" />
+                        <action action3="skip" value1="0" />
+                    </actions>
+                    <filter filter-type="device-or-library-name" content="Garritan" />
+                </technique>
+                <technique name="Trem. (solo, GPO)" enabled="true" instrument-type="strings" technique-type="tremolo-triggered">
+                    <actions>
+                        <action action1="keyswitch" value1="7" value2="0" />
+                        <action action2="dynamic-cc1" value1="7" value2="127" />
+                        <action action3="skip" value1="0" />
+                    </actions>
+                    <filter filter-type="multiple-filter" content="#lib#GPO #patch#Solo KS" />
+                </technique>
+                <technique name="Tremolo+mute" enabled="true" instrument-type="strings" technique-type="tremolo-mute-triggered">
+                    <actions>
+                        <action action1="keyswitch" value1="6" value2="0" />
+                        <action action2="skip" value1="0" value2="0" />
+                        <action action3="skip" value1="0" />
+                    </actions>
+                    <filter filter-type="device-or-library-name" content="GPO" />
+                </technique>
+                <technique name="Trem.+mute (solo, GPO)" enabled="true" instrument-type="strings" technique-type="tremolo-mute-sampled">
+                    <actions>
+                        <action action1="keyswitch" value1="7" value2="0" />
+                        <action action2="skip" value1="0" value2="0" />
+                        <action action3="skip" value1="0" />
+                    </actions>
+                    <filter filter-type="multiple-filter" content="#lib#GPO #patch#Solo KS" />
+                </technique>
+                <technique name="Spiccato (section, GPO)" enabled="true" instrument-type="strings" technique-type="spiccato">
+                    <actions>
+                        <action action1="keyswitch" value1="2" value2="0" />
+                        <action action2="dynamic-velocity" value1="0" value2="0" />
+                        <action action3="skip" value1="0" />
+                    </actions>
+                    <filter filter-type="multiple-filter" content="#lib#GPO #!patch#Solo" />
+                </technique>
+                <technique name="Détaché (solo, GPO)" enabled="true" instrument-type="strings" technique-type="detache">
+                    <actions>
+                        <action action1="keyswitch" value1="2" value2="0" />
+                        <action action2="dynamic-cc1" value1="2" value2="127" />
+                        <action action3="skip" value1="0" />
+                    </actions>
+                    <filter filter-type="multiple-filter" content="#lib#GPO #patch#Solo KS" />
+                </technique>
+                <technique name="Down bow (section, GPO)" enabled="false" instrument-type="strings" technique-type="down-bow">
+                    <actions>
+                        <action action1="keyswitch" value1="4" value2="0" />
+                        <action action2="dynamic-velocity" value1="0" value2="0" />
+                        <action action3="skip" value1="0" />
+                    </actions>
+                    <filter filter-type="device-or-library-name" content="GPO" />
+                </technique>
+                <technique name="Down bow (solo, GPO)" enabled="true" instrument-type="strings" technique-type="down-bow">
+                    <actions>
+                        <action action1="keyswitch" value1="4" value2="0" />
+                        <action action2="skip" value1="0" value2="0" />
+                        <action action3="skip" value1="0" />
+                    </actions>
+                    <filter filter-type="multiple-filter" content="#lib#GPO #patch#Solo KS" />
+                </technique>
+                <technique name="1/2 tone trill" enabled="false" instrument-type="strings" technique-type="half-tone-trill">
+                    <actions>
+                        <action action1="keyswitch" value1="9" value2="0" />
+                        <action action2="skip" value1="0" value2="0" />
+                        <action action3="skip" value1="0" />
+                    </actions>
+                    <filter filter-type="device-or-library-name" content="GPO" />
+                </technique>
+                <technique name="Whole tone trill" enabled="false" instrument-type="strings" technique-type="whole-tone-trill">
+                    <actions>
+                        <action action1="keyswitch" value1="11" value2="0" />
+                        <action action2="skip" value1="0" value2="0" />
+                        <action action3="skip" value1="0" />
+                    </actions>
+                    <filter filter-type="device-or-library-name" content="GPO" />
+                </technique>
+                <technique name="Pizz patch" enabled="true" instrument-type="strings" technique-type="pizzicato">
+                    <actions>
+                        <action action1="dynamic-velocity" value1="11" value2="127" />
+                        <action action2="skip" value1="0" value2="0" />
+                        <action action3="skip" value1="0" />
+                    </actions>
+                    <filter filter-type="patch-name" content="pizz, uprightbass" />
+                </technique>
+            </container>
+            <container name="Garritan: Stradivari Violin">
+                <technique name="Standard" enabled="true" instrument-type="violin" technique-type="standard">
+                    <actions>
+                        <action action1="keyswitch" value1="36" value2="0" />
+                        <action action2="dynamic-cc11" value1="0" value2="0" />
+                        <action action3="skip" value1="0" />
+                    </actions>
+                    <filter filter-type="patch-name" content="Stradivari" />
+                </technique>
+                <technique name="Mute" enabled="true" instrument-type="violin" technique-type="mute">
+                    <actions>
+                        <action action1="keyswitch" value1="37" value2="0" />
+                        <action action2="dynamic-cc11" value1="0" value2="0" />
+                        <action action3="skip" value1="0" />
+                    </actions>
+                    <filter filter-type="patch-name" content="Stradivari" />
+                </technique>
+                <technique name="Staccato" enabled="true" instrument-type="violin" technique-type="staccato">
+                    <actions>
+                        <action action1="keyswitch" value1="40" value2="0" />
+                        <action action2="dynamic-velocity" value1="0" value2="0" />
+                        <action action3="skip" value1="0" />
+                    </actions>
+                    <filter filter-type="patch-name" content="Stradivari" />
+                </technique>
+                <technique name="Downbow" enabled="true" instrument-type="violin" technique-type="down-bow">
+                    <actions>
+                        <action action1="keyswitch" value1="41" value2="0" />
+                        <action action2="dynamic-velocity" value1="0" value2="0" />
+                        <action action3="skip" value1="0" />
+                    </actions>
+                    <filter filter-type="patch-name" content="Stradivari" />
+                </technique>
+                <technique name="Pizzicato" enabled="true" instrument-type="violin" technique-type="pizzicato">
+                    <actions>
+                        <action action1="keyswitch" value1="2" value2="0" />
+                        <action action2="skip" value1="0" value2="0" />
+                        <action action3="skip" value1="0" />
+                    </actions>
+                    <filter filter-type="patch-name" content="Stradivari" />
+                </technique>
+                <technique name="Tremolo" enabled="true" instrument-type="violin" technique-type="tremolo-triggered">
+                    <actions>
+                        <action action1="keyswitch" value1="45" value2="0" />
+                        <action action2="dynamic-cc11" value1="0" value2="0" />
+                        <action action3="skip" value1="0" />
+                    </actions>
+                    <filter filter-type="patch-name" content="Stradivari" />
+                </technique>
+                <technique name="Harmonics" enabled="true" instrument-type="violin" technique-type="harmonics">
+                    <actions>
+                        <action action1="keyswitch" value1="47" value2="0" />
+                        <action action2="add-pitch" value1="0" value2="0" />
+                        <action action3="dynamic-cc11" value1="0" />
+                    </actions>
+                    <filter filter-type="patch-name" content="Stradivari" />
+                </technique>
+            </container>
+            <container name="Garritan: Gofriller Cello">
+                <technique name="Standard" enabled="true" instrument-type="cello" technique-type="standard">
+                    <actions>
+                        <action action1="keyswitch" value1="24" value2="0" />
+                        <action action2="dynamic-cc11" value1="0" value2="0" />
+                        <action action3="skip" value1="0" />
+                    </actions>
+                    <filter filter-type="patch-name" content="Gofriller" />
+                </technique>
+                <technique name="Mute" enabled="true" instrument-type="cello" technique-type="mute">
+                    <actions>
+                        <action action1="keyswitch" value1="25" value2="0" />
+                        <action action2="dynamic-cc11" value1="0" value2="0" />
+                        <action action3="skip" value1="0" />
+                    </actions>
+                    <filter filter-type="patch-name" content="Gofriller" />
+                </technique>
+                <technique name="Staccato" enabled="true" instrument-type="cello" technique-type="staccato">
+                    <actions>
+                        <action action1="keyswitch" value1="28" value2="0" />
+                        <action action2="keyswitch" value1="28" value2="0" />
+                        <action action3="dynamic-velocity" value1="0" />
+                    </actions>
+                    <filter filter-type="patch-name" content="Gofriller" />
+                </technique>
+                <technique name="Martelé" enabled="true" instrument-type="cello" technique-type="martellato">
+                    <actions>
+                        <action action1="keyswitch" value1="2" value2="0" />
+                        <action action2="skip" value1="0" value2="0" />
+                        <action action3="skip" value1="0" />
+                    </actions>
+                    <filter filter-type="patch-name" content="Gofriller" />
+                </technique>
+                <technique name="Pizzicato" enabled="true" instrument-type="cello" technique-type="pizzicato">
+                    <actions>
+                        <action action1="keyswitch" value1="34" value2="0" />
+                        <action action2="dynamic-velocity" value1="0" value2="0" />
+                        <action action3="skip" value1="0" />
+                    </actions>
+                    <filter filter-type="patch-name" content="Gofriller" />
+                </technique>
+                <technique name="Tremolo" enabled="true" instrument-type="cello" technique-type="tremolo-triggered">
+                    <actions>
+                        <action action1="keyswitch" value1="33" value2="0" />
+                        <action action2="dynamic-cc11" value1="0" value2="0" />
+                        <action action3="skip" value1="0" />
+                    </actions>
+                    <filter filter-type="patch-name" content="Gofriller" />
+                </technique>
+                <technique name="Harmonics" enabled="true" instrument-type="cello" technique-type="harmonics">
+                    <actions>
+                        <action action1="keyswitch" value1="35" value2="0" />
+                        <action action2="add-pitch" value1="0" value2="0" />
+                        <action action3="dynamic-cc11" value1="0" />
+                    </actions>
+                    <filter filter-type="patch-name" content="Gofriller" />
+                </technique>
+            </container>
+            <container name="Garritan: Winds">
+                <technique name="Winds: Standard" enabled="true" instrument-type="winds" technique-type="standard">
+                    <actions>
+                        <action action1="keyswitch" value1="0" value2="0" />
+                        <action action2="skip" value1="0" value2="0" />
+                        <action action3="skip" value1="0" />
+                    </actions>
+                    <filter filter-type="device-or-library-name" content="Garritan" />
+                </technique>
+                <technique name="Brass: Mute" enabled="true" instrument-type="brass" technique-type="mute">
+                    <actions>
+                        <action action1="keyswitch" value1="2" value2="0" />
+                        <action action2="skip" value1="0" value2="0" />
+                        <action action3="skip" value1="0" />
+                    </actions>
+                    <filter filter-type="device-or-library-name" content="Garritan" />
+                </technique>
+                <technique name="Brass: Stopped" enabled="true" instrument-type="brass" technique-type="stopped">
+                    <actions>
+                        <action action1="keyswitch" value1="2" value2="0" />
+                        <action action2="skip" value1="0" value2="0" />
+                        <action action3="skip" value1="0" />
+                    </actions>
+                    <filter filter-type="device-or-library-name" content="Garritan" />
+                </technique>
+                <technique name="Flute: Fluttertongue" enabled="true" instrument-type="flute" technique-type="fluttertongue">
+                    <actions>
+                        <action action1="keyswitch" value1="4" value2="0" />
+                        <action action2="skip" value1="0" value2="0" />
+                        <action action3="skip" value1="0" />
+                    </actions>
+                    <filter filter-type="multiple-filter" content="#lib#GPO #patch#KS" />
+                </technique>
+                <technique name="Piccolo: Fluttertongue" enabled="true" instrument-type="piccolo" technique-type="fluttertongue">
+                    <actions>
+                        <action action1="keyswitch" value1="4" value2="0" />
+                        <action action2="skip" value1="0" value2="0" />
+                        <action action3="skip" value1="0" />
+                    </actions>
+                    <filter filter-type="multiple-filter" content="#lib#GPO #patch#KS" />
+                </technique>
+            </container>
+            <container name="Garritan: Harp">
+                <technique name="Standard" enabled="true" instrument-type="harp" technique-type="standard">
+                    <actions>
+                        <action action1="keyswitch" value1="0" value2="0" />
+                        <action action2="skip" value1="0" value2="0" />
+                        <action action3="skip" value1="0" />
+                    </actions>
+                    <filter filter-type="device-or-library-name" content="Garritan" />
+                </technique>
+                <technique name="Harmonics" enabled="true" instrument-type="harp" technique-type="harmonics">
+                    <actions>
+                        <action action1="keyswitch" value1="2" value2="0" />
+                        <action action2="skip" value1="0" value2="0" />
+                        <action action3="skip" value1="0" />
+                    </actions>
+                    <filter filter-type="device-or-library-name" content="Finale, Garritan" />
+                </technique>
+                <technique name="Harmonics (GPO)" enabled="true" instrument-type="harp" technique-type="harmonics">
+                    <actions>
+                        <action action1="keyswitch" value1="4" value2="0" />
+                        <action action2="skip" value1="0" value2="0" />
+                        <action action3="skip" value1="0" />
+                    </actions>
+                    <filter filter-type="device-or-library-name" content="GPO" />
+                </technique>
+                <technique name="Damped" enabled="true" instrument-type="harp" technique-type="damped-notes">
+                    <actions>
+                        <action action1="keyswitch" value1="1" value2="0" />
+                        <action action2="skip" value1="0" value2="0" />
+                        <action action3="skip" value1="0" />
+                    </actions>
+                    <filter filter-type="device-or-library-name" content="Finale, Garritan" />
+                </technique>
+                <technique name="Damped (GPO)" enabled="true" instrument-type="harp" technique-type="damped-notes">
+                    <actions>
+                        <action action1="controller" value1="64" value2="127" />
+                        <action action2="skip" value1="0" value2="0" />
+                        <action action3="skip" value1="0" />
+                    </actions>
+                    <filter filter-type="device-or-library-name" content="GPO" />
+                </technique>
+                <technique name="Damped Harm." enabled="true" instrument-type="harp" technique-type="damped-harmonics">
+                    <actions>
+                        <action action1="keyswitch" value1="3" value2="0" />
+                        <action action2="skip" value1="0" value2="0" />
+                        <action action3="skip" value1="0" />
+                    </actions>
+                    <filter filter-type="device-or-library-name" content="Finale, Garritan" />
+                </technique>
+                <technique name="Damped Harm. (GPO)" enabled="true" instrument-type="harp" technique-type="damped-harmonics">
+                    <actions>
+                        <action action1="keyswitch" value1="4" value2="0" />
+                        <action action2="controller" value1="64" value2="127" />
+                        <action action3="skip" value1="0" />
+                    </actions>
+                    <filter filter-type="device-or-library-name" content="GPO" />
+                </technique>
+            </container>
+            <container name="Garritan: Percussion">
+                <technique name="Timp.: Standard" enabled="true" instrument-type="timpani" technique-type="standard">
+                    <actions>
+                        <action action1="keyswitch" value1="0" value2="0" />
+                        <action action2="skip" value1="0" value2="0" />
+                        <action action3="skip" value1="0" />
+                    </actions>
+                    <filter filter-type="device-or-library-name" content="Garritan" />
+                </technique>
+                <technique name="Timp.: Damped" enabled="true" instrument-type="timpani" technique-type="mute">
+                    <actions>
+                        <action action1="keyswitch" value1="2" value2="0" />
+                        <action action2="skip" value1="0" value2="0" />
+                        <action action3="skip" value1="0" />
+                    </actions>
+                    <filter filter-type="device-or-library-name" content="Garritan" />
+                </technique>
+                <technique name="Garritan Perc.: Standard" enabled="true" instrument-type="unpitched-percussion" technique-type="standard">
+                    <actions>
+                        <action action1="dynamic-velocity" value1="2" value2="127" />
+                        <action action2="skip" value1="0" value2="0" />
+                        <action action3="skip" value1="0" />
+                    </actions>
+                    <filter filter-type="patch-name" content="Basic Orch, Bass Drum, Snares, Cymbals" />
+                </technique>
+                <technique name="Bass Drum Rolls" enabled="true" instrument-type="unpitched-percussion" technique-type="rolls-sampled">
+                    <actions>
+                        <action action1="set-to-pitch" value1="37" value2="0" />
+                        <action action2="these-notes-only" value1="35" value2="36" />
+                        <action action3="dynamic-cc1" value1="30" />
+                    </actions>
+                    <filter filter-type="patch-name" content="Basic Orch, Bass Drum" />
+                </technique>
+                <technique name="Snare Drum Rolls" enabled="true" instrument-type="unpitched-percussion" technique-type="rolls-sampled">
+                    <actions>
+                        <action action1="set-to-pitch" value1="61" value2="0" />
+                        <action action2="these-notes-only" value1="59" value2="60" />
+                        <action action3="dynamic-cc1" value1="30" />
+                    </actions>
+                    <filter filter-type="patch-name" content="Basic Orch, Snares" />
+                </technique>
+                <technique name="Side Drum Rolls" enabled="true" instrument-type="unpitched-percussion" technique-type="rolls-sampled">
+                    <actions>
+                        <action action1="set-to-pitch" value1="58" value2="0" />
+                        <action action2="these-notes-only" value1="56" value2="57" />
+                        <action action3="dynamic-cc1" value1="30" />
+                    </actions>
+                    <filter filter-type="patch-name" content="Basic Orch, Snares" />
+                </technique>
+                <technique name="Cymbals Rolls 1" enabled="true" instrument-type="unpitched-percussion" technique-type="rolls-sampled">
+                    <actions>
+                        <action action1="set-to-pitch" value1="92" value2="0" />
+                        <action action2="these-notes-only" value1="89" value2="90" />
+                        <action action3="dynamic-cc1" value1="30" />
+                    </actions>
+                    <filter filter-type="patch-name" content="Basic Orch, Cymbals" />
+                </technique>
+                <technique name="Cymbals Rolls 2" enabled="true" instrument-type="unpitched-percussion" technique-type="rolls-sampled">
+                    <actions>
+                        <action action1="set-to-pitch" value1="92" value2="0" />
+                        <action action2="these-notes-only" value1="87" value2="87" />
+                        <action action3="dynamic-cc1" value1="30" />
+                    </actions>
+                    <filter filter-type="patch-name" content="Basic Orch, Cymbals" />
+                </technique>
+            </container>
+            <container name="Garritan: Jazz, Big Band &amp; Marching Band">
+                <technique name="Brass: Cup Mute" enabled="true" instrument-type="brass" technique-type="mute-cup">
+                    <actions>
+                        <action action1="keyswitch" value1="4" value2="0" />
+                        <action action2="skip" value1="0" value2="0" />
+                        <action action3="skip" value1="0" />
+                    </actions>
+                    <filter filter-type="device-or-library-name" content="Garritan, JABB, Jazz" />
+                </technique>
+                <technique name="Brass: Harmon Mute" enabled="true" instrument-type="brass" technique-type="mute-harmon">
+                    <actions>
+                        <action action1="keyswitch" value1="5" value2="0" />
+                        <action action2="skip" value1="0" value2="0" />
+                        <action action3="skip" value1="0" />
+                    </actions>
+                    <filter filter-type="device-or-library-name" content="Garritan, JABB, Jazz" />
+                </technique>
+                <technique name="Brass: Bucket Mute" enabled="true" instrument-type="brass" technique-type="mute-bucket">
+                    <actions>
+                        <action action1="keyswitch" value1="7" value2="0" />
+                        <action action2="skip" value1="0" value2="0" />
+                        <action action3="skip" value1="0" />
+                    </actions>
+                    <filter filter-type="device-or-library-name" content="Garritan, JABB, Jazz" />
+                </technique>
+                <technique name="Winds: Fluttertongue" enabled="true" instrument-type="winds" technique-type="fluttertongue">
+                    <actions>
+                        <action action1="controller" value1="18" value2="100" />
+                        <action action2="skip" value1="0" value2="0" />
+                        <action action3="skip" value1="0" />
+                    </actions>
+                    <filter filter-type="device-or-library-name" content="JABB, Marching" />
+                </technique>
+                <technique name="Trumpet: Falloffs" enabled="true" instrument-type="trumpet" technique-type="falloff">
+                    <actions>
+                        <action action1="controller" value1="15" value2="40" />
+                        <action action2="skip" value1="0" value2="0" />
+                        <action action3="skip" value1="0" />
+                    </actions>
+                    <filter filter-type="device-or-library-name" content="JABB" />
+                </technique>
+                <technique name="Trumpet: Doits" enabled="true" instrument-type="trumpet" technique-type="doit">
+                    <actions>
+                        <action action1="controller" value1="15" value2="75" />
+                        <action action2="skip" value1="0" value2="0" />
+                        <action action3="skip" value1="0" />
+                    </actions>
+                    <filter filter-type="device-or-library-name" content="JABB" />
+                </technique>
+                <technique name="Upright Bass: Détaché" enabled="true" instrument-type="strings" technique-type="detache">
+                    <actions>
+                        <action action1="keyswitch" value1="2" value2="0" />
+                        <action action2="skip" value1="0" value2="0" />
+                        <action action3="skip" value1="0" />
+                    </actions>
+                    <filter filter-type="patch-name" content="Bass 2 Arco" />
+                </technique>
+                <technique name="Bass: Tremolo" enabled="true" instrument-type="contrabass" technique-type="tremolo-triggered">
+                    <actions>
+                        <action action1="keyswitch" value1="7" value2="0" />
+                        <action action2="skip" value1="0" value2="0" />
+                        <action action3="skip" value1="0" />
+                    </actions>
+                    <filter filter-type="device-or-library-name" content="JABB" />
+                </technique>
+                <technique name="March. Band: Solo" enabled="true" instrument-type="any-sustaining" technique-type="solo">
+                    <actions>
+                        <action action1="base-volume" value1="7" value2="0" />
+                        <action action2="keyswitch" value1="7" value2="0" />
+                        <action action3="skip" value1="0" />
+                    </actions>
+                    <filter filter-type="multiple-filter" content="#lib#Marching #patch#Grp-Solo" />
+                </technique>
+                <technique name="March. Band: Tutti" enabled="true" instrument-type="any-sustaining" technique-type="tutti">
+                    <actions>
+                        <action action1="base-volume" value1="0" value2="0" />
+                        <action action2="keyswitch" value1="0" value2="0" />
+                        <action action3="skip" value1="0" />
+                    </actions>
+                    <filter filter-type="multiple-filter" content="#lib#Marching #patch#Grp-Solo" />
+                </technique>
+                <technique name="March. Band: Standard" enabled="true" instrument-type="brass" technique-type="standard">
+                    <actions>
+                        <action action1="keyswitch" value1="7" value2="0" />
+                        <action action2="skip" value1="0" value2="0" />
+                        <action action3="skip" value1="0" />
+                    </actions>
+                    <filter filter-type="device-or-library-name" content="Marching Band" />
+                </technique>
+                <technique name="March. Band: Standard (group)" enabled="true" instrument-type="brass" technique-type="standard">
+                    <actions>
+                        <action action1="keyswitch" value1="0" value2="0" />
+                        <action action2="skip" value1="0" value2="0" />
+                        <action action3="skip" value1="0" />
+                    </actions>
+                    <filter filter-type="multiple-filter" content="#lib#Marching #patch#Grp, #lib#Marching #patch#Group" />
+                </technique>
+                <technique name="March. Band: Mute" enabled="true" instrument-type="brass" technique-type="mute">
+                    <actions>
+                        <action action1="keyswitch" value1="9" value2="0" />
+                        <action action2="skip" value1="0" value2="0" />
+                        <action action3="skip" value1="0" />
+                    </actions>
+                    <filter filter-type="external-midi" content="Marching Band" />
+                </technique>
+                <technique name="March. Band: Mute (group)" enabled="true" instrument-type="brass" technique-type="mute">
+                    <actions>
+                        <action action1="keyswitch" value1="2" value2="0" />
+                        <action action2="skip" value1="0" value2="0" />
+                        <action action3="skip" value1="0" />
+                    </actions>
+                    <filter filter-type="multiple-filter" content="#lib#Marching #patch#Grp, #lib#Marching #patch#Group" />
+                </technique>
+                <technique name="March. Band: Cup Mute" enabled="true" instrument-type="brass" technique-type="mute-cup">
+                    <actions>
+                        <action action1="keyswitch" value1="11" value2="0" />
+                        <action action2="skip" value1="0" value2="0" />
+                        <action action3="skip" value1="0" />
+                    </actions>
+                    <filter filter-type="external-midi" content="Marching Band" />
+                </technique>
+                <technique name="March. Band: Cup (group)" enabled="true" instrument-type="brass" technique-type="mute-cup">
+                    <actions>
+                        <action action1="keyswitch" value1="4" value2="0" />
+                        <action action2="skip" value1="0" value2="0" />
+                        <action action3="skip" value1="0" />
+                    </actions>
+                    <filter filter-type="multiple-filter" content="#lib#Marching #patch#Grp, #lib#Marching #patch#Group" />
+                </technique>
+            </container>
+            <container name="Garritan: GM instruments">
+                <technique name="Soundtrack &amp; Squarewave" enabled="true" instrument-type="any-sustaining" technique-type="standard">
+                    <actions>
+                        <action action1="dynamic-cc7+velocity" value1="4" value2="75" />
+                        <action action2="skip" value1="0" value2="0" />
+                        <action action3="skip" value1="0" />
+                    </actions>
+                    <filter filter-type="patch-name" content="Soundtrack, Squarewave" />
+                </technique>
+            </container>
+            <container name="GPO 5: Voice">
+                <technique name="Voice:Ahhs" enabled="true" instrument-type="any-sustaining" technique-type="custom">
+                    <actions>
+                        <action action1="keyswitch" value1="0" value2="0" />
+                        <action action2="skip" value1="0" value2="0" />
+                        <action action3="skip" value1="0" />
+                    </actions>
+                    <filter filter-type="text-expression" content="voice aahs" />
+                </technique>
+                <technique name="Voice: Oohs" enabled="true" instrument-type="any-sustaining" technique-type="custom">
+                    <actions>
+                        <action action1="keyswitch" value1="2" value2="0" />
+                        <action action2="skip" value1="0" value2="0" />
+                        <action action3="skip" value1="0" />
+                    </actions>
+                    <filter filter-type="text-expression" content="voice oohs" />
+                </technique>
+                <technique name="Voice: eehs" enabled="true" instrument-type="any-sustaining" technique-type="custom">
+                    <actions>
+                        <action action1="keyswitch" value1="4" value2="0" />
+                        <action action2="skip" value1="0" value2="0" />
+                        <action action3="skip" value1="0" />
+                    </actions>
+                    <filter filter-type="text-expression" content="voice eehs" />
+                </technique>
+            </container>
+            <container name="GPO 5: 1st Violins Section">
+                <technique name="Standard (arco)" enabled="true" instrument-type="violin" technique-type="standard">
+                    <actions>
+                        <action action1="keyswitch" value1="0" value2="0" />
+                        <action action2="skip" value1="0" value2="0" />
+                        <action action3="skip" value1="0" />
+                    </actions>
+                    <filter filter-type="multiple-filter" content="#lib#GPO #patch#n-01 Violins 1 KS" />
+                </technique>
+                <technique name="HeavyVib" enabled="true" instrument-type="violin" technique-type="custom">
+                    <actions>
+                        <action action1="keyswitch" value1="1" value2="0" />
+                        <action action2="skip" value1="0" value2="0" />
+                        <action action3="skip" value1="0" />
+                    </actions>
+                    <filter filter-type="text-expression" content="Heavy Vibrato" />
+                </technique>
+                <technique name="Grand DÃ©tachÃ©" enabled="true" instrument-type="violin" technique-type="custom">
+                    <actions>
+                        <action action1="keyswitch" value1="2" value2="0" />
+                        <action action2="skip" value1="0" value2="0" />
+                        <action action3="skip" value1="0" />
+                    </actions>
+                    <filter filter-type="text-expression" content="detache" />
+                </technique>
+                <technique name="Marcato" enabled="true" instrument-type="violin" technique-type="custom">
+                    <actions>
+                        <action action1="keyswitch" value1="3" value2="0" />
+                        <action action2="skip" value1="0" value2="0" />
+                        <action action3="skip" value1="0" />
+                    </actions>
+                    <filter filter-type="text-expression" content="Marcato" />
+                </technique>
+                <technique name="Martele" enabled="true" instrument-type="violin" technique-type="custom">
+                    <actions>
+                        <action action1="keyswitch" value1="4" value2="0" />
+                        <action action2="skip" value1="0" value2="0" />
+                        <action action3="skip" value1="0" />
+                    </actions>
+                    <filter filter-type="text-expression" content="martele" />
+                </technique>
+                <technique name="Pizzicato" enabled="true" instrument-type="violin" technique-type="pizzicato">
+                    <actions>
+                        <action action1="keyswitch" value1="5" value2="0" />
+                        <action action2="skip" value1="0" value2="0" />
+                        <action action3="skip" value1="0" />
+                    </actions>
+                    <filter filter-type="multiple-filter" content="#lib#GPO #patch#n-01 Violins 1 KS" />
+                </technique>
+                <technique name="Portato" enabled="true" instrument-type="violin" technique-type="custom">
+                    <actions>
+                        <action action1="keyswitch" value1="6" value2="0" />
+                        <action action2="skip" value1="0" value2="0" />
+                        <action action3="skip" value1="0" />
+                    </actions>
+                    <filter filter-type="text-expression" content="Portato" />
+                </technique>
+                <technique name="Col Legno" enabled="true" instrument-type="violin" technique-type="col-legno-battuto">
+                    <actions>
+                        <action action1="keyswitch" value1="7" value2="0" />
+                        <action action2="skip" value1="0" value2="0" />
+                        <action action3="skip" value1="0" />
+                    </actions>
+                    <filter filter-type="multiple-filter" content="#lib#GPO #patch#01 Violins 1 KS" />
+                </technique>
+                <technique name="Sautille" enabled="true" instrument-type="violin" technique-type="custom">
+                    <actions>
+                        <action action1="keyswitch" value1="8" value2="0" />
+                        <action action2="skip" value1="0" value2="0" />
+                        <action action3="skip" value1="0" />
+                    </actions>
+                    <filter filter-type="text-expression" content="Sautille" />
+                </technique>
+                <technique name="Spiccato" enabled="true" instrument-type="violin" technique-type="custom">
+                    <actions>
+                        <action action1="keyswitch" value1="9" value2="0" />
+                        <action action2="skip" value1="0" value2="0" />
+                        <action action3="skip" value1="0" />
+                    </actions>
+                    <filter filter-type="text-expression" content="Spiccato" />
+                </technique>
+                <technique name="Staccato" enabled="true" instrument-type="violin" technique-type="custom">
+                    <actions>
+                        <action action1="keyswitch" value1="10" value2="0" />
+                        <action action2="skip" value1="0" value2="0" />
+                        <action action3="skip" value1="0" />
+                    </actions>
+                    <filter filter-type="text-expression" content="Staccato" />
+                </technique>
+                <technique name="Sul Tasto" enabled="true" instrument-type="violin" technique-type="custom">
+                    <actions>
+                        <action action1="keyswitch" value1="11" value2="0" />
+                        <action action2="skip" value1="0" value2="0" />
+                        <action action3="skip" value1="0" />
+                    </actions>
+                    <filter filter-type="text-expression" content="Sul tasto" />
+                </technique>
+            </container>
+            <container name="GPO 5: 2nd Violins Section">
+                <technique name="Standard (arco)" enabled="true" instrument-type="violin" technique-type="standard">
+                    <actions>
+                        <action action1="keyswitch" value1="0" value2="0" />
+                        <action action2="skip" value1="0" value2="0" />
+                        <action action3="skip" value1="0" />
+                    </actions>
+                    <filter filter-type="multiple-filter" content="#lib#GPO #patch#n-02 Violins 2 KS" />
+                </technique>
+                <technique name="HeavyVib" enabled="true" instrument-type="any" technique-type="custom">
+                    <actions>
+                        <action action1="keyswitch" value1="1" value2="0" />
+                        <action action2="skip" value1="0" value2="0" />
+                        <action action3="skip" value1="0" />
+                    </actions>
+                    <filter filter-type="text-expression" content="Heavy Vibrato" />
+                </technique>
+                <technique name="Grand DÃ©tachÃ©" enabled="true" instrument-type="violin" technique-type="detache">
+                    <actions>
+                        <action action1="keyswitch" value1="2" value2="0" />
+                        <action action2="skip" value1="0" value2="0" />
+                        <action action3="skip" value1="0" />
+                    </actions>
+                    <filter filter-type="multiple-filter" content="#lib#GPO #patch#02 Violins 2 KS" />
+                </technique>
+                <technique name="Marcato" enabled="true" instrument-type="violin" technique-type="custom">
+                    <actions>
+                        <action action1="keyswitch" value1="3" value2="0" />
+                        <action action2="skip" value1="0" value2="0" />
+                        <action action3="skip" value1="0" />
+                    </actions>
+                    <filter filter-type="text-expression" content="Marcato" />
+                </technique>
+                <technique name="Martele" enabled="true" instrument-type="violin" technique-type="martellato">
+                    <actions>
+                        <action action1="keyswitch" value1="4" value2="0" />
+                        <action action2="skip" value1="0" value2="0" />
+                        <action action3="skip" value1="0" />
+                    </actions>
+                    <filter filter-type="multiple-filter" content="#lib#GPO #patch#02 Violins 2 KS" />
+                </technique>
+                <technique name="Pizzicato" enabled="true" instrument-type="violin" technique-type="pizzicato">
+                    <actions>
+                        <action action1="keyswitch" value1="5" value2="0" />
+                        <action action2="skip" value1="0" value2="0" />
+                        <action action3="skip" value1="0" />
+                    </actions>
+                    <filter filter-type="multiple-filter" content="#lib#GPO #ptch#n-02 Violins 2 KS" />
+                </technique>
+                <technique name="Portato" enabled="true" instrument-type="violin" technique-type="custom">
+                    <actions>
+                        <action action1="keyswitch" value1="6" value2="0" />
+                        <action action2="skip" value1="0" value2="0" />
+                        <action action3="skip" value1="0" />
+                    </actions>
+                    <filter filter-type="text-expression" content="Portato" />
+                </technique>
+                <technique name="Col Legno" enabled="true" instrument-type="violin" technique-type="col-legno-battuto">
+                    <actions>
+                        <action action1="keyswitch" value1="7" value2="0" />
+                        <action action2="skip" value1="0" value2="0" />
+                        <action action3="skip" value1="0" />
+                    </actions>
+                    <filter filter-type="multiple-filter" content="#lib#GPO #patch#n-02 Violins 2 KS" />
+                </technique>
+                <technique name="Sautille" enabled="true" instrument-type="violin" technique-type="custom">
+                    <actions>
+                        <action action1="keyswitch" value1="8" value2="0" />
+                        <action action2="skip" value1="0" value2="0" />
+                        <action action3="skip" value1="0" />
+                    </actions>
+                    <filter filter-type="text-expression" content="Sautille" />
+                </technique>
+                <technique name="Spiccato" enabled="true" instrument-type="violin" technique-type="spiccato">
+                    <actions>
+                        <action action1="keyswitch" value1="9" value2="0" />
+                        <action action2="skip" value1="0" value2="0" />
+                        <action action3="skip" value1="0" />
+                    </actions>
+                    <filter filter-type="multiple-filter" content="#lib#GPO #patch#02 Violins 2 KS" />
+                </technique>
+                <technique name="Staccato" enabled="true" instrument-type="violin" technique-type="staccato">
+                    <actions>
+                        <action action1="keyswitch" value1="10" value2="0" />
+                        <action action2="skip" value1="0" value2="0" />
+                        <action action3="skip" value1="0" />
+                    </actions>
+                    <filter filter-type="multiple-filter" content="#lib#GPO #patch#02 Violins 2 KS" />
+                </technique>
+                <technique name="Sul Tasto" enabled="true" instrument-type="violin" technique-type="tasto">
+                    <actions>
+                        <action action1="keyswitch" value1="11" value2="0" />
+                        <action action2="skip" value1="0" value2="0" />
+                        <action action3="skip" value1="0" />
+                    </actions>
+                    <filter filter-type="multiple-filter" content="#lib#GPO #patch#02 Violins 2 KS" />
+                </technique>
+            </container>
+            <container name="GPO 5: Viola Section">
+                <technique name="Standard (arco)" enabled="true" instrument-type="viola" technique-type="standard">
+                    <actions>
+                        <action action1="keyswitch" value1="0" value2="0" />
+                        <action action2="skip" value1="0" value2="0" />
+                        <action action3="skip" value1="0" />
+                    </actions>
+                    <filter filter-type="multiple-filter" content="#lib#GPO #patch#03 Violas KS" />
+                </technique>
+                <technique name="HeavyVib" enabled="true" instrument-type="any" technique-type="custom">
+                    <actions>
+                        <action action1="keyswitch" value1="1" value2="0" />
+                        <action action2="skip" value1="0" value2="0" />
+                        <action action3="skip" value1="0" />
+                    </actions>
+                    <filter filter-type="text-expression" content="Vla. Heavy Vibrato" />
+                </technique>
+                <technique name="Grand DÃ©tachÃ©" enabled="true" instrument-type="viola" technique-type="custom">
+                    <actions>
+                        <action action1="keyswitch" value1="2" value2="0" />
+                        <action action2="skip" value1="0" value2="0" />
+                        <action action3="skip" value1="0" />
+                    </actions>
+                    <filter filter-type="text-expression" content="detache" />
+                </technique>
+                <technique name="Martele Agg." enabled="true" instrument-type="viola" technique-type="custom">
+                    <actions>
+                        <action action1="keyswitch" value1="3" value2="0" />
+                        <action action2="skip" value1="0" value2="0" />
+                        <action action3="skip" value1="0" />
+                    </actions>
+                    <filter filter-type="text-expression" content="martele agg" />
+                </technique>
+                <technique name="Martele" enabled="true" instrument-type="viola" technique-type="custom">
+                    <actions>
+                        <action action1="keyswitch" value1="4" value2="0" />
+                        <action action2="skip" value1="0" value2="0" />
+                        <action action3="skip" value1="0" />
+                    </actions>
+                    <filter filter-type="text-expression" content="martele" />
+                </technique>
+                <technique name="Pizzicato" enabled="true" instrument-type="viola" technique-type="pizzicato">
+                    <actions>
+                        <action action1="keyswitch" value1="5" value2="0" />
+                        <action action2="skip" value1="0" value2="0" />
+                        <action action3="skip" value1="0" />
+                    </actions>
+                    <filter filter-type="multiple-filter" content="#lib#GPO #patch#03 Violas KS" />
+                </technique>
+                <technique name="Portato" enabled="true" instrument-type="viola" technique-type="custom">
+                    <actions>
+                        <action action1="keyswitch" value1="6" value2="0" />
+                        <action action2="skip" value1="0" value2="0" />
+                        <action action3="skip" value1="0" />
+                    </actions>
+                    <filter filter-type="text-expression" content="Portato" />
+                </technique>
+                <technique name="Col Legno" enabled="true" instrument-type="viola" technique-type="col-legno-battuto">
+                    <actions>
+                        <action action1="keyswitch" value1="7" value2="0" />
+                        <action action2="skip" value1="0" value2="0" />
+                        <action action3="skip" value1="0" />
+                    </actions>
+                    <filter filter-type="multiple-filter" content="#lib#GPO #patch#03 Violas KS" />
+                </technique>
+                <technique name="Spiccato" enabled="true" instrument-type="viola" technique-type="custom">
+                    <actions>
+                        <action action1="keyswitch" value1="8" value2="0" />
+                        <action action2="skip" value1="0" value2="0" />
+                        <action action3="skip" value1="0" />
+                    </actions>
+                    <filter filter-type="text-expression" content="Spiccato" />
+                </technique>
+            </container>
+            <container name="GPO 5: Cello Section">
+                <technique name="Standard (arco)" enabled="true" instrument-type="cello" technique-type="standard">
+                    <actions>
+                        <action action1="keyswitch" value1="0" value2="0" />
+                        <action action2="skip" value1="0" value2="0" />
+                        <action action3="skip" value1="0" />
+                    </actions>
+                    <filter filter-type="multiple-filter" content="#lib#GPO #patch#04 Cellos KS" />
+                </technique>
+                <technique name="HeavyVib" enabled="true" instrument-type="cello" technique-type="custom">
+                    <actions>
+                        <action action1="keyswitch" value1="1" value2="0" />
+                        <action action2="skip" value1="0" value2="0" />
+                        <action action3="skip" value1="0" />
+                    </actions>
+                    <filter filter-type="text-expression" content="#lib#GPO #patch#04 Cellos KS" />
+                </technique>
+                <technique name="Grand DÃ©tachÃ©" enabled="true" instrument-type="cello" technique-type="custom">
+                    <actions>
+                        <action action1="keyswitch" value1="2" value2="0" />
+                        <action action2="skip" value1="0" value2="0" />
+                        <action action3="skip" value1="0" />
+                    </actions>
+                    <filter filter-type="text-expression" content="detache" />
+                </technique>
+                <technique name="Marcato" enabled="true" instrument-type="cello" technique-type="custom">
+                    <actions>
+                        <action action1="keyswitch" value1="3" value2="0" />
+                        <action action2="skip" value1="0" value2="0" />
+                        <action action3="skip" value1="0" />
+                    </actions>
+                    <filter filter-type="text-expression" content="marcato" />
+                </technique>
+                <technique name="Martele" enabled="true" instrument-type="cello" technique-type="custom">
+                    <actions>
+                        <action action1="keyswitch" value1="4" value2="0" />
+                        <action action2="skip" value1="0" value2="0" />
+                        <action action3="skip" value1="0" />
+                    </actions>
+                    <filter filter-type="text-expression" content="Martele" />
+                </technique>
+                <technique name="Pizzicato" enabled="true" instrument-type="cello" technique-type="pizzicato">
+                    <actions>
+                        <action action1="keyswitch" value1="5" value2="0" />
+                        <action action2="skip" value1="0" value2="0" />
+                        <action action3="skip" value1="0" />
+                    </actions>
+                    <filter filter-type="multiple-filter" content="#lib#GPO #patch#04 Cellos KS" />
+                </technique>
+                <technique name="Col Legno" enabled="true" instrument-type="cello" technique-type="col-legno-battuto">
+                    <actions>
+                        <action action1="keyswitch" value1="6" value2="0" />
+                        <action action2="skip" value1="0" value2="0" />
+                        <action action3="skip" value1="0" />
+                    </actions>
+                    <filter filter-type="multiple-filter" content="#lib#GPO #patch#04 Cellos KS" />
+                </technique>
+                <technique name="Spiccato" enabled="true" instrument-type="cello" technique-type="custom">
+                    <actions>
+                        <action action1="keyswitch" value1="7" value2="0" />
+                        <action action2="skip" value1="0" value2="0" />
+                        <action action3="skip" value1="0" />
+                    </actions>
+                    <filter filter-type="text-expression" content="Spiccato" />
+                </technique>
+                <technique name="Staccato" enabled="true" instrument-type="cello" technique-type="custom">
+                    <actions>
+                        <action action1="keyswitch" value1="8" value2="0" />
+                        <action action2="skip" value1="0" value2="0" />
+                        <action action3="skip" value1="0" />
+                    </actions>
+                    <filter filter-type="text-expression" content="staccato" />
+                </technique>
+            </container>
+            <container name="GPO 5: Bass Section">
+                <technique name="Standard (arco)" enabled="true" instrument-type="contrabass" technique-type="standard">
+                    <actions>
+                        <action action1="keyswitch" value1="0" value2="0" />
+                        <action action2="skip" value1="0" value2="0" />
+                        <action action3="skip" value1="0" />
+                    </actions>
+                    <filter filter-type="multiple-filter" content="#lib#GPO #patch#05 Basses KS" />
+                </technique>
+                <technique name="HeavyVib" enabled="true" instrument-type="contrabass" technique-type="custom">
+                    <actions>
+                        <action action1="keyswitch" value1="1" value2="0" />
+                        <action action2="skip" value1="0" value2="0" />
+                        <action action3="skip" value1="0" />
+                    </actions>
+                    <filter filter-type="text-expression" content="#lib#GPO #patch#05 Basses KS" />
+                </technique>
+                <technique name="Grand DÃ©tachÃ©" enabled="true" instrument-type="contrabass" technique-type="custom">
+                    <actions>
+                        <action action1="keyswitch" value1="2" value2="0" />
+                        <action action2="skip" value1="0" value2="0" />
+                        <action action3="skip" value1="0" />
+                    </actions>
+                    <filter filter-type="text-expression" content="detache" />
+                </technique>
+                <technique name="Staccato" enabled="true" instrument-type="contrabass" technique-type="staccato">
+                    <actions>
+                        <action action1="keyswitch" value1="3" value2="0" />
+                        <action action2="skip" value1="0" value2="0" />
+                        <action action3="skip" value1="0" />
+                    </actions>
+                    <filter filter-type="multiple-filter" content="#lib#GPO #patch#05 Basses KS" />
+                </technique>
+                <technique name="Martele" enabled="true" instrument-type="contrabass" technique-type="custom">
+                    <actions>
+                        <action action1="keyswitch" value1="4" value2="0" />
+                        <action action2="skip" value1="0" value2="0" />
+                        <action action3="skip" value1="0" />
+                    </actions>
+                    <filter filter-type="text-expression" content="martele" />
+                </technique>
+                <technique name="Pizzicato" enabled="true" instrument-type="contrabass" technique-type="pizzicato">
+                    <actions>
+                        <action action1="keyswitch" value1="5" value2="0" />
+                        <action action2="skip" value1="0" value2="0" />
+                        <action action3="skip" value1="0" />
+                    </actions>
+                    <filter filter-type="multiple-filter" content="#lib#GPO #patch#05 Basses KS" />
+                </technique>
+                <technique name="Col Legno" enabled="true" instrument-type="contrabass" technique-type="col-legno-battuto">
+                    <actions>
+                        <action action1="keyswitch" value1="6" value2="0" />
+                        <action action2="skip" value1="0" value2="0" />
+                        <action action3="skip" value1="0" />
+                    </actions>
+                    <filter filter-type="multiple-filter" content="#lib#GPO #patch#05 Basses KS" />
+                </technique>
+                <technique name="Snap Pizz." enabled="true" instrument-type="contrabass" technique-type="custom">
+                    <actions>
+                        <action action1="keyswitch" value1="7" value2="0" />
+                        <action action2="skip" value1="0" value2="0" />
+                        <action action3="skip" value1="0" />
+                    </actions>
+                    <filter filter-type="text-expression" content="snap pizz" />
+                </technique>
+            </container>
+            <container name="GPO 5: Violin Solo">
+                <technique name="Sustain Vibrato (arco)" enabled="true" instrument-type="violin" technique-type="standard">
+                    <actions>
+                        <action action1="keyswitch" value1="0" value2="0" />
+                        <action action2="skip" value1="0" value2="0" />
+                        <action action3="skip" value1="0" />
+                    </actions>
+                    <filter filter-type="multiple-filter" content="#lib#GPO #patch#Violin 1 KS" />
+                </technique>
+                <technique name="Lush Forte" enabled="true" instrument-type="any" technique-type="custom">
+                    <actions>
+                        <action action1="keyswitch" value1="1" value2="0" />
+                        <action action2="skip" value1="0" value2="0" />
+                        <action action3="skip" value1="0" />
+                    </actions>
+                    <filter filter-type="text-expression" content="Heavy Vibrato" />
+                </technique>
+                <technique name="Sfzando" enabled="true" instrument-type="violin" technique-type="custom">
+                    <actions>
+                        <action action1="keyswitch" value1="2" value2="0" />
+                        <action action2="skip" value1="0" value2="0" />
+                        <action action3="skip" value1="0" />
+                    </actions>
+                    <filter filter-type="text-expression" content="#lib#GPO #patch#Violin 1 KS" />
+                </technique>
+                <technique name="DÃ©tachÃ©" enabled="true" instrument-type="violin" technique-type="detache">
+                    <actions>
+                        <action action1="keyswitch" value1="3" value2="0" />
+                        <action action2="skip" value1="0" value2="0" />
+                        <action action3="skip" value1="0" />
+                    </actions>
+                    <filter filter-type="multiple-filter" content="#lib#GPO #patch#Violin 1 KS" />
+                </technique>
+                <technique name="Martele" enabled="true" instrument-type="violin" technique-type="martellato">
+                    <actions>
+                        <action action1="keyswitch" value1="4" value2="0" />
+                        <action action2="skip" value1="0" value2="0" />
+                        <action action3="skip" value1="0" />
+                    </actions>
+                    <filter filter-type="multiple-filter" content="#lib#GPO #patch#Violin 1 KS" />
+                </technique>
+                <technique name="Pizzicato" enabled="true" instrument-type="violin" technique-type="pizzicato">
+                    <actions>
+                        <action action1="keyswitch" value1="5" value2="0" />
+                        <action action2="skip" value1="0" value2="0" />
+                        <action action3="skip" value1="0" />
+                    </actions>
+                    <filter filter-type="multiple-filter" content="#lib#GPO #patch#Violin 1 KS" />
+                </technique>
+                <technique name="Col Legno" enabled="true" instrument-type="violin" technique-type="col-legno-battuto">
+                    <actions>
+                        <action action1="keyswitch" value1="6" value2="0" />
+                        <action action2="skip" value1="0" value2="0" />
+                        <action action3="skip" value1="0" />
+                    </actions>
+                    <filter filter-type="multiple-filter" content="#lib#GPO #patch#Violin 1 KS" />
+                </technique>
+                <technique name="Spiccato" enabled="true" instrument-type="violin" technique-type="spiccato">
+                    <actions>
+                        <action action1="keyswitch" value1="7" value2="0" />
+                        <action action2="skip" value1="0" value2="0" />
+                        <action action3="skip" value1="0" />
+                    </actions>
+                    <filter filter-type="multiple-filter" content="#lib#GPO #patch#Violin 1 KS" />
+                </technique>
+                <technique name="Staccato" enabled="true" instrument-type="violin" technique-type="staccato">
+                    <actions>
+                        <action action1="keyswitch" value1="8" value2="0" />
+                        <action action2="skip" value1="0" value2="0" />
+                        <action action3="skip" value1="0" />
+                    </actions>
+                    <filter filter-type="multiple-filter" content="#lib#GPO #patch#Violin 1 KS" />
+                </technique>
+            </container>
+            <container name="GPO 5: Viola Solo">
+                <technique name="Sustain Vibrato (arco)" enabled="true" instrument-type="viola" technique-type="standard">
+                    <actions>
+                        <action action1="keyswitch" value1="0" value2="0" />
+                        <action action2="skip" value1="0" value2="0" />
+                        <action action3="skip" value1="0" />
+                    </actions>
+                    <filter filter-type="multiple-filter" content="#lib#GPO #patch#Viola 1 KS" />
+                </technique>
+                <technique name="Tremolo" enabled="true" instrument-type="any" technique-type="custom">
+                    <actions>
+                        <action action1="keyswitch" value1="2" value2="0" />
+                        <action action2="skip" value1="0" value2="0" />
+                        <action action3="skip" value1="0" />
+                    </actions>
+                    <filter filter-type="text-expression" content="#lib#GPO #patch#Viola 1 KS" />
+                </technique>
+                <technique name="Snap" enabled="true" instrument-type="viola" technique-type="bartok-pizz">
+                    <actions>
+                        <action action1="keyswitch" value1="4" value2="0" />
+                        <action action2="skip" value1="0" value2="0" />
+                        <action action3="skip" value1="0" />
+                    </actions>
+                    <filter filter-type="multiple-filter" content="#lib#GPO #patch#Viola 1 KS" />
+                </technique>
+                <technique name="Pizzicato" enabled="true" instrument-type="viola" technique-type="pizzicato">
+                    <actions>
+                        <action action1="keyswitch" value1="5" value2="0" />
+                        <action action2="skip" value1="0" value2="0" />
+                        <action action3="skip" value1="0" />
+                    </actions>
+                    <filter filter-type="multiple-filter" content="#lib#GPO #patch#Viola 1 KS" />
+                </technique>
+                <technique name="Spiccato" enabled="true" instrument-type="viola" technique-type="spiccato">
+                    <actions>
+                        <action action1="keyswitch" value1="7" value2="0" />
+                        <action action2="skip" value1="0" value2="0" />
+                        <action action3="skip" value1="0" />
+                    </actions>
+                    <filter filter-type="multiple-filter" content="#lib#GPO #patch#Viola 1 KS" />
+                </technique>
+            </container>
+            <container name="GPO 5: Cello Solo">
+                <technique name="Sustained Vibrato(arco)" enabled="true" instrument-type="cello" technique-type="standard">
+                    <actions>
+                        <action action1="keyswitch" value1="0" value2="0" />
+                        <action action2="skip" value1="0" value2="0" />
+                        <action action3="skip" value1="0" />
+                    </actions>
+                    <filter filter-type="multiple-filter" content="#lib#GPO #patch#Cello 1 KS" />
+                </technique>
+                <technique name="Tremolo" enabled="true" instrument-type="cello" technique-type="tremolo-sampled">
+                    <actions>
+                        <action action1="keyswitch" value1="2" value2="0" />
+                        <action action2="skip" value1="0" value2="0" />
+                        <action action3="skip" value1="0" />
+                    </actions>
+                    <filter filter-type="multiple-filter" content="#lib#GPO #patch#Cello 1 KS" />
+                </technique>
+                <technique name="DÃ©tachÃ©" enabled="true" instrument-type="cello" technique-type="detache">
+                    <actions>
+                        <action action1="keyswitch" value1="4" value2="0" />
+                        <action action2="skip" value1="0" value2="0" />
+                        <action action3="skip" value1="0" />
+                    </actions>
+                    <filter filter-type="multiple-filter" content="#lib#GPO #patch#Cello 1 KS" />
+                </technique>
+                <technique name="Pizzicato" enabled="true" instrument-type="cello" technique-type="pizzicato">
+                    <actions>
+                        <action action1="keyswitch" value1="5" value2="0" />
+                        <action action2="skip" value1="0" value2="0" />
+                        <action action3="skip" value1="0" />
+                    </actions>
+                    <filter filter-type="multiple-filter" content="#lib#GPO #patch#Cello 1 KS" />
+                </technique>
+                <technique name="Spiccato" enabled="true" instrument-type="cello" technique-type="spiccato">
+                    <actions>
+                        <action action1="keyswitch" value1="7" value2="0" />
+                        <action action2="skip" value1="0" value2="0" />
+                        <action action3="skip" value1="0" />
+                    </actions>
+                    <filter filter-type="multiple-filter" content="#lib#GPO #patch#Cello 1 KS" />
+                </technique>
+                <technique name="Snap" enabled="true" instrument-type="cello" technique-type="bartok-pizz">
+                    <actions>
+                        <action action1="keyswitch" value1="9" value2="0" />
+                        <action action2="skip" value1="0" value2="0" />
+                        <action action3="skip" value1="0" />
+                    </actions>
+                    <filter filter-type="multiple-filter" content="#lib#GPO #patch#Cello 1 KS" />
+                </technique>
+            </container>
+            <container name="GPO 5: Bass Solo">
+                <technique name="Sustained Vibrato(arco)" enabled="true" instrument-type="contrabass" technique-type="standard">
+                    <actions>
+                        <action action1="keyswitch" value1="0" value2="0" />
+                        <action action2="skip" value1="0" value2="0" />
+                        <action action3="skip" value1="0" />
+                    </actions>
+                    <filter filter-type="multiple-filter" content="#lib#GPO #patch#Bass 1 KS" />
+                </technique>
+                <technique name="Spiccato" enabled="true" instrument-type="contrabass" technique-type="spiccato">
+                    <actions>
+                        <action action1="keyswitch" value1="2" value2="0" />
+                        <action action2="skip" value1="0" value2="0" />
+                        <action action3="skip" value1="0" />
+                    </actions>
+                    <filter filter-type="multiple-filter" content="#lib#GPO #patch#Bass 1 KS" />
+                </technique>
+                <technique name="Snap Pizz." enabled="true" instrument-type="contrabass" technique-type="bartok-pizz">
+                    <actions>
+                        <action action1="keyswitch" value1="4" value2="0" />
+                        <action action2="skip" value1="0" value2="0" />
+                        <action action3="skip" value1="0" />
+                    </actions>
+                    <filter filter-type="multiple-filter" content="#lib#GPO #patch#Bass 1 KS" />
+                </technique>
+                <technique name="Pizzicato" enabled="true" instrument-type="contrabass" technique-type="pizzicato">
+                    <actions>
+                        <action action1="keyswitch" value1="5" value2="0" />
+                        <action action2="skip" value1="0" value2="0" />
+                        <action action3="skip" value1="0" />
+                    </actions>
+                    <filter filter-type="multiple-filter" content="#lib#GPO #patch#Bass 1 KS" />
+                </technique>
+            </container>
+            <container name="GPO 5: SAM Brass">
+                <technique name="SAM Brass: Standard" enabled="true" instrument-type="brass" technique-type="standard">
+                    <actions>
+                        <action action1="keyswitch" value1="0" value2="0" />
+                        <action action2="skip" value1="0" value2="0" />
+                        <action action3="skip" value1="0" />
+                    </actions>
+                    <filter filter-type="multiple-filter" content="#lib#GPO #patch#SAM #patch#KS" />
+                </technique>
+                <technique name="SAM Brass: Marcato" enabled="true" instrument-type="brass" technique-type="custom">
+                    <actions>
+                        <action action1="keyswitch" value1="2" value2="0" />
+                        <action action2="skip" value1="0" value2="0" />
+                        <action action3="skip" value1="0" />
+                    </actions>
+                    <filter filter-type="text-expression" content="marcato" />
+                </technique>
+                <technique name="SAM Brass: Staccato" enabled="true" instrument-type="brass" technique-type="custom">
+                    <actions>
+                        <action action1="keyswitch" value1="4" value2="0" />
+                        <action action2="skip" value1="0" value2="0" />
+                        <action action3="skip" value1="0" />
+                    </actions>
+                    <filter filter-type="text-expression" content="staccato" />
+                </technique>
+            </container>
+            <container name="GPO 5: Concert Harp">
+                <technique name="Chromatic Harp" enabled="true" instrument-type="harp" technique-type="custom">
+                    <actions>
+                        <action action1="keyswitch" value1="0" value2="0" />
+                        <action action2="skip" value1="0" value2="0" />
+                        <action action3="skip" value1="0" />
+                    </actions>
+                    <filter filter-type="text-expression" content="Chromatic Harp" />
+                </technique>
+                <technique name="Pedal Harp" enabled="true" instrument-type="harp" technique-type="standard">
+                    <actions>
+                        <action action1="keyswitch" value1="2" value2="0" />
+                        <action action2="skip" value1="0" value2="0" />
+                        <action action3="skip" value1="0" />
+                    </actions>
+                    <filter filter-type="no-filter" content="" />
+                </technique>
+                <technique name="Harmonics" enabled="true" instrument-type="harp" technique-type="plucked-string-harmonics">
+                    <actions>
+                        <action action1="keyswitch" value1="4" value2="0" />
+                        <action action2="skip" value1="0" value2="0" />
+                        <action action3="skip" value1="0" />
+                    </actions>
+                    <filter filter-type="multiple-filter" content="#patch#Concert Grand Harp 1 KS" />
+                </technique>
+            </container>
+            <container name="Virtual Drumline">
+                <technique name="Virtual Drumline: Standard" enabled="true" instrument-type="unpitched-percussion" technique-type="standard">
+                    <actions>
+                        <action action1="dynamic-cc7+velocity" value1="88" value2="0" />
+                        <action action2="skip" value1="0" value2="0" />
+                        <action action3="skip" value1="0" />
+                    </actions>
+                    <filter filter-type="patch-name" content="VDL" />
+                </technique>
+                <technique name="VDL: Snare Drum Roll" enabled="true" instrument-type="unpitched-percussion" technique-type="rolls-sampled">
+                    <actions>
+                        <action action1="set-to-pitch" value1="88" value2="0" />
+                        <action action2="skip" value1="0" value2="0" />
+                        <action action3="skip" value1="0" />
+                    </actions>
+                    <filter filter-type="patch-name" content="VDLite Snare" />
+                </technique>
+                <technique name="Tenor Rolls 1" enabled="true" instrument-type="unpitched-percussion" technique-type="rolls-sampled">
+                    <actions>
+                        <action action1="set-to-pitch" value1="53" value2="0" />
+                        <action action2="these-notes-only" value1="41" value2="42" />
+                        <action action3="skip" value1="0" />
+                    </actions>
+                    <filter filter-type="patch-name" content="VDLite Tenor" />
+                </technique>
+                <technique name="Tenor Rolls 2" enabled="true" instrument-type="unpitched-percussion" technique-type="rolls-sampled">
+                    <actions>
+                        <action action1="set-to-pitch" value1="53" value2="0" />
+                        <action action2="these-notes-only" value1="65" value2="66" />
+                        <action action3="skip" value1="0" />
+                    </actions>
+                    <filter filter-type="patch-name" content="VDLite Tenor" />
+                </technique>
+                <technique name="Tenor Rolls 3" enabled="true" instrument-type="unpitched-percussion" technique-type="rolls-sampled">
+                    <actions>
+                        <action action1="set-to-pitch" value1="54" value2="0" />
+                        <action action2="these-notes-only" value1="43" value2="44" />
+                        <action action3="skip" value1="0" />
+                    </actions>
+                    <filter filter-type="patch-name" content="VDLite Tenor" />
+                </technique>
+                <technique name="Tenor Rolls 4" enabled="true" instrument-type="unpitched-percussion" technique-type="rolls-sampled">
+                    <actions>
+                        <action action1="set-to-pitch" value1="54" value2="0" />
+                        <action action2="these-notes-only" value1="67" value2="68" />
+                        <action action3="skip" value1="0" />
+                    </actions>
+                    <filter filter-type="patch-name" content="VDLite Tenor" />
+                </technique>
+                <technique name="Tenor Rolls 5" enabled="true" instrument-type="unpitched-percussion" technique-type="rolls-sampled">
+                    <actions>
+                        <action action1="set-to-pitch" value1="55" value2="0" />
+                        <action action2="these-notes-only" value1="45" value2="46" />
+                        <action action3="skip" value1="0" />
+                    </actions>
+                    <filter filter-type="patch-name" content="VDLite Tenor" />
+                </technique>
+                <technique name="Tenor Rolls 6" enabled="true" instrument-type="unpitched-percussion" technique-type="rolls-sampled">
+                    <actions>
+                        <action action1="set-to-pitch" value1="55" value2="0" />
+                        <action action2="these-notes-only" value1="69" value2="70" />
+                        <action action3="skip" value1="0" />
+                    </actions>
+                    <filter filter-type="patch-name" content="VDLite Tenor" />
+                </technique>
+                <technique name="Tenor Rolls 7" enabled="true" instrument-type="unpitched-percussion" technique-type="rolls-sampled">
+                    <actions>
+                        <action action1="set-to-pitch" value1="56" value2="0" />
+                        <action action2="these-notes-only" value1="47" value2="48" />
+                        <action action3="skip" value1="0" />
+                    </actions>
+                    <filter filter-type="patch-name" content="VDLite Tenor" />
+                </technique>
+                <technique name="Tenor Rolls 8" enabled="true" instrument-type="unpitched-percussion" technique-type="rolls-sampled">
+                    <actions>
+                        <action action1="set-to-pitch" value1="56" value2="0" />
+                        <action action2="these-notes-only" value1="71" value2="72" />
+                        <action action3="skip" value1="0" />
+                    </actions>
+                    <filter filter-type="patch-name" content="VDLite Tenor" />
+                </technique>
+                <technique name="Tenor Rolls 9" enabled="true" instrument-type="unpitched-percussion" technique-type="rolls-sampled">
+                    <actions>
+                        <action action1="set-to-pitch" value1="57" value2="0" />
+                        <action action2="these-notes-only" value1="49" value2="50" />
+                        <action action3="skip" value1="0" />
+                    </actions>
+                    <filter filter-type="patch-name" content="VDLite Tenor" />
+                </technique>
+                <technique name="Tenor Rolls 10" enabled="true" instrument-type="unpitched-percussion" technique-type="rolls-sampled">
+                    <actions>
+                        <action action1="set-to-pitch" value1="57" value2="0" />
+                        <action action2="these-notes-only" value1="73" value2="74" />
+                        <action action3="skip" value1="0" />
+                    </actions>
+                    <filter filter-type="patch-name" content="VDLite Tenor" />
+                </technique>
+                <technique name="Tenor Rolls 11" enabled="true" instrument-type="unpitched-percussion" technique-type="rolls-sampled">
+                    <actions>
+                        <action action1="set-to-pitch" value1="58" value2="0" />
+                        <action action2="these-notes-only" value1="51" value2="52" />
+                        <action action3="skip" value1="0" />
+                    </actions>
+                    <filter filter-type="patch-name" content="VDLite Tenor" />
+                </technique>
+                <technique name="Tenor Rolls 12" enabled="true" instrument-type="unpitched-percussion" technique-type="rolls-sampled">
+                    <actions>
+                        <action action1="set-to-pitch" value1="58" value2="0" />
+                        <action action2="these-notes-only" value1="75" value2="76" />
+                        <action action3="skip" value1="0" />
+                    </actions>
+                    <filter filter-type="patch-name" content="VDLite Tenor" />
+                </technique>
+                <technique name="Bass Rolls 1" enabled="true" instrument-type="unpitched-percussion" technique-type="rolls-sampled">
+                    <actions>
+                        <action action1="set-to-pitch" value1="49" value2="0" />
+                        <action action2="these-notes-only" value1="63" value2="64" />
+                        <action action3="skip" value1="0" />
+                    </actions>
+                    <filter filter-type="patch-name" content="VDLite Bass" />
+                </technique>
+                <technique name="Bass Rolls 2" enabled="true" instrument-type="unpitched-percussion" technique-type="rolls-sampled">
+                    <actions>
+                        <action action1="set-to-pitch" value1="49" value2="0" />
+                        <action action2="these-notes-only" value1="65" value2="66" />
+                        <action action3="skip" value1="0" />
+                    </actions>
+                    <filter filter-type="patch-name" content="VDLite Bass" />
+                </technique>
+                <technique name="Finale Perc Map: Roll 1" enabled="true" instrument-type="unpitched-percussion" technique-type="rolls-sampled">
+                    <actions>
+                        <action action1="set-to-pitch" value1="42" value2="0" />
+                        <action action2="these-notes-only" value1="38" value2="39" />
+                        <action action3="skip" value1="0" />
+                    </actions>
+                    <filter filter-type="patch-name" content="VDLite Finale" />
+                </technique>
+                <technique name="Finale Perc Map: Roll 2" enabled="true" instrument-type="unpitched-percussion" technique-type="rolls-sampled">
+                    <actions>
+                        <action action1="set-to-pitch" value1="60" value2="0" />
+                        <action action2="these-notes-only" value1="48" value2="49" />
+                        <action action3="skip" value1="0" />
+                    </actions>
+                    <filter filter-type="patch-name" content="VDLite Finale" />
+                </technique>
+                <technique name="Finale Perc Map: Roll 3" enabled="true" instrument-type="unpitched-percussion" technique-type="rolls-sampled">
+                    <actions>
+                        <action action1="set-to-pitch" value1="60" value2="0" />
+                        <action action2="these-notes-only" value1="50" value2="51" />
+                        <action action3="skip" value1="0" />
+                    </actions>
+                    <filter filter-type="patch-name" content="VDLite Finale" />
+                </technique>
+                <technique name="Finale Perc Map: Roll 4" enabled="true" instrument-type="unpitched-percussion" technique-type="rolls-sampled">
+                    <actions>
+                        <action action1="set-to-pitch" value1="67" value2="0" />
+                        <action action2="these-notes-only" value1="65" value2="66" />
+                        <action action3="skip" value1="0" />
+                    </actions>
+                    <filter filter-type="patch-name" content="VDLite Finale" />
+                </technique>
+                <technique name="Finale Perc Map: Roll 5" enabled="true" instrument-type="unpitched-percussion" technique-type="rolls-sampled">
+                    <actions>
+                        <action action1="set-to-pitch" value1="71" value2="0" />
+                        <action action2="these-notes-only" value1="69" value2="70" />
+                        <action action3="skip" value1="0" />
+                    </actions>
+                    <filter filter-type="patch-name" content="VDLite Finale" />
+                </technique>
+                <technique name="Finale Perc Map: Roll 6" enabled="true" instrument-type="unpitched-percussion" technique-type="rolls-sampled">
+                    <actions>
+                        <action action1="set-to-pitch" value1="74" value2="0" />
+                        <action action2="these-notes-only" value1="72" value2="73" />
+                        <action action3="skip" value1="0" />
+                    </actions>
+                    <filter filter-type="patch-name" content="VDLite Finale" />
+                </technique>
+                <technique name="Finale Perc Map: Roll 7" enabled="true" instrument-type="unpitched-percussion" technique-type="rolls-sampled">
+                    <actions>
+                        <action action1="set-to-pitch" value1="78" value2="0" />
+                        <action action2="these-notes-only" value1="76" value2="77" />
+                        <action action3="skip" value1="0" />
+                    </actions>
+                    <filter filter-type="patch-name" content="VDLite Finale" />
+                </technique>
+            </container>
+            <container name="SoftSynth (General MIDI)">
+                <technique name="Strings: Arco (GM)" enabled="true" instrument-type="strings" technique-type="standard">
+                    <actions>
+                        <action action1="staff-patch" />
+                        <action action2="skip" value1="0" value2="0" />
+                        <action action3="skip" value1="0" />
+                    </actions>
+                    <filter filter-type="softsynth-or-external-midi" />
+                </technique>
+                <technique name="Strings: Pizz. (GM)" enabled="true" instrument-type="strings" technique-type="pizzicato">
+                    <actions>
+                        <action action1="program-change" value1="46" value2="0" />
+                        <action action2="skip" value1="0" value2="0" />
+                        <action action3="skip" value1="0" />
+                    </actions>
+                    <filter filter-type="softsynth-or-external-midi" />
+                </technique>
+                <technique name="Strings: Trem. (GM)" enabled="true" instrument-type="strings" technique-type="tremolo-sampled">
+                    <actions>
+                        <action action1="program-change" value1="45" value2="0" />
+                        <action action2="skip" value1="0" value2="0" />
+                        <action action3="skip" value1="0" />
+                    </actions>
+                    <filter filter-type="softsynth-or-external-midi" />
+                </technique>
+                <technique name="Trp: Stand. (GM)" enabled="true" instrument-type="trumpet" technique-type="standard">
+                    <actions>
+                        <action action1="staff-patch" value1="59" value2="0" />
+                        <action action2="skip" value1="0" value2="0" />
+                        <action action3="skip" value1="0" />
+                    </actions>
+                    <filter filter-type="softsynth-or-external-midi" />
+                </technique>
+                <technique name="Trp: Mute (GM)" enabled="true" instrument-type="trumpet" technique-type="mute">
+                    <actions>
+                        <action action1="program-change" value1="60" value2="0" />
+                        <action action2="skip" value1="0" value2="0" />
+                        <action action3="skip" value1="0" />
+                    </actions>
+                    <filter filter-type="softsynth-or-external-midi" />
+                </technique>
+            </container>
+        </techniques>
+    </preference>
+</humanplayback-defaults>

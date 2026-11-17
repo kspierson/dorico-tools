@@ -1,0 +1,19 @@
+feature           notes   tenuto%   accent%  marcato% staccato%
+ALL                5019       1.7       1.5       2.4       0.5
+dur ≤16th          2879       0.0       0.0       2.7       0.2
+dur 8th             809       3.7       4.4       4.1       1.7
+dur crotchet        473       1.5       1.7       0.8       0.0
+dur minim           719       6.7       4.0       0.7       0.4
+dur longer          139       0.0       0.0       0.0       0.0
+downbeat           1797       3.0       2.2       1.4       0.7
+on beat             720       1.7       1.8       5.0       0.8
+8th off             725       2.6       2.9       1.5       0.1
+16th off           1777       0.1       0.1       2.6       0.2
+after rest          436       2.5       3.9       3.7       0.7
+legato in          4583       1.6       1.2       2.2       0.4
+before rest         435       0.9       2.1       1.1       2.1
+continues          4584       1.8       1.4       2.5       0.3
+pitch peak          918       0.8       0.9       0.8       0.1
+not peak           4101       1.9       1.6       2.7       0.5
+unmarked           4345       2.0       1.6       2.4       0.3
+already marked      674       0.0       0.7       1.9       1.8

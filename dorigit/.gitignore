@@ -1,0 +1,11 @@
+/target/
+node_modules/
+/app/dist/
+/app/src-tauri/target/
+/app/src-tauri/gen/
+__pycache__/
+*.pyc
+
+# test projects A-H moved to engine/tests/dorico-files (ignored at the root)
+/out/
+/dist/
